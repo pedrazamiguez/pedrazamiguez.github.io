@@ -1,1029 +1,852 @@
-<!doctype html>
-<html lang="en">
-    <head>
-        <title>Andrés Pedraza Míguez</title>
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="description" content="Online CV - Andrés Pedraza Míguez" />
-        <meta name="keywords" content="online cv, developer, java, cv, online presence, andres, pedraza, miguez, springframework, mongodb, " />
-        <meta name="developer" content="Andrés Pedraza Míguez">
-        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<!DOCTYPE html>
+<html>
+<head>
+    <!-- ==========================
+    	Meta Tags 
+    =========================== -->
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- ==========================
+    	Title 
+    =========================== -->
+    <title>Super Freelancer</title>
+    
+    <!-- ==========================
+    	Favicons 
+    =========================== -->
+    <link rel="shortcut icon" href="icons/favicon.ico">
+	<link rel="apple-touch-icon" href="icons/apple-touch-icon.png">
+	<link rel="apple-touch-icon" sizes="72x72" href="icons/apple-touch-icon-72x72.png">
+	<link rel="apple-touch-icon" sizes="114x114" href="icons/apple-touch-icon-114x114.png">
+    
+    <!-- ==========================
+    	Fonts 
+    =========================== -->
+    <link href='http://fonts.googleapis.com/css?family=Lato:100,300,400,700,900,100italic,300italic,400italic,700italic,900italic' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Lilita+One' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Alegreya+Sans+SC' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet' type='text/css'>
+  
+
+    <!-- ==========================
+    	CSS 
+    =========================== -->
+    <link href="css/bootstrap.min.css" rel="stylesheet" type="text/css">
+    <link href="css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link href="css/animate.css" rel="stylesheet" type="text/css">
+    <link href="css/creative-brands.css" rel="stylesheet" type="text/css">
+    <link href="css/vertical-carousel.css" rel="stylesheet" type="text/css">
+    <link href="css/custom.css" rel="stylesheet" type="text/css">
+    
+    <!-- ==========================
+    	JS 
+    =========================== -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+      <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
+    <![endif]-->
+    
+</head>
+<body id="page-top">
+	<a href="#page-top" class="scroll-up scroll"><i class="fa fa-chevron-up"></i></a>
+    <h1>Freelancer</h1>
+	
+    <!-- ==========================
+    	HEADER - START 
+    =========================== -->
+    <header>
+        <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
+            <div class="container">
+                <!-- Brand and toggle get grouped for better mobile display -->
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavigation"><i class="fa fa-bars"></i></button>
+                    <img src="image/jonathan.png" class="navbar-logo pull-left" alt="" />
+                    <a href="index.html" class="navbar-brand animated flipInX">John Doe</a>
+                </div>
                 
-        <!-- FAV AND ICONS   -->
-        <link rel="shortcut icon" href="assets/images/favicon.ico">
-        <link rel="shortcut icon" href="assets/images/apple-icon.png">
-        <link rel="shortcut icon" sizes="72x72" href="assets/images/apple-icon-72x72.png">
-        <link rel="shortcut icon" sizes="114x114" href="assets/images/apple-icon-114x114.png">
+                <!-- Collect the nav links, forms, and other content for toggling -->
+                <div class="collapse navbar-collapse" id="myNavigation">
+                
+                    <ul class="nav navbar-nav navbar-right animated flipInX">
+                        <li><a href="#about" class="scroll">About me</a></li>
+                        <li><a href="#reference" class="scroll">Reference</a></li>
+                        <li><a href="#pricing" class="scroll">Pricing</a></li>
+                        <li><a href="#contact" class="scroll">Contact</a></li>
+                        <li><a href="blog.html" class="scroll blog_menu_link">Blog</a></li>
+                    </ul>
+                </div><!-- /.navbar-collapse -->
+            </div><!-- /.container -->
+        </nav>
         
-        <!-- Google Font-->
-        <link href="http://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
-        <!-- Font Awesome -->
-        <link rel="stylesheet" href="assets/icons/font-awesome-4.7.0/css/font-awesome.min.css">
-        <!-- Bootstrap CSS -->
-        <link rel="stylesheet" href="assets/plugins/css/bootstrap.min.css">
-        <!-- Animate CSS-->
-        <link rel="stylesheet" href="assets/plugins/css/animate.css">
-        <!-- Owl Carousel CSS-->
-        <link rel="stylesheet" href="assets/plugins/css/owl.css">
-        <!-- Fancybox-->
-        <link rel="stylesheet" href="assets/plugins/css/jquery.fancybox.min.css">
+        <div class="jumbotron">
+            <img src="image/jonathan.png" class="img-responsive scrollpoint sp-effect3" alt="" />	
+            <div class="social-wrapper">
+                <ul class="brands brands-inline hidden-xs scrollpoint sp-effect1">
+                    <li><a href="#"><i class="fa fa-facebook  hi-icon-effect-8"></i></a></li>
+                    <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+                </ul>   
+                <h2 class="scrollpoint sp-effect3">John Doe</h2>
+                <ul class="brands brands-inline hidden-xs scrollpoint sp-effect2">
+                    <li><a href="#"><i class="fa fa-google-plus"></i></a></li>
+                    <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
+                </ul>       
+            </div>
+            <!-- Slideshow start -->                          
+            <div id="slideshow" class="carousel slide vertical scrollpoint sp-effect3" data-ride="carousel">
+                <div class="carousel-inner">
+                    <!-- Slideshow item 1 active --> 
+                    <div class="item active"><h3>I <i class="fa fa-heart icon-first"></i> webdesign</h3></div>
+                    <!-- Slideshow item 2 -->     
+                    <div class="item"><h3>Creative coder <i class="fa fa-code icon"></i></h3></div>
+                    <!-- Slideshow item 3 -->   
+                    <div class="item"><h3><i class="fa fa-trophy"></i> Awesome designer</h3></div>
+                </div>
+            </div>
+            <!-- Slideshow end -->   
+        <a href="#about" class="btn btn-reference btn-lg scroll scrollpoint sp-effect1" role="button"><i class="fa fa-smile-o"></i> Know me better</a>
+        <a href="#contact" class="btn btn-reference btn-lg btn-active scroll scrollpoint sp-effect2" role="button"><i class="fa fa-bolt"></i> Hire me</a> 
+        </div>
+    </header>
+    <!-- ==========================
+    	HEADER - END 
+    =========================== -->
+     
+    <!-- ==========================
+    	ABOUT - START 
+    =========================== -->
+    <section id="about" class="content-first">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-2 hidden-xs scrollpoint sp-effect1"><!-- Profile image --> 
+                	<img src="image/jonathan.png" class="image-bordered img-responsive" alt="" />                
+                </div><!-- Profile end --> 
+                
+                <div class="col-md-7 col-sm-6 scrollpoint sp-effect1"><!-- Profile description --> 
+                	<h3>John Doe</h3>
+                  	<p>At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga. Et harum quidem rerum facilis est et expedita distinctio.</p>      
+                    
+                    <div class="tweets"><!-- Tweets row --> 
+                        <!-- Tweets slideshow --> 
+                             <div class="media">
+                                    <div class="pull-left"><i class="fa fa-twitter"></i></div>
+                                    <div class="media-body">
+                                        <div id="slideshow1" class="carousel slide" data-ride="carousel">
+                                              <div class="carousel-inner">
+                                               <!-- Slideshow item 1 active --> 
+                                                  <div class="item active">
+                                                        <p>Hi everyone i just finished my last #awesome web template you can check it on #wrapbootstrap.. Fully responsive and mobile first webtheme.co</p> 
+                                                  </div>
+                                               <!-- Slideshow item 2 -->    
+                                                  <div class="item">
+                                                        <p>Check our new amazing portfolio on #Pixelized</p>
+                                                  </div>
+                                                  
+                                                <!-- Slideshow item 3 -->
+                                                  <div class="item">
+                                                        <p>Another very #important tweet from your twitter.</p>
+                                                  </div>
+                                              </div>    
+                                         </div>
+                                    </div>
+                             </div>    
+                       <!-- Tweets slideshow end --> 
+                    </div><!-- Tweets row end --> 
+               </div><!-- Profile description end--> 
+                
+              <div class="col-md-3 col-sm-4 scrollpoint sp-effect2"><!--Timeline-->
+                 
+                  <div class="timeline">
+                      <!-- BLOG POST 1 - START -->
+                      <div class="event">
+                          <div class="event-info">
+                            <div class="date">1999</div>
+                          </div>
+                      	  <span>Graduated harvard</span>
+                      </div> <!-- BLOG POST 1 - END -->
+                      
+                      <div class="event">
+                          <div class="event-info">
+                             <div class="date">2000</div>
+                          </div>
+                      	  <span>Internship Google</span>
+                      </div> <!-- BLOG POST 1 - END -->
+                      
+                      <div class="event">
+                          <div class="event-info">
+                             <div class="date">2001</div>
+                          </div>
+                      	  <span>Full-time Job Google</span>
+                      </div> <!-- BLOG POST 1 - END -->
+                      
+                      <div class="event">
+                          <div class="event-info">
+                             <div class="date">2009</div>
+                          </div>
+                      	  <span>Publish own book</span>
+                      </div> <!-- BLOG POST 1 - END -->
+                      
+                      <div class="event">
+                          <div class="event-info">
+                             <div class="date">2012</div>
+                          </div>
+                      	  <span>Start freelancing</span>
+                      </div> <!-- BLOG POST 1 - END -->
+                      
+                  </div><!--timeline-->
+              </div><!--col 3 end-->
+               
+            </div><!--Row about end-->
+            
+            
+            <div class="row">
+            	<div class="col-md-12 text-center">
+                	<a id="skills-toggle" class="btn btn-primary"><i class="fa fa-arrow-circle-o-down"></i> Check my skills</a>
+                </div>
+            </div>
+        </div><!-- Container end-->
         
-        <!-- Custom CSS-->
-        <link rel="stylesheet" href="assets/css/styles.css">
-        <link rel="stylesheet" href="assets/css/responsive.css">
-        <link rel="stylesheet" href="assets/css/tweaks.css">
+        <div id="skills">
+            <div class="container">   
+                <div class="row"><!-- Toogle my skills start --> 
+                    <div class="col-md-3">
+                        <div class="chart" data-percent="73">73% CSS</div>
+                    </div>
+                    <div class="col-md-3">
+                        <div class="chart" data-percent="89">89% Html</div>
+                    </div>
+                    <div class="col-md-3">
+                        <div class="chart" data-percent="83">83% Code</div>
+                    </div>
+                    <div class="col-md-3">
+                        <div class="chart" data-percent="62">62% Design</div>
+                    </div>
+                </div><!-- Toogle my skills end--> 
+                
+            </div><!-- Container end-->
+        </div>
         
-        <!-- Colors -->
-        <link rel="stylesheet" href="assets/css/colors/defauld.css" title="defauld">
-        <!-- <link rel="alternate stylesheet" href="assets/css/colors/blue.css" title="blue"> -->
-        <!-- <link rel="alternate stylesheet" href="assets/css/colors/green.css" title="green"> -->
-        <!-- <link rel="alternate stylesheet" href="assets/css/colors/blue-munsell.css" title="blue-munsell"> -->
-        <!-- <link rel="alternate stylesheet" href="assets/css/colors/orange.css" title="orange"> -->
-        <!-- <link rel="alternate stylesheet" href="assets/css/colors/purple.css" title="purple">  -->
-        <!-- <link rel="alternate stylesheet" href="assets/css/colors/slate.css" title="slate"> -->
-        <!-- <link rel="alternate stylesheet" href="assets/css/colors/yellow.css" title="yellow"> -->
-        
-    </head>
-    <body class="dark-vertion black-bg">
-        
-        <!-- Start Loader -->
-        <div class="section-loader">
-            <div class="loader">
-                <div></div>
-                <div></div> 
+    </section>
+    <!-- ==========================
+    	ABOUT - END 
+    =========================== --> 
+    
+     <!-- ==========================
+    	SERVICER - START
+    =========================== -->   
+    <section id="services" class="content-second">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <h2 class="scrollpoint sp-effect3">What i do</h2>
+                    <p class="scrollpoint sp-effect3">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce in turpis quam. Nulla quis eleifend lectus.</p> 
+                </div>
+                
+                <div class="col-md-3 service scrollpoint sp-effect1">
+                <img src="image/ico5.png" alt="">
+                <h3>SEO first</h3>
+                <p>At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum.At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum.</p>
+                </div>
+                
+                
+                <div class="col-md-3 service scrollpoint sp-effect1">
+                <img src="image/ico4.png" alt="">
+                <h3>Firstclass design</h3>
+                <p>At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum.At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum.</p>
+                </div>
+                
+                
+                <div class="col-md-3 service scrollpoint sp-effect2">
+                <img src="image/ico1.png" alt="">
+                <h3>Fully responsive</h3>
+                <p>At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum.At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum.</p>
+                </div>
+                
+                <div class="col-md-3 service scrollpoint sp-effect2">
+                <img src="image/ico3.png" alt="">
+                <h3>Browser friendly</h3>
+                <p>At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum.At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum.</p>
+                </div>
+                
             </div>
         </div>
-        <!-- End Loader -->
-        
-        <!--
-        ===================
-           NAVIGATION
-        ===================
-        -->
-        <header class="black-bg mh-header mh-fixed-nav nav-scroll mh-xs-mobile-nav" id="mh-header">
-            <div class="overlay"></div>
-            <div class="container">
-                <div class="row">
-                    <nav class="navbar navbar-expand-lg mh-nav nav-btn">
-                        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                            <span class="navbar-toggler-icon icon"></span>
-                        </button>
+    </section>
+    <!-- ==========================
+    	SERVICES - END 
+    =========================== -->
+    
+    <!-- ==========================
+    	NUMBERS - START
+    =========================== -->   
+    <section id="separator" class="content-first">
+        <div class="container">
+            <div class="row scrollpoint sp-effect3">
+                <div class="col-sm-2">
+                	<i class="fa fa-user"></i>
+                    <p><span class="number highlight" data-from="0" data-to="100" data-refresh-interval="10"></span> Happy clients</p>
+                </div> 	
+                <div class="col-sm-2">
+                	<i class="fa fa-coffee"></i>
+                    <p><span class="number highlight" data-from="0" data-to="250" data-refresh-interval="10"></span> cups of coffee</p>
+                </div> 	
+                <div class="col-sm-2">
+                	<i class="fa fa-code"></i>
+                    <p><span class="number highlight" data-from="0" data-to="2500" data-refresh-interval="10"></span> lines of codes</p>
+                </div> 	
+                <div class="col-sm-2">
+                	<i class="fa fa-envelope"></i>
+                    <p><span class="number highlight" data-from="0" data-to="300" data-refresh-interval="10"></span> emails</p>
+                </div> 	
+                <div class="col-sm-2">
+                	<i class="fa fa-phone"></i>
+                    <p><span class="number highlight" data-from="0" data-to="50" data-refresh-interval="10"></span> hours phone calls</p>
+                </div> 	
+                <div class="col-sm-2">
+                	<i class="fa fa-facebook"></i>
+                    <p><span class="number highlight" data-from="0" data-to="24" data-refresh-interval="10"></span> hours facebook</p>
+                </div> 	
+            </div>
+        </div>
+    </section>
+    <!-- ==========================
+    	NUMBERS - END 
+    =========================== -->
+    
+     <!-- ==========================
+    	SHOWCASE - START
+    =========================== -->   
+    <section id="showcase" class="content-second">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-12">
+                    <h2 class="scrollpoint sp-effect3">My latest work</h2>
+                    <p class="scrollpoint sp-effect3">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce in turpis quam. Nulla quis eleifend lectus.</p> 
+                </div>
+                
+                <div class="col-lg-6 showcase-text scrollpoint sp-effect1">
+                    <div class="row">
+                    <!-- Service 1 -->
+                    	<div class="col-sm-6 col-md-6 col-lg-12">
+                            <div class="media">
+                                <div class="pull-left showcase-icon"><i class="fa fa-puzzle-piece"></i></div>
+                                <div class="media-body">
+                                    <h3 class="media-heading">Browser friendly</h3>
+                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet, consectetur ad.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Service 2 -->
+                    	<div class="col-sm-6 col-md-6 col-lg-12">
+                            <div class="media">
+                                <div class="pull-left showcase-icon"><i class="fa fa-trophy"></i></div>
+                                <div class="media-body">
+                                   <h3 class="media-heading">First class design</h3>
+                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet, consectetur ad.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Service 3 -->
+                    	<div class="col-sm-6 col-md-6 col-lg-12">
+                            <div class="media">
+                                <div class="pull-left showcase-icon"><i class="fa fa-thumbs-up"></i></div>
+                                <div class="media-body">
+                                    <h3 class="media-heading">Profesional scheme for freelancers</h3>
+                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet, consectetur ad.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Service 4 -->
+                    	<div class="col-sm-6 col-md-6 col-lg-12">
+                            <div class="media">
+                                <div class="pull-left showcase-icon"><i class="fa fa-arrows"></i></div>
+                                <div class="media-body">
+                                    <h3 class="media-heading">Fully responsive</h3>
+                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet, consectetur ad.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                     
-                        <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                            <ul class="navbar-nav mr-auto ml-auto">
-                                <li class="nav-item active">
-                                    <a class="nav-link" href="#mh-home">Home</a>
-                                </li>
-                                <li class="nav-item">
-                                    <a class="nav-link" href="#mh-about">About</a>
-                                </li>
-                                <li class="nav-item">
-                                   <a class="nav-link" href="#mh-skills">Skills</a>
-                                </li>                                
-                                <li class="nav-item">
-                                   <a class="nav-link" href="#mh-experience">Experiences</a>
-                                </li>                                
-                                <li class="nav-item">
-                                    <a class="nav-link" href="#mh-portfolio">Portfolio</a>
-                                </li>
-                                <li class="nav-item">
-                                    <a class="nav-link" href="#mh-blog">Blog</a>
-                                </li>
-                                <li class="nav-item">
-                                   <a class="nav-link" href="#mh-contact">Contact</a>
-                                </li>
-                            </ul>
+                   <div class="text-center showcase-button">
+                   		<a class="btn btn-primary btn-lg" role="button"><i class="fa fa-bolt"></i> See in action</a>
+                   </div>
+                </div>            
+            
+                <div class="col-lg-6 col-sm-8 col-md-8 col-md-offset-2 col-sm-offset-2 col-lg-offset-0 showcase-carousel hidden-xs scrollpoint sp-effect2">
+                    <img src="image/imac.png" class="img-responsive" alt="">
+                    
+                    <div id="carousel-reference" class="carousel slide" data-ride="carousel">
+                        <!-- Wrapper for slides -->
+                        <div class="carousel-inner">
+                            <div class="item active"><img src="image/image_01.png" alt=""></div>
+                            <div class="item"><img src="image/image_02.png" alt=""></div>
                         </div>
-                    </nav>
-                </div>
+                        
+                        <!-- Controls -->
+                        <a class="left carousel-control" href="#carousel-reference" data-slide="prev"><i class="fa fa-arrow-left"></i></a>
+                        <a class="right carousel-control" href="#carousel-reference" data-slide="next"><i class="fa fa-arrow-right"></i></a>
+                    </div>
+                </div>  
             </div>
-        </header>
-
-        <!--
-        ===================
-           Home
-        ===================
-        -->
-        <section class="mh-home image-bg home-2-img" id="mh-home">
-            <div class="img-foverlay img-color-overlay">
-                <div class="container">
-                    <div class="row section-separator xs-column-reverse vertical-middle-content home-padding">
-                        <div class="col-sm-6">
-                            <div class="mh-header-info">
-                                <div class="mh-promo wow fadeInUp" data-wow-duration="0.8s" data-wow-delay="0.1s">
-                                    <span>Hello! I'm</span>
-                                </div>
-                                
-                                <h2 class="wow fadeInUp" data-wow-duration="0.8s" data-wow-delay="0.2s">Andrés Pedraza</h2>
-                                <h4 class="wow fadeInUp" data-wow-duration="0.8s" data-wow-delay="0.3s">Backend Developer</h4>
-                                
-                                <ul>
-                                    <li class="wow fadeInUp" data-wow-duration="0.8s" data-wow-delay="0.4s"><span class="centered-icon"><i class="fa fa-envelope"></i></span><a href="mailto:andres.javadev@email.com">andres.javadev@email.com</a></li>
-                                    <li class="wow fadeInUp" data-wow-duration="0.8s" data-wow-delay="0.5s"><span class="centered-icon"><i class="fa fa-phone"></i></span><a href="callto:+441234567890">+44 1234567890</a></li>
-                                    <li class="wow fadeInUp" data-wow-duration="0.8s" data-wow-delay="0.6s"><span class="centered-icon"><i class="fa fa-map-marker"></i></span><address>Seville, Spain</address></li>
-                                </ul>
-                                
-                                <ul class="social-icon wow fadeInUp" data-wow-duration="0.8s" data-wow-delay="0.7s">
-                                    <li><a href="https://www.linkedin.com/in/pedrazamiguez/" target="_blank"><i class="fa fa-linkedin-square"></i></a></li>
-                                    <li><a href=""><i class="fa fa-twitter"></i></a></li>
-                                    <li><a href="https://github.com/pedrazamiguez" target="_blank"><i class="fa fa-github"></i></a></li>
-                                    <li><a href=""><i class="fa fa-dribbble"></i></a></li>
-                                </ul>
-                            </div>
-                        </div>
-                        <div class="col-sm-6">
-                            <div class="hero-img wow fadeInUp" data-wow-duration="0.8s" data-wow-delay="0.6s">
-                                <div class="img-border">
-                                    <img src="assets/images/hero.png" alt=""  class="img-fluid">
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-        
-        <!--
-        ===================
-           ABOUT
-        ===================
-        -->
-        <section class="mh-about" id="mh-about">
-            <div class="container">
-                <div class="row section-separator">
-                    <div class="col-sm-12 col-md-6">
-                        <div class="mh-about-img shadow-2 wow fadeInUp" data-wow-duration="0.8s" data-wow-delay="0.4s">
-                            <img src="assets/images/ab-img.png" alt="" class="img-fluid">
-                        </div>
-                    </div>
-                    <div class="col-sm-12 col-md-6">
-                        <div class="mh-about-inner">
-                            <h2 class="wow fadeInUp" data-wow-duration="0.8s" data-wow-delay="0.1s">About Me</h2>
-                            <p class="wow fadeInUp" data-wow-duration="0.8s" data-wow-delay="0.2s">Hello, I'm Andrés, back-end developer based in Seville, Spain. 
-                            I have hands-on experience in RESTful APIs and web services. I am also good at</p>
-                            <div class="mh-about-tag wow fadeInUp" data-wow-duration="0.8s" data-wow-delay="0.3s">
-                                <ul>
-                                    <li><span>Java</span></li>
-                                    <li><span>Spring Framework</span></li>
-                                    <li><span>Security</span></li>
-                                    <li><span>Kotlin</span></li>
-                                    <li><span>Android</span></li>
-                                    <li><span>Global Payments</span></li>
-                                    <li><span>Elastic products</span></li>
-                                </ul>
-                            </div>
-                            <a href="" class="btn btn-fill wow fadeInUp" data-wow-duration="0.8s" data-wow-delay="0.4s">Downlaod CV <i class="fa fa-download"></i></a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-        
-        <!--
-        ===================
-           SERVICE
-        ===================
-        -->
-        <section class="mh-service">
-            <div class="container">
-                <div class="row section-separator">
-                    <div class="col-sm-12 text-center section-title wow fadeInUp" data-wow-duration="0.8s" data-wow-delay="0.2s">
-                        <h2>What I do</h2>
-                    </div>
-                    <div class="col-sm-4">
-                        <div class="mh-service-item shadow-1 dark-bg wow fadeInUp" data-wow-duration="0.8s" data-wow-delay="0.3s">
-                            <i class="fa fa-bullseye purple-color"></i>
-                            <h3>UI Design</h3>
-                            <p>
-                                Lorem ipsum dolor sit amet, consectetuer adipiscing elit,
-                                sed diam nonummy nibh euismod tincidunt ut laoreet dolore
-                                magna aliquam erat volutpat.
-                            </p>
-                        </div>
-                    </div>
-                    <div class="col-sm-4">
-                        <div class="mh-service-item shadow-1 dark-bg wow fadeInUp" data-wow-duration="0.8s" data-wow-delay="0.5s">
-                            <i class="fa fa-code iron-color"></i>
-                            <h3>Web Development</h3>
-                            <p>
-                                Lorem ipsum dolor sit amet, consectetuer adipiscing elit,
-                                sed diam nonummy nibh euismod tincidunt ut laoreet dolore
-                                magna aliquam erat volutpat.
-                            </p>
-                        </div>
-                    </div>
-                    <div class="col-sm-4">
-                        <div class="mh-service-item shadow-1 dark-bg wow fadeInUp" data-wow-duration="0.8s" data-wow-delay="0.7s">
-                            <i class="fa fa-object-ungroup sky-color"></i>
-                            <h3>App Development</h3>
-                            <p>
-                                Lorem ipsum dolor sit amet, consectetuer adipiscing elit,
-                                sed diam nonummy nibh euismod tincidunt ut laoreet dolore
-                                magna aliquam erat volutpat.
-                            </p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-        
-        <!--
-        ===================
-          FEATURE PROJECTS
-        ===================
-        -->
-        <section class="mh-featured-project image-bg featured-img-one">
-            <div class="img-color-overlay">
-                <div class="container">
-                    <div class="row section-separator">
-                        <div class="section-title col-sm-12">
-                            <h3>Featured Projects</h3>
-                        </div>
-                        <div class="col-sm-12">
-                            <div class="mh-single-project-slide-by-side row">
-                                <!-- Project Items -->
-                                <div class="col-sm-12 mh-featured-item">
-                                    <div class="row">
-                                        <div class="col-sm-7">
-                                            <div class="mh-featured-project-img shadow-2 wow fadeInUp" data-wow-duration="0.8s" data-wow-delay="0.2s">
-                                                <img src="assets/images/p-2.png" alt="" class="img-fluid">
-                                            </div>
-                                        </div>
-                                        <div class="col-sm-5">
-                                            <div class="mh-featured-project-content">
-                                                <h4 class="project-category wow fadeInUp" data-wow-duration="0.8s" data-wow-delay="0.4s">Web Design</h4>
-                                                <h2 class="wow fadeInUp" data-wow-duration="0.8s" data-wow-delay="0.5s">Wrap</h2>
-                                                <span class="wow fadeInUp" data-wow-duration="0.8s" data-wow-delay="0.6s">Design & Development</span>
-                                                <p class="wow fadeInUp" data-wow-duration="0.8s" data-wow-delay="0.7s">Stamp is a clean and elegant Multipurpose Landing Page Template. 
-                                                It will fit perfectly for Startup, Web App or any type of Web Services.
-                                                It has 4 background styles with 6 homepage styles. 6 pre-defined color scheme. 
-                                                All variations are organized separately so you can use / customize the template very easily.</p>
-                                                <a href="" class="btn btn-fill wow fadeInUp" data-wow-duration="0.8s" data-wow-delay="0.7s">View Details</a>
-                                                <div class="mh-testimonial mh-project-testimonial wow fadeInUp" data-wow-duration="0.8s" data-wow-delay="0.9s">
-                                                    <blockquote>
-                                    					<q>Excellent Template - suits my needs perfectly whilst allowing me to learn some new technology first hand.</q>
-                                    					<cite>- Shane Kavanagh</cite>
-                                    				</blockquote>
-                                    				<blockquote>
-                                    					<q>Creative Template - suits my needs perfectly whilst allowing me to learn some new technology first hand.</q>
-                                    					<cite>- Shane Kavanagh</cite>
-                                    				</blockquote>
-                                    				<blockquote>
-                                    					<q>Organize Code - suits my needs perfectly whilst allowing me to learn some new technology first hand.</q>
-                                    					<cite>- Shane Kavanagh</cite>
-                                    				</blockquote>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <!-- Project Items -->
-                                <div class="col-sm-12 mh-featured-item">
-                                    <div class="row">
-                                        <div class="col-sm-7">
-                                            <div class="mh-featured-project-img shadow-2 wow fadeInUp" data-wow-duration="0.8s" data-wow-delay="0.2s">
-                                                <img src="assets/images/p-2.png" alt="" class="img-fluid">
-                                            </div>
-                                        </div>
-                                        <div class="col-sm-5">
-                                            <div class="mh-featured-project-content">
-                                                <h4 class="project-category wow fadeInUp" data-wow-duration="0.8s" data-wow-delay="0.4s">Web Design</h4>
-                                                <h2 class="wow fadeInUp" data-wow-duration="0.8s" data-wow-delay="0.5s">Wrap</h2>
-                                                <span class="wow fadeInUp" data-wow-duration="0.8s" data-wow-delay="0.6s">Design & Development</span>
-                                                <p class="wow fadeInUp" data-wow-duration="0.8s" data-wow-delay="0.7s">Stamp is a clean and elegant Multipurpose Landing Page Template. 
-                                                It will fit perfectly for Startup, Web App or any type of Web Services.
-                                                It has 4 background styles with 6 homepage styles. 6 pre-defined color scheme. 
-                                                All variations are organized separately so you can use / customize the template very easily.</p>
-                                                <a href="" class="btn btn-fill wow fadeInUp" data-wow-duration="0.8s" data-wow-delay="0.7s">View Details</a>
-                                                <div class="mh-testimonial mh-project-testimonial wow fadeInUp" data-wow-duration="0.8s" data-wow-delay="0.9s">
-                                                    <blockquote>
-                                    					<q>Excellent Template - suits my needs perfectly whilst allowing me to learn some new technology first hand.</q>
-                                    					<cite>- Shane Kavanagh</cite>
-                                    				</blockquote>
-                                    				<blockquote>
-                                    					<q>Creative Template - suits my needs perfectly whilst allowing me to learn some new technology first hand.</q>
-                                    					<cite>- Shane Kavanagh</cite>
-                                    				</blockquote>
-                                    				<blockquote>
-                                    					<q>Organize Code - suits my needs perfectly whilst allowing me to learn some new technology first hand.</q>
-                                    					<cite>- Shane Kavanagh</cite>
-                                    				</blockquote>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <!-- Project Items -->
-                                <div class="col-sm-12 mh-featured-item">
-                                    <div class="row">
-                                        <div class="col-sm-7">
-                                            <div class="mh-featured-project-img shadow-2 wow fadeInUp" data-wow-duration="0.8s" data-wow-delay="0.2s">
-                                                <img src="assets/images/p-2.png" alt="" class="img-fluid">
-                                            </div>
-                                        </div>
-                                        <div class="col-sm-5">
-                                            <div class="mh-featured-project-content">
-                                                <h4 class="project-category wow fadeInUp" data-wow-duration="0.8s" data-wow-delay="0.4s">Web Design</h4>
-                                                <h2 class="wow fadeInUp" data-wow-duration="0.8s" data-wow-delay="0.5s">Wrap</h2>
-                                                <span class="wow fadeInUp" data-wow-duration="0.8s" data-wow-delay="0.6s">Design & Development</span>
-                                                <p class="wow fadeInUp" data-wow-duration="0.8s" data-wow-delay="0.7s">Stamp is a clean and elegant Multipurpose Landing Page Template. 
-                                                It will fit perfectly for Startup, Web App or any type of Web Services.
-                                                It has 4 background styles with 6 homepage styles. 6 pre-defined color scheme. 
-                                                All variations are organized separately so you can use / customize the template very easily.</p>
-                                                <a href="" class="btn btn-fill wow fadeInUp" data-wow-duration="0.8s" data-wow-delay="0.7s">View Details</a>
-                                                <div class="mh-testimonial mh-project-testimonial wow fadeInUp" data-wow-duration="0.8s" data-wow-delay="0.9s">
-                                                    <blockquote>
-                                    					<q>Excellent Template - suits my needs perfectly whilst allowing me to learn some new technology first hand.</q>
-                                    					<cite>- Shane Kavanagh</cite>
-                                    				</blockquote>
-                                    				<blockquote>
-                                    					<q>Creative Template - suits my needs perfectly whilst allowing me to learn some new technology first hand.</q>
-                                    					<cite>- Shane Kavanagh</cite>
-                                    				</blockquote>
-                                    				<blockquote>
-                                    					<q>Organize Code - suits my needs perfectly whilst allowing me to learn some new technology first hand.</q>
-                                    					<cite>- Shane Kavanagh</cite>
-                                    				</blockquote>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div> <!-- End: .row -->
-                </div>
-            </div>
-        </section>  
-        
-        <!--
-        ===================
-           SKILLS
-        ===================
-        -->
-        <section class="mh-skills" id="mh-skills">
-            <div class="home-v-img">
-                <div class="container">
-                    <div class="row section-separator">
-                        <div class="section-title text-center col-sm-12">
-                            <!--<h2>Skills</h2>-->
-                        </div>
-                        <div class="col-sm-12 col-md-6">
-                            <div class="mh-skills-inner">
-                                <div class="mh-professional-skill wow fadeInUp" data-wow-duration="0.8s" data-wow-delay="0.3s">
-                                    <h3>Technical Skills</h3>
-                                    <div class="each-skills">
-                                        <div class="candidatos">
-                                            <div class="parcial">
-                                                <div class="info">
-                                                    <div class="nome">Javascript</div>
-                                                    <div class="percentagem-num">86%</div>
-                                                </div>
-                                                <div class="progressBar">
-                                                    <div class="percentagem" style="width: 86%;"></div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="candidatos">
-                                            <div class="parcial">
-                                                <div class="info">
-                                                    <div class="nome">Java</div>
-                                                    <div class="percentagem-num">46%</div>
-                                                </div>
-                                                <div class="progressBar">
-                                                    <div class="percentagem" style="width: 46%;"></div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="candidatos">
-                                            <div class="parcial">
-                                                <div class="info">
-                                                    <div class="nome">Python</div>
-                                                    <div class="percentagem-num">38%</div>
-                                                </div>
-                                                <div class="progressBar">
-                                                    <div class="percentagem" style="width: 38%;"></div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="candidatos">
-                                            <div class="parcial">
-                                                <div class="info">
-                                                    <div class="nome">PHP</div>
-                                                    <div class="percentagem-num">17%</div>
-                                                </div>
-                                                <div class="progressBar">
-                                                    <div class="percentagem" style="width: 17%;"></div>
-                                                </div>
-                                            </div>
-                                        </div>                                    
-                                        
-                                        <div class="candidatos">
-                                            <div class="parcial">
-                                                <div class="info">
-                                                    <div class="nome">Python</div>
-                                                    <div class="percentagem-num">38%</div>
-                                                </div>
-                                                <div class="progressBar">
-                                                    <div class="percentagem" style="width: 38%;"></div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="candidatos">
-                                            <div class="parcial">
-                                                <div class="info">
-                                                    <div class="nome">PHP</div>
-                                                    <div class="percentagem-num">17%</div>
-                                                </div>
-                                                <div class="progressBar">
-                                                    <div class="percentagem" style="width: 17%;"></div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-sm-12 col-md-6">
-                            <div class="mh-professional-skills wow fadeInUp" data-wow-duration="0.8s" data-wow-delay="0.5s">
-                                <h3>Professional Skills</h3>
-                                <ul class="mh-professional-progress">
-                                    <li>
-                                        <div class="mh-progress mh-progress-circle" data-progress="95"></div>
-                                        <div class="pr-skill-name">Communication</div>
-                                    </li>
-                                    <li>
-                                        <div class="mh-progress mh-progress-circle" data-progress="55"></div> 
-                                        <div class="pr-skill-name">Team Work</div>
-                                    </li>
-                                    <li>
-                                        <div class="mh-progress mh-progress-circle" data-progress="86"></div>
-                                        <div class="pr-skill-name">Project Management</div>
-                                    </li> 
-                                    <li>
-                                        <div class="mh-progress mh-progress-circle" data-progress="60"></div>
-                                        <div class="pr-skill-name">Creativity</div>
-                                    </li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-        
-        <!--
-        ===================
-           EXPERIENCES
-        ===================
-        -->
-        <section class="mh-experince image-bg featured-img-one" id="mh-experience">
-            <div class="img-color-overlay">
-                <div class="container">
-                    <div class="row section-separator">
-                        <div class="col-sm-12 col-md-6">
-                            <div class="mh-education">
-                                <h3 class="wow fadeInUp" data-wow-duration="0.8s" data-wow-delay="0.2s">Education</h3>
-                                <div class="mh-education-deatils">
-                                    <!-- Education Institutes-->
-                                    <div class="mh-education-item dark-bg wow fadeInUp" data-wow-duration="0.8s" data-wow-delay="0.3s">
-                                        <h4>Art & Multimedia From <a href="">Oxford University</a></h4>
-                                        <div class="mh-eduyear">2005-2008</div>
-                                        <p>It is a long established fact that a reader will be distracted by the readable content of a 
-                                        page when looking at its layout. The point of using  Lorem Ipsum </p>
-                                    </div>                                
-                                    <!-- Education Institutes-->
-                                    <div class="mh-education-item dark-bg wow fadeInUp" data-wow-duration="0.8s" data-wow-delay="0.5s">
-                                        <h4>Art & Multimedia From <a href="">Oxford University</a></h4>
-                                        <div class="mh-eduyear">2005-2008</div>
-                                        <p>It is a long established fact that a reader will be distracted by the readable content of a 
-                                        page when looking at its layout. The point of using  Lorem Ipsum </p>
-                                    </div>                                
-                                    <!-- Education Institutes-->
-                                    <div class="mh-education-item dark-bg wow fadeInUp" data-wow-duration="0.8s" data-wow-delay="0.6s">
-                                        <h4>Art & Multimedia From <a href="">Oxford University</a></h4>
-                                        <div class="mh-eduyear">2005-2008</div>
-                                        <p>It is a long established fact that a reader will be distracted by the readable content of a 
-                                        page when looking at its layout. The point of using L orem Ipsum </p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-sm-12 col-md-6">
-                            <div class="mh-work">
-                                 <h3>Work Experience</h3>
-                                <div class="mh-experience-deatils">
-                                    <!-- Education Institutes-->
-                                    <div class="mh-work-item dark-bg wow fadeInUp" data-wow-duration="0.8s" data-wow-delay="0.4s">
-                                        <h4>UI/UX Designer <a href="">IronSketch</a></h4>
-                                        <div class="mh-eduyear">2005-2008</div>
-                                        <span>Responsibility :</span>
-                                        <ul class="work-responsibility">
-                                            <li><i class="fa fa-circle"></i>Validate CSS</li>
-                                            <li><i class="fa fa-circle"></i>Project Management</li>
-                                        </ul>
-                                    </div>                                
-                                    <!-- Education Institutes-->
-                                    <div class="mh-work-item dark-bg wow fadeInUp" data-wow-duration="0.8s" data-wow-delay="0.6s">
-                                        <h4>Art & Multimedia From <a href="">Oxford University</a></h4>
-                                        <div class="mh-eduyear">2005-2008</div>
-                                        <span>Responsibility :</span>
-                                        <ul class="work-responsibility">
-                                            <li><i class="fa fa-circle"></i>Validate CSS</li>
-                                            <li><i class="fa fa-circle"></i>Project Management</li>
-                                        </ul>
-                                    </div>                                
-                                    <!-- Education Institutes-->
-                                    <div class="mh-work-item dark-bg wow fadeInUp" data-wow-duration="0.8s" data-wow-delay="0.7s">
-                                        <h4>Art & Multimedia From <a href="">Oxford University</a></h4>
-                                        <div class="mh-eduyear">2005-2008</div>
-                                        <span>Responsibility :</span>
-                                        <ul class="work-responsibility">
-                                            <li><i class="fa fa-circle"></i>Validate CSS</li>
-                                            <li><i class="fa fa-circle"></i>Project Management</li>
-                                        </ul>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>       
-        
-        <!--
-        ===================
-           PORTFOLIO
-        ===================
-        -->
-        <section class="mh-portfolio" id="mh-portfolio">
-            <div class="container">
-                <div class="row section-separator">
-                    <div class="section-title col-sm-12 wow fadeInUp" data-wow-duration="0.8s" data-wow-delay="0.1s">
-                        <h3>Recent Portfolio</h3>
-                    </div>
-                    <div class="part col-sm-12">
-                        <div class="portfolio-nav col-sm-12" id="filter-button">
-                            <ul>
-                                <li data-filter="*" class="current wow fadeInUp" data-wow-duration="0.8s" data-wow-delay="0.1s"> <span>All Categories</span></li>
-                                <li data-filter=".user-interface" class="wow fadeInUp" data-wow-duration="0.8s" data-wow-delay="0.2s"><span>Web Design</span></li>
-                                <li data-filter=".branding" class="wow fadeInUp" data-wow-duration="0.8s" data-wow-delay="0.3s"><span>Branding</span></li>
-                                <li data-filter=".mockup" class="wow fadeInUp" data-wow-duration="0.8s" data-wow-delay="0.4s"><span>Mockups</span></li>
-                                <li data-filter=".ui" class="wow fadeInUp" data-wow-duration="0.8s" data-wow-delay="0.5s"><span>Photography</span></li>
-                            </ul>
-                        </div>
-                        <div class="mh-project-gallery col-sm-12 wow fadeInUp" id="project-gallery" data-wow-duration="0.8s" data-wow-delay="0.5s">
-                            <div class="portfolioContainer row">
-                                <div class="grid-item col-md-4 col-sm-6 col-xs-12 user-interface">
-                                    <figure>
-                                        <img src="assets/images/portfolio/g1.jpg" alt="img04">
-                                        <figcaption class="fig-caption">
-                                            <i class="fa fa-search"></i>
-                                            <h5 class="title">Creative Design</h5>
-                                            <span class="sub-title">Photograpy</span>
-                                            <a data-fancybox data-src="#mh"></a>
-                                        </figcaption>
-                                    </figure>
-                                </div>
-                                <div class="grid-item col-md-4 col-sm-6 col-xs-12 ui mockup">
-                                    <figure>
-                                        <img src="assets/images/portfolio/g2.png" alt="img04">
-                                        <figcaption class="fig-caption">
-                                            <i class="fa fa-search"></i>
-                                            <h5 class="title">Creative Design</h5>
-                                            <span class="sub-title">Photograpy</span>
-                                            <a href="assets/images/portfolio/g2.png" data-fancybox data-src="#mh"></a>
-                                        </figcaption>
-                                    </figure>
-                                </div>
-                                <div class="grid-item col-md-4 col-sm-6 col-xs-12 user-interface">
-                                    <figure>
-                                        <img src="assets/images/portfolio/g3.png" alt="img04">
-                                        <figcaption class="fig-caption">
-                                            <i class="fa fa-search"></i>
-                                            <h5 class="title">Creative Design</h5>
-                                            <span class="sub-title">Photograpy</span>
-                                            <a href="assets/images/portfolio/g3.png" data-fancybox data-src="#mh"></a>
-                                        </figcaption>
-                                    </figure>
-                                </div>
-                                <div class="grid-item col-md-4 col-sm-6 col-xs-12 branding">
-                                    <figure>
-                                        <img src="assets/images/portfolio/g5.png" alt="img04">
-                                        <figcaption class="fig-caption">
-                                            <i class="fa fa-search"></i>
-                                            <h5 class="title">Creative Design</h5>
-                                            <span class="sub-title">Photograpy</span>
-                                            <a href="assets/images/portfolio/g5.png" data-fancybox data-src="#mh"></a>
-                                        </figcaption>
-                                    </figure>
-                                </div>
-                                <div class="grid-item col-md-4 col-sm-6 col-xs-12 user-interface">
-                                    <figure>
-                                        <img src="assets/images/portfolio/g4.png" alt="img04">
-                                        <figcaption class="fig-caption">
-                                            <i class="fa fa-search"></i>
-                                            <h5 class="title">Creative Design</h5>
-                                            <span class="sub-title">Photograpy</span>
-                                            <a href="assets/images/portfolio/g4.png" data-fancybox data-src="#mh"></a>
-                                        </figcaption>
-                                    </figure>
-                                </div>
-                                <div class="grid-item col-md-4 col-sm-6 col-xs-12 branding">
-                                    <figure>
-                                        <img src="assets/images/portfolio/g6.png" alt="img04">
-                                        <figcaption class="fig-caption">
-                                            <i class="fa fa-search"></i>
-                                            <h5 class="title">Creative Design</h5>
-                                            <span class="sub-title">Photograpy</span>
-                                            <a href="assets/images/portfolio/g6.png" data-fancybox data-src="#mh"></a>
-                                        </figcaption>
-                                    </figure>
-                                </div>
-                                <div class="grid-item col-md-4 col-sm-6 col-xs-12 branding">
-                                    <figure>
-                                        <img src="assets/images/portfolio/g8.png" alt="img04">
-                                        <figcaption class="fig-caption">
-                                            <i class="fa fa-search"></i>
-                                            <h5 class="title">Creative Design</h5>
-                                            <span class="sub-title">Photograpy</span>
-                                            <a href="assets/images/portfolio/g8.png" data-fancybox data-src="#mh"></a>
-                                        </figcaption>
-                                    </figure>
-                                </div>
-                                <div class="grid-item col-md-4 col-sm-6 col-xs-12 ui">
-                                    <figure>
-                                        <img src="assets/images/portfolio/g9.png" alt="img04">
-                                        <figcaption class="fig-caption">
-                                            <i class="fa fa-search"></i>
-                                            <h5 class="title">Creative Design</h5>
-                                            <span class="sub-title">Photograpy</span>
-                                            <a href="assets/images/portfolio/g9.png" data-fancybox data-src="#mh"></a>
-                                        </figcaption>
-                                    </figure>
-                                </div>
-                                <div class="grid-item col-md-4 col-sm-6 col-xs-12 branding">
-                                    <figure>
-                                        <img src="assets/images/portfolio/g7.jpg" alt="img04">
-                                        <figcaption class="fig-caption">
-                                            <i class="fa fa-search"></i>
-                                            <h5 class="title">Creative Design</h5>
-                                            <span class="sub-title">Photograpy</span>
-                                            <a href="assets/images/portfolio/g7.jpg" data-fancybox="gallery"></a>
-                                        </figcaption>
-                                    </figure>
-                                </div>
-                            </div> <!-- End: .grid .project-gallery -->
-                        </div> <!-- End: .grid .project-gallery -->
-                    </div> <!-- End: .part -->
-                </div> <!-- End: .row -->
-            </div>
-            <div class="mh-portfolio-modal" id="mh">
-                <div class="container">
-                    <div class="row mh-portfolio-modal-inner">
-                        <div class="col-sm-5">
-                            <h2>Wrap - A campanion plugin</h2>
-                            <p>Wrap is a clean and elegant Multipurpose Landing Page Template. 
-                            It will fit perfectly for Startup, Web App or any type of Web Services.
-                            It has 4 background styles with 6 homepage styles. 6 pre-defined color scheme. 
-                            All variations are organized separately so you can use / customize the template very easily.</p>       
-                            
-                            <p>It is a clean and elegant Multipurpose Landing Page Template. 
-                            It will fit perfectly for Startup, Web App or any type of Web Services.
-                            It has 4 background styles with 6 homepage styles. 6 pre-defined color scheme. 
-                            All variations are organized separately so you can use / customize the template very easily.</p>      
-                            <div class="mh-about-tag">
-                                <ul>
-                                    <li><span>php</span></li>
-                                    <li><span>html</span></li>
-                                    <li><span>css</span></li>
-                                    <li><span>php</span></li>
-                                    <li><span>wordpress</span></li>
-                                    <li><span>React</span></li>
-                                    <li><span>Javascript</span></li>
-                                </ul>
-                            </div>
-                            <a href="" class="btn btn-fill">Live Demo</a>
-                        </div>
-                        <div class="col-sm-7">
-                            <div class="mh-portfolio-modal-img">
-                                <img src="assets/images/pr-0.jif" alt="" class="img-fluid">
-                                <p>All variations are organized separately so you can use / customize the template very easily.</p>    
-                                <img src="assets/images/pr-1.jif" alt="" class="img-fluid">
-                                <p>All variations are organized separately so you can use / customize the template very easily.</p>     
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-        
-        <!--
-        ===================
-           QUATES
-        ===================
-        -->
-        <section class="mh-quates image-bg home-2-img">
-            <div class="img-color-overlay">
-                <div class="container">
-                    <div class="row section-separator">
-                        <div class="each-quates col-sm-12 col-md-6">
-                            <h3 class="wow fadeInUp" data-wow-duration="0.8s" data-wow-delay="0.2s">Interested to Work?</h3>
-                            <p class="wow fadeInUp" data-wow-duration="0.8s" data-wow-delay="0.4s">Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat. Mirum est notare quam littera gothica.
-                            quam nunc putamus parum claram,</p>
-                            <a href="#mh-contact" class="btn btn-fill wow fadeInUp" data-wow-duration="0.8s" data-wow-delay="0.5s">Contact</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-        
-        <!--
-        ===================
-           BLOG
-        ===================
-        -->
-        <section class="mh-blog image-bg featured-img-two" id="mh-blog">
-            <div class="img-color-overlay">
-                <div class="container">
-                    <div class="row section-separator">
-                        <div class="col-sm-12 section-title wow fadeInUp" data-wow-duration="0.8s" data-wow-delay="0.2s">
-                            <h3>Featured Posts</h3>
-                        </div>
-                        <div class="col-sm-12 col-md-4">
-                             <div class="mh-blog-item dark-bg wow fadeInUp" data-wow-duration="0.8s" data-wow-delay="0.3s">
-                                <img src="assets/images/b-3.png" alt="" class="img-fluid">
-                                <div class="blog-inner">
-                                    <h2><a href="blog-single.html">A life without the daily traffic jams</a></h2>
-                                    <div class="mh-blog-post-info">
-                                        <ul>
-                                            <li><strong>Post On</strong><a href="">24.11.19</a></li>
-                                            <li><strong>By</strong><a href="">ThemeSpiders</a></li>
-                                        </ul>
-                                    </div>
-                                    <p>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout</p>
-                                    <a href="blog-single.html">Read More</a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-sm-12 col-md-4">
-                            <div class="mh-blog-item dark-bg wow fadeInUp" data-wow-duration="0.8s" data-wow-delay="0.5s">
-                                <img src="assets/images/b-2.png" alt="" class="img-fluid">
-                                <div class="blog-inner">
-                                    <h2><a href="blog-single.html">Proportion are what’s really needed</a></h2>
-                                    <div class="mh-blog-post-info">
-                                        <ul>
-                                            <li><strong>Post On</strong><a href="">24.11.19</a></li>
-                                            <li><strong>By</strong><a href="">ThemeSpiders</a></li>
-                                        </ul>
-                                    </div>
-                                    <p>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout</p>
-                                    <a href="blog-single.html">Read More</a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-sm-12 col-md-4">
-                            <div class="mh-blog-item dark-bg wow fadeInUp" data-wow-duration="0.8s" data-wow-delay="0.7s">
-                                <img src="assets/images/b-1.png" alt="" class="img-fluid">
-                                <div class="blog-inner">
-                                    <h2><a href="blog-single.html">Mounts of paper work to remember the way</a></h2>
-                                    <div class="mh-blog-post-info">
-                                        <ul>
-                                            <li><strong>Post On</strong><a href="">24.11.19</a></li>
-                                            <li><strong>By</strong><a href="">ThemeSpiders</a></li>
-                                        </ul>
-                                    </div>
-                                    <p>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout</p>
-                                    <a href="blog-single.html">Read More</a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section> 
-        
-        <!--
-        ===================
-           Testimonial
-        ===================
-        -->
-        <section class="mh-testimonial" id="mh-testimonial">
-            <div class="home-v-img">
-                <div class="container">
-                    <div class="row section-separator">
-                        <div class="col-sm-12 section-title wow fadeInUp" data-wow-duration="0.8s" data-wow-delay="0.2s">
-                            <h3>Client Reviews</h3>
-                        </div>
-                        <div class="col-sm-12 wow fadeInUp" id="mh-client-review" data-wow-duration="0.8s" data-wow-delay="0.3s">
-                            <div class="each-client-item">
-                                <div class="mh-client-item dark-bg black-shadow-1">
-                                    <img src="assets/images/c-1.png" alt="" class="img-fluid">
-                                    <p>Absolute wonderful ! I am completely
-                                    blown away.The very best.I was amazed
-                                    at the quality</p>
-                                    <h4>John Mike</h4>
-                                    <span>CEO, Author.Inc</span>
-                                </div>
-                            </div>
-                            <div class="each-client-item">
-                                <div class="mh-client-item dark-bg black-shadow-1">
-                                    <img src="assets/images/c-1.png" alt="" class="img-fluid">
-                                    <p>Absolute wonderful ! I am completely
-                                    blown away.The very best.I was amazed
-                                    at the quality</p>
-                                    <h4>John Mike</h4>
-                                    <span>CEO, Author.Inc</span>
-                                </div>
-                            </div>                    
-                            
-                            <div class="each-client-item">
-                                <div class="mh-client-item dark-bg black-shadow-1">
-                                    <img src="assets/images/c-1.png" alt="" class="img-fluid">
-                                    <p>Absolute wonderful ! I am completely
-                                    blown away.The very best.I was amazed
-                                    at the quality</p>
-                                    <h4>John Mike</h4>
-                                    <span>CEO, Author.Inc</span>
-                                </div>
-                            </div>
-                            <div class="each-client-item">
-                                <div class="mh-client-item dark-bg black-shadow-1">
-                                    <img src="assets/images/c-1.png" alt="" class="img-fluid">
-                                    <p>Absolute wonderful ! I am completely
-                                    blown away.The very best.I was amazed
-                                    at the quality</p>
-                                    <h4>John Mike</h4>
-                                    <span>CEO, Author.Inc</span>
-                                </div>
-                            </div>
-                            <div class="each-client-item">
-                                <div class="mh-client-item dark-bg black-shadow-1">
-                                    <img src="assets/images/c-1.png" alt="" class="img-fluid">
-                                    <p>Absolute wonderful ! I am completely
-                                    blown away.The very best.I was amazed
-                                    at the quality</p>
-                                    <h4>John Mike</h4>
-                                    <span>CEO, Author.Inc</span>
-                                </div>
-                            </div>                    
-                            
-                            <div class="each-client-item">
-                                <div class="mh-client-item dark-bg black-shadow-1">
-                                    <img src="assets/images/c-1.png" alt="" class="img-fluid">
-                                    <p>Absolute wonderful ! I am completely
-                                    blown away.The very best.I was amazed
-                                    at the quality</p>
-                                    <h4>John Mike</h4>
-                                    <span>CEO, Author.Inc</span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-        
-        <!--
-        ===================
-           FOOTER 3
-        ===================
-        -->
-        <footer class="mh-footer mh-footer-3">
-            <div class="container-fluid">
-                <div class="row section-separator">
-                    <div class="col-sm-12 section-title wow fadeInUp" data-wow-duration="0.8s" data-wow-delay="0.2s">
-                        <h3>Contact Me</h3>
-                    </div>
-                    <div class="map-image image-bg col-sm-12">
-                        <div class="container mt-30">
-                            <div class="row">
-                                <div class="col-sm-12 col-md-6 mh-footer-address">
-                                    <div class="col-sm-12 xs-no-padding">
-                                        <div class="mh-address-footer-item dark-bg shadow-1 media wow fadeInUp" data-wow-duration="0.8s" data-wow-delay="0.2s">
-                                            <div class="each-icon">
-                                                <i class="fa fa-location-arrow"></i>
-                                            </div>
-                                            <div class="each-info media-body">
-                                                <h4>Address</h4>
-                                                <address>
-                                                    5th Avenue, 34th floor, <br> 
-                                                     New york
-                                                </address>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="col-sm-12 xs-no-padding">
-                                        <div class="mh-address-footer-item media dark-bg shadow-1 wow fadeInUp" data-wow-duration="0.8s" data-wow-delay="0.4s">
-                                            <div class="each-icon">
-                                                <i class="fa fa-envelope-o"></i>
-                                            </div>
-                                            <div class="each-info media-body">
-                                                <h4>Email</h4>
-                                                <a href="mailto:yourmail@email.com">yourmail@email.com</a><br>
-                                                <a href="mailto:yourmail@email.com">yourmail@email.com</a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="col-sm-12 xs-no-padding">
-                                        <div class="mh-address-footer-item media dark-bg shadow-1 wow fadeInUp" data-wow-duration="0.8s" data-wow-delay="0.6s">
-                                            <div class="each-icon">
-                                                <i class="fa fa-phone"></i>
-                                            </div>
-                                            <div class="each-info media-body">
-                                                <h4>Phone</h4>
-                                                <a href="callto:(880)-8976-987">(880)-8976-987</a><br>
-                                                <a href="callto:(880)-8976-987">(880)-8976-987</a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-sm-12 col-md-6 wow fadeInUp" data-wow-duration="0.8s" data-wow-delay="0.2s">
-                                    <form id="contactForm" class="single-form quate-form wow fadeInUp" data-toggle="validator">
-                                        <div id="msgSubmit" class="h3 text-center hidden"></div>
-                                        <div class="row">
-                                            <div class="col-sm-12">
-                                                <input name="name" class="contact-name form-control" id="name" type="text" placeholder="First Name" required>
-                                            </div>
-                
-                                            <div class="col-sm-12">
-                                                <input name="name" class="contact-email form-control" id="L_name" type="text" placeholder="Last Name" required>
-                                            </div>
-                
-                                            <div class="col-sm-12">
-                                                <input name="name" class="contact-subject form-control" id="email" type="email" placeholder="Your Email" required>
-                                            </div>
-                
-                                            <div class="col-sm-12">
-                                                <textarea class="contact-message" id="message" rows="6" placeholder="Your Message" required></textarea>
-                                            </div>
-                                            
-                                            <!-- Subject Button -->
-                                            <div class="btn-form col-sm-12">
-                                                <button type="submit" class="btn btn-fill btn-block" id="form-submit">Send Message</button>
-                                            </div>
-                                        </div>
-                                    </form>
-                                </div>
-                                <div class="col-sm-12 mh-copyright wow fadeInUp" data-wow-duration="0.8s" data-wow-delay="0.2s">
-                                    <div class="row">
-                                        <div class="col-sm-6">
-                                            <div class="text-left text-xs-center">
-                                                <p>All right reserved Siful Islam @ 2018</p>
-                                            </div>
-                                        </div>
-                                        <div class="col-sm-6">
-                                            <ul class="social-icon">
-                                                <li><a href=""><i class="fa fa-facebook"></i></a></li>
-                                                <li><a href=""><i class="fa fa-twitter"></i></a></li>
-                                                <li><a href=""><i class="fa fa-github"></i></a></li>
-                                                <li><a href=""><i class="fa fa-dribbble"></i></a></li>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </footer>
-
-    <!--
-    ==============
-    * JS Files *
-    ==============
-    -->
+        </div>
+    </section>
+    <!-- ==========================
+    	SHOWCASE - END 
+    =========================== -->
     
-    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <!-- ==========================
+    	QUOTES - START
+    =========================== -->   
+    <section id="quotes" class="content-first">
+        <div class="container">
+            <div class="row scrollpoint sp-effect3">
+                <div class="col-sm-8 col-sm-offset-2">
+                    <blockquote class="blockquote-reverse">
+                        <p><i class="fa fa-quote-left"></i> Design is not just what it looks like and feels like. Design is how it works.</p>
+                        <footer> Steve Jobs</footer>
+                    </blockquote>
+                </div>   	
+            </div>
+        </div>
+    </section>
+    <!-- ==========================
+    	QUOTES - END 
+    =========================== -->
     
-    <!-- jQuery -->
-    <script src="assets/plugins/js/jquery.min.js"></script>
-    <!-- popper -->
-    <script src="assets/plugins/js/popper.min.js"></script>
-    <!-- bootstrap -->
-    <script src="assets/plugins/js/bootstrap.min.js"></script>
-    <!-- owl carousel -->
-    <script src="assets/plugins/js/owl.carousel.js"></script>
-    <!-- validator -->
-    <script src="assets/plugins/js/validator.min.js"></script>
-    <!-- wow -->
-    <script src="assets/plugins/js/wow.min.js"></script>
-    <!-- mixin js-->
-    <script src="assets/plugins/js/jquery.mixitup.min.js"></script>
-    <!-- circle progress-->
-    <script src="assets/plugins/js/circle-progress.js"></script>
-    <!-- jquery nav -->
-    <script src="assets/plugins/js/jquery.nav.js"></script>
-    <!-- Fancybox js-->
-    <script src="assets/plugins/js/jquery.fancybox.min.js"></script>
-    <!-- Map api -->
-    <!-- <script src="//maps.googleapis.com/maps/api/js?v=3.exp&amp;key=AIzaSyCRP2E3BhaVKYs7BvNytBNumU0MBmjhhxc"></script> -->
-    <!-- isotope js-->
-    <script src="assets/plugins/js/isotope.pkgd.js"></script>
-    <script src="assets/plugins/js/packery-mode.pkgd.js"></script>
-    <!-- Custom Scripts-->
-    <!-- <script src="assets/js/map-init.js"></script> -->
-    <script src="assets/js/custom-scripts.js"></script>
+    <!-- ==========================
+    	REFERENCE - START
+    =========================== -->
+    <section id="reference" class="content-second">
+        <h2 class="scrollpoint sp-effect3">Reference</h2>
+        <p class="scrollpoint sp-effect3">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce in turpis quam. Nulla quis eleifend lectus.</p> 
+   		<ul class="grid cs-style-4">
+				<li>
+					<figure class="scrollpoint sp-effect1">
+						<div><img src="image/ref1.png" alt="img04"></div>
+						<figcaption>
+							<h3>Lorem ipsum</h3>
+							<a href="portfolio.html">Show me</a>
+						</figcaption>
+					</figure>
+				</li>
+                
+                <li>
+					<figure class="scrollpoint sp-effect3">
+						<div><img src="image/ref2.png" alt="img04"></div>
+						<figcaption>
+							<h3>Lorem ipsum</h3>
+							<a href="portfolio.html">Show me</a>
+						</figcaption>
+					</figure>
+				</li>
+                
+                <li>
+					<figure class="scrollpoint sp-effect2">
+						<div><img src="image/ref3.png" alt="img04"></div>
+						<figcaption>
+							<h3>Lorem ipsum</h3>
+							<a href="portfolio.html">Show me</a>
+						</figcaption>
+					</figure>
+				</li>
+                
+                <li>
+					<figure class="scrollpoint sp-effect1">
+						<div><img src="image/ref4.png" alt="img04"></div>
+						<figcaption>
+							<h3>Lorem ipsum</h3>
+							<a href="portfolio.html">Show me</a>
+						</figcaption>
+					</figure>
+				</li>
+                
+                <li>
+					<figure class="scrollpoint sp-effect3">
+						<div><img src="image/ref5.png" alt="img04"></div>
+						<figcaption>
+							<h3>Lorem ipsum</h3>
+							<a href="portfolio.html">Show me</a>
+						</figcaption>
+					</figure>
+				</li>
+                
+                <li>
+					<figure class="scrollpoint sp-effect2">
+						<div><img src="image/ref6.png" alt="img04"></div>
+						<figcaption>
+							<h3>Lorem ipsum</h3>
+							<a href="portfolio.html">Show me</a>
+						</figcaption>
+					</figure>
+				</li>
+				
+			</ul>
+    
+	</section>
+    <!-- ==========================
+    	REFERENCE - END 
+    =========================== -->
+    
+    <!-- ==========================
+    	BLOG - START
+    =========================== -->   
+    <section id="blog" class="content-first">
+    	<div class="container">
+        	<h2 class="scrollpoint sp-effect3">Latest Blog Posts</h2>
+        	<p class="scrollpoint sp-effect3">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce in turpis quam. Nulla quis eleifend lectus.</p> 
+        </div>
+            
+        <div class="line hidden-xs">
+        	<div class="container">
+                <div class="row">
+                    <div class="col-sm-4"><i class="fa fa-bullhorn"></i></div>
+                    <div class="col-sm-4"><i class="fa fa-bullhorn"></i></div>
+                    <div class="col-sm-4"><i class="fa fa-bullhorn"></i></div>
+                </div>
+            </div>
+        </div>
+		
+        <div class="container">
+            <div class="row"><!-- MAIN ROW - Start -->
+            	<!-- BLOG POST - Start -->
+                <div class="col-sm-4 scrollpoint sp-effect1">
+                	<div class="blog-post">
+                    	<div class="blog-body">
+                    		<h3>Lorem Ipsum</h3>
+                        	<p>At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum. At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum</p>
+                        	<a href="blog.html" class="btn btn-primary">Read More</a>
+                        </div>
+                        <div class="blog-info">
+                        	<a><i class="fa fa-comment"></i> 352</a>
+                            <a><i class="fa fa-calendar"></i> 21/03/2014</a>
+                            <a href="#"><i class="fa fa-facebook"></i></a>
+							<a href="#"><i class="fa fa-twitter"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <!-- BLOG POST - End -->
+                
+                <!-- BLOG POST - Start -->
+                <div class="col-sm-4 scrollpoint sp-effect3">
+                	<div class="blog-post">
+                    	<div class="blog-body">
+                    		<h3>Lorem Ipsum</h3>
+                        	<p>At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum. At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum</p>
+                        	<a href="blog.html" class="btn btn-primary">Read More</a>
+                        </div>
+                        <div class="blog-info">
+                        	<a><i class="fa fa-comment"></i> 352</a>
+                            <a><i class="fa fa-calendar"></i> 21/03/2014</a>
+                            <a href="#"><i class="fa fa-facebook"></i></a>
+							<a href="#"><i class="fa fa-twitter"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <!-- BLOG POST - End -->
+                
+                <!-- BLOG POST - Start -->
+                <div class="col-sm-4 scrollpoint sp-effect2">
+                	<div class="blog-post">
+                    	<div class="blog-body">
+                    		<h3>Lorem Ipsum</h3>
+                        	<p>At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum. At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum</p>
+                        	<a href="blog.html" class="btn btn-primary">Read More</a>
+                        </div>
+                        <div class="blog-info">
+                        	<a><i class="fa fa-comment"></i> 352</a>
+                            <a><i class="fa fa-calendar"></i> 21/03/2014</a>
+                            <a href="#"><i class="fa fa-facebook"></i></a>
+							<a href="#"><i class="fa fa-twitter"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <!-- BLOG POST - End -->
+                
+            </div><!-- MAIN ROW - end -->
+        </div><!-- CONTAINER - end -->
+    </section>
+    <!-- ==========================
+    	BLOG - END 
+    =========================== --> 
+       
+    <!-- ==========================
+    	PRICING - START
+    =========================== -->   
+    <section id="pricing" class="content-second">
+        <div class="container">
+        	<h2 class="scrollpoint sp-effect3">Pricing plans</h2>
+        	<p class="scrollpoint sp-effect3">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce in turpis quam. Nulla quis eleifend lectus.</p> 
+            <div class="row">
+            <!-- PRICING TABLE FIRST - start --> 
+                <div class="col-sm-4 scrollpoint sp-effect1"><!-- PRICING TABLE FIRST - start -->  
+                    <div class="pricing-table"><!-- Pricing table - start --> 
+                        <div class="pricing-headline">
+                        	<h3>Lite</h3>
+                            <div class="prize">$99</div>
+                        </div>
+                        
+                        <ul class="list-unstyled">
+                            <li><strong>150</strong> Lorem Ipsum</li>
+                            <li><i class="fa fa-check"></i> Lorem Ipsum</li>
+                            <li><i class="fa fa-times"></i> Lorem Ipsum</li>
+                            <li><strong>150</strong> Lorem Ipsum</li>
+                        </ul>
+                        
+                        <div class="btn-wrapper">
+                        <a class="btn btn-primary">Order</a>
+                        </div>
+                        
+                        
+                    </div><!-- Pricing table - end-->      
+           		</div><!-- COL-SM-4 - end --> 
+                  
+            	<div class="col-sm-4 scrollpoint sp-effect3"><!-- PRICING TABLE FIRST - start -->  
+                    <div class="pricing-table active"><!-- Pricing table - start --> 
+                        <div class="pricing-headline">
+                        	<h3>Standard</h3>
+                            <div class="prize">$150</div>
+                        </div>
+                        
+                        <ul class="list-unstyled">
+                            <li><strong>150</strong> Lorem Ipsum</li>
+                            <li><i class="fa fa-check"></i> Lorem Ipsum</li>
+                            <li><i class="fa fa-times"></i> Lorem Ipsum</li>
+                            <li><strong>150</strong> Lorem Ipsum</li>
+                        </ul>
+                        
+                        <div class="btn-wrapper">
+                        <a class="btn btn-primary">Order</a>
+                        </div>
+                        
+                        
+                    </div><!-- Pricing table - end-->      
+           		</div><!-- COL-SM-4 - end --> 
+                
+                <div class="col-sm-4 scrollpoint sp-effect2"><!-- PRICING TABLE FIRST - start -->  
+                    <div class="pricing-table"><!-- Pricing table - start --> 
+                        <div class="pricing-headline">
+                        	<h3>Premium</h3>
+                            <div class="prize">$350</div>
+                        </div>
+                        
+                        <ul class="list-unstyled">
+                            <li><strong>150</strong> Lorem Ipsum</li>
+                            <li><i class="fa fa-check"></i> Lorem Ipsum</li>
+                            <li><i class="fa fa-times"></i> Lorem Ipsum</li>
+                            <li><strong>150</strong> Lorem Ipsum</li>
+                        </ul>
+                        
+                        <div class="btn-wrapper">
+                        <a class="btn btn-primary">Order</a>
+                        </div>
+                        
+                        
+                    </div><!-- Pricing table - end-->      
+           		</div><!-- COL-SM-4 - end -->   
+            
+            </div>
+        </div>
+    </section>
+    <!-- ==========================
+    	PRICING - END 
+    =========================== -->
+    
+    <!-- ==========================
+    	TESTIMONIALS - START
+    =========================== -->   
+    <section id="testimonials" class="content-first">
+        <div class="container">
+        	<h2 class="scrollpoint sp-effect3 text-center">Testimonials</h2>
+        	<p class="scrollpoint sp-effect3 text-center">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce in turpis quam. Nulla quis eleifend lectus.</p> 
+            <div class="row">
+            	
+                <!-- TESTIMONIAL 1 - START -->
+                <div class="col-sm-6 scrollpoint sp-effect1">
+                    <div class="media">
+                        <a class="pull-left" href="#"><img class="media-object img-circle" src="image/tom.png" alt=""></a>
+                        <div class="media-body">
+                            <h4 class="media-heading">John Doe</h4>
+                            <span>Webdesigner</span>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent sed volutpat est. Donec lobortis interdum volutpat. Maecenas bibendum dui quis pharetra tincidunt. Praesent posuere eu velit at scelerisque.</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- TESTIMONIAL 1 - END -->
+                
+                <!-- TESTIMONIAL 2 - START -->
+                <div class="col-sm-6 scrollpoint sp-effect2">
+                    <div class="media">
+                        <a class="pull-left" href="#"><img class="media-object img-circle" src="image/suzanne.png" alt=""></a>
+                        <div class="media-body">
+                            <h4 class="media-heading">John Doe</h4>
+                            <span>Webdesigner</span>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent sed volutpat est. Donec lobortis interdum volutpat. Maecenas bibendum dui quis pharetra tincidunt. Praesent posuere eu velit at scelerisque.</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- TESTIMONIAL 2 - END -->
+                
+            </div>
+            
+        </div>
+    </section>
+    <!-- ==========================
+    	TESTIMONIALS - END 
+    =========================== -->
+    
+    <!-- ==========================
+    	CONTACT - START
+    =========================== -->   
+    <section id="contact" class="content-first">
+        <div class="container">
+        	<h2 class="scrollpoint sp-effect3">Contact me</h2>
+            <div class="contact-alert">
+            </div>
+            <div class="row">
+            <!-- PRICING TABLE FIRST - start --> 
+                <div class="col-sm-12">
+                	<img src="image/macbook.png" class="img-responsive hidden-xs" alt="">
+                    
+                    <div class="macbook-inner black">
+                    	<div class="row scrollpoint sp-effect4">
+                        	<div class="col-sm-8">
+                            	<h3 class="hidden-xs">Leave a message</h3>
+                                
+                                <form role="form" id="contactForm">
+
+                                    <div class="form-group control-group">
+                                        <div class="controls">
+                                            <p class="help-block"></p>
+                                            <input type="text" class="form-control" placeholder="First Name" id="firstname" data-validation-required-message="Please enter your first name." aria-invalid="false">
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="form-group control-group">
+                                        <div class="controls">
+                                            <p class="help-block"></p>
+                                            <input type="text" class="form-control" placeholder="Last Name" id="lastname" data-validation-required-message="Please enter your last name." aria-invalid="false">
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="form-group control-group">
+                                        <div class="controls">
+                                            <p class="help-block"></p>
+                                            <input type="email" class="form-control" placeholder="Email" id="email" data-validation-required-message="Please enter your email address." aria-invalid="false">
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="form-group control-group">
+                                        <div class="controls">
+                                            <p class="help-block"></p>
+                                            <textarea class="form-control" placeholder="Message" id="message" data-validation-required-message="Please enter some message." aria-invalid="false"></textarea>
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="form-group">
+                                        <button type="submit" class="btn btn-primary">Send message</button>
+                                    </div>
+                                </form>
+                                
+                            </div>
+                            <div class="col-sm-4">
+                            
+                            <img src="image/jonathan.png" class="contact-image image-responsive hidden-xs hidden-sm" alt="" />
+                            	<div class="contact-info">
+                                	<p>John Doe</p>
+                                    <p>795 Folsom Ave, Suite 600</p>
+                                    <p>San Francisco, CA 94107</p>
+                                    <p>123-456-7890</p>
+                                </div>
+                            </div>
+                    	</div>
+                    </div>
+                    
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- ==========================
+    	CONTACT - END 
+    =========================== -->
+    
+    <!-- ==========================
+    	FOOTER - START
+    =========================== -->   
+    <section id="footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-12 scrollpoint sp-effect3">
+                
+               			<ul class="brands brands-inline">
+                            <li><a href="#"><i class="fa fa-facebook  hi-icon-effect-8"></i></a></li>
+                            <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+                            <li><a href="#"><i class="fa fa-google-plus"></i></a></li>
+                            <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
+                        </ul>  
+                    
+                    <p>© John Doe The Freelancer 2014 All right reserved. Designed by <a href="http://pixelized.cz" target="_blank" class="btn btn-footer">Pixelized Studio</a></p>
+                </div>   	
+            </div>
+        </div>
+    </section>
+    <!-- ==========================
+    	FOOTER - END 
+    =========================== -->
+    
+    <!-- ==========================
+    	JS 
+    =========================== -->
+	<script src="http://code.jquery.com/jquery-latest.min.js"></script>
+	<script src="js/bootstrap.min.js"></script>
+    <script src="js/jquery.magnific-popup.min.js"></script>
+    <script src="js/creative-brands.js"></script>
+    <script src="js/jquery.easy-pie-chart.js"></script>
+    <script src="js/modernizr.custom.js"></script>
+    <script src="js/waypoints.min.js"></script>
+    <script src="js/jquery.countTo.js"></script>
+    <script src="js/jqBootstrapValidation.js"></script>
+    <script src="js/custom.js"></script>
+    <script>
+    $(function () { 
+		$("input,textarea").jqBootstrapValidation({
+        	preventSubmit: true,
+			
+			submitSuccess: function($form, event) {
+				event.preventDefault(); // prevent default submit behaviour
+				// get values from FORM
+				var firstname = $("input#firstname").val();
+				var lastname = $("input#lastname").val();
+				var email = $("input#email").val();
+				var message = $("textarea#message").val();
+	
+				$.ajax({
+					url: "send.php",
+					type: "POST",
+					data: {
+						firstname: firstname,
+						lastname: lastname,
+						email: email,
+						message: message
+					},
+					cache: false,
+					success: function() {
+						// Success message
+						$('.contact-alert').html("<div class='alert alert-success'>");
+						$('.contact-alert > .alert-success').html("<button type='button' class='close' data-dismiss='alert' aria-hidden='true'><i class='fa fa-times'></i></button><strong>Your message has been sent.</strong></div>");
+						//clear all fields
+						$('#contactForm').trigger("reset");
+					},
+					error: function() {
+						// Fail message
+						$('.contact-alert').html("<div class='alert alert-danger'>");
+						$('.contact-alert > .alert-danger').html("<button type='button' class='close' data-dismiss='alert' aria-hidden='true'><i class='fa fa-times'></i></button><strong>Sorry, it seems that my mail server is not responding. Please try again later!</strong></div>");
+						//clear all fields
+						$('#contactForm').trigger("reset");
+					},
+				})
+			}
+		});
+	});
+    </script>
 </body>
 </html>
