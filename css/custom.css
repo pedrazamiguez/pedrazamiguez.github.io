@@ -672,6 +672,10 @@ header {
 	padding-top: 2px;
 }
 
+.event .life:after {
+	background-color: #ED5A64;
+}
+
 .event .event-icon-flag:after {
 	content: "\f024";
 }
@@ -698,6 +702,22 @@ header {
 
 .event .event-icon-graduation-cap:after {
 	content: "\f19d";
+}
+
+.event .event-icon-child:after {
+	content: "\f1ae";
+}
+
+.event .event-icon-married:after {
+	content: "\f227";
+}
+
+.event .event-icon-trophy:after {
+	content: "\f091";
+}
+
+.event .event-icon-home:after {
+	content: "\f015";
 }
 
 .event .event-info .date {
