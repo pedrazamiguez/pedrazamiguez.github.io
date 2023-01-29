@@ -48,6 +48,26 @@ $(document).ready(function () {
 
 	$('#footer-year').text(new Date().getFullYear());
 
+	function monthDiff(dateFrom, dateTo) {
+		return dateTo.getMonth() - dateFrom.getMonth() + 
+			(12 * (dateTo.getFullYear() - dateFrom.getFullYear()));
+	}
+
+	totalMonths = 1 + monthDiff(new Date(2019, 04), new Date());
+	years = Math.floor(totalMonths / 12);
+	months = 1 + (totalMonths % 12);
+	yText = "yrs";
+	mText = "mos";
+	if (1 === years) {
+		yText = "yr";
+	}
+	if (1 === months) {
+		mText = "mo";
+	}
+	timeDiffText = years + " " + yText + " " + months + " " + mText;
+	
+	$('#timedifftext').text(timeDiffText);
+
 	$('#overlay-hide').click(function () {
 		$('#reference .reference-overlay').animate({ opacity: 0 }, 1000);
 		$('#reference-text').animate({ opacity: 0 }, 1000);
