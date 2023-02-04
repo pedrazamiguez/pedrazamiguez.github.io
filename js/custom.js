@@ -53,7 +53,7 @@ $(document).ready(function () {
 			(12 * (dateTo.getFullYear() - dateFrom.getFullYear()));
 	}
 
-	totalMonths = 1 + monthDiff(new Date(2019, 04), new Date());
+	totalMonths = 1 + monthDiff(new Date(2022, 02), new Date());
 	years = Math.floor(totalMonths / 12);
 	months = 1 + (totalMonths % 12);
 	yText = "yrs";

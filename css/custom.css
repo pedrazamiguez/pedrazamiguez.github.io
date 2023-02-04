@@ -716,6 +716,19 @@ header {
 	content: "\f091";
 }
 
+.event .event-icon-plane-up:after {
+	content: "\f072";
+}
+
+.event .event-icon-plane-down:after {
+	content: "\f072";
+	-webkit-transform: rotate(90deg);
+    -moz-transform: rotate(90deg);
+    -ms-transform: rotate(90deg);
+    -o-transform: rotate(90deg);
+    transform: rotate(90deg);
+}
+
 .event .event-icon-home:after {
 	content: "\f015";
 }
