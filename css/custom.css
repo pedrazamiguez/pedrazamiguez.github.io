@@ -4,6 +4,11 @@
  *
  * Freelancer theme v1.1
 ------------------------------*/
+/* Avoid horizontal scroll on mobile */
+body {
+	overflow-x: hidden;
+	position: relative;
+}
 /*------------------------------
 	BLOG
 ------------------------------*/
