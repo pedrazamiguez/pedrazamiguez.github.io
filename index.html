@@ -1,1146 +1,487 @@
 <!DOCTYPE html>
 <html>
-
 <head>
-    <!-- ==========================
-    	Meta Tags 
-    =========================== -->
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>linkedin_improved.md</title>
+<meta http-equiv="Content-type" content="text/html;charset=UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<link rel="stylesheet" href="./style.css" type="text/css">
 
-    <!-- ==========================
-    	Title 
-    =========================== -->
-    <title>Andrés Pedraza Míguez</title>
+<style>
+/* https://github.com/microsoft/vscode/blob/master/extensions/markdown-language-features/media/markdown.css */
+/*---------------------------------------------------------------------------------------------
+ *  Copyright (c) Microsoft Corporation. All rights reserved.
+ *  Licensed under the MIT License. See License.txt in the project root for license information.
+ *--------------------------------------------------------------------------------------------*/
 
-    <!-- ==========================
-    	Favicons 
-    =========================== -->
-    <link rel="shortcut icon" href="icons/favicon.ico">
-    <link rel="apple-touch-icon" href="icons/apple-touch-icon.png">
+body {
+	font-family: var(--vscode-markdown-font-family, -apple-system, BlinkMacSystemFont, "Segoe WPC", "Segoe UI", "Ubuntu", "Droid Sans", sans-serif);
+	font-size: var(--vscode-markdown-font-size, 14px);
+	padding: 0 26px;
+	line-height: var(--vscode-markdown-line-height, 22px);
+	word-wrap: break-word;
+}
 
-    <!-- ==========================
-    	Fonts 
-    =========================== -->
-    <link
-        href='https://fonts.googleapis.com/css?family=Lato:100,300,400,700,900,100italic,300italic,400italic,700italic,900italic'
-        rel='stylesheet' type='text/css'>
-    <link href='https://fonts.googleapis.com/css?family=Lilita+One' rel='stylesheet' type='text/css'>
-    <link href='https://fonts.googleapis.com/css?family=Alegreya+Sans+SC' rel='stylesheet' type='text/css'>
-    <link href='https://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet' type='text/css'>
+#code-csp-warning {
+	position: fixed;
+	top: 0;
+	right: 0;
+	color: white;
+	margin: 16px;
+	text-align: center;
+	font-size: 12px;
+	font-family: sans-serif;
+	background-color:#444444;
+	cursor: pointer;
+	padding: 6px;
+	box-shadow: 1px 1px 1px rgba(0,0,0,.25);
+}
 
+#code-csp-warning:hover {
+	text-decoration: none;
+	background-color:#007acc;
+	box-shadow: 2px 2px 2px rgba(0,0,0,.25);
+}
 
-    <!-- ==========================
-    	CSS 
-    =========================== -->
-    <link href="css/bootstrap.min.css" rel="stylesheet" type="text/css">
-    <link href="css/font-awesome.min.css" rel="stylesheet" type="text/css">
-    <link href="css/animate.css" rel="stylesheet" type="text/css">
-    <link href="css/creative-brands.css" rel="stylesheet" type="text/css">
-    <link href="css/vertical-carousel.css" rel="stylesheet" type="text/css">
-    <link href="css/custom.css" rel="stylesheet" type="text/css">
+body.scrollBeyondLastLine {
+	margin-bottom: calc(100vh - 22px);
+}
 
-    <!-- ==========================
-    	JS 
-    =========================== -->
-    <!--[if lt IE 9]>
-      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
-      <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
-    <![endif]-->
+body.showEditorSelection .code-line {
+	position: relative;
+}
 
+body.showEditorSelection .code-active-line:before,
+body.showEditorSelection .code-line:hover:before {
+	content: "";
+	display: block;
+	position: absolute;
+	top: 0;
+	left: -12px;
+	height: 100%;
+}
+
+body.showEditorSelection li.code-active-line:before,
+body.showEditorSelection li.code-line:hover:before {
+	left: -30px;
+}
+
+.vscode-light.showEditorSelection .code-active-line:before {
+	border-left: 3px solid rgba(0, 0, 0, 0.15);
+}
+
+.vscode-light.showEditorSelection .code-line:hover:before {
+	border-left: 3px solid rgba(0, 0, 0, 0.40);
+}
+
+.vscode-light.showEditorSelection .code-line .code-line:hover:before {
+	border-left: none;
+}
+
+.vscode-dark.showEditorSelection .code-active-line:before {
+	border-left: 3px solid rgba(255, 255, 255, 0.4);
+}
+
+.vscode-dark.showEditorSelection .code-line:hover:before {
+	border-left: 3px solid rgba(255, 255, 255, 0.60);
+}
+
+.vscode-dark.showEditorSelection .code-line .code-line:hover:before {
+	border-left: none;
+}
+
+.vscode-high-contrast.showEditorSelection .code-active-line:before {
+	border-left: 3px solid rgba(255, 160, 0, 0.7);
+}
+
+.vscode-high-contrast.showEditorSelection .code-line:hover:before {
+	border-left: 3px solid rgba(255, 160, 0, 1);
+}
+
+.vscode-high-contrast.showEditorSelection .code-line .code-line:hover:before {
+	border-left: none;
+}
+
+img {
+	max-width: 100%;
+	max-height: 100%;
+}
+
+a {
+	text-decoration: none;
+}
+
+a:hover {
+	text-decoration: underline;
+}
+
+a:focus,
+input:focus,
+select:focus,
+textarea:focus {
+	outline: 1px solid -webkit-focus-ring-color;
+	outline-offset: -1px;
+}
+
+hr {
+	border: 0;
+	height: 2px;
+	border-bottom: 2px solid;
+}
+
+h1 {
+	padding-bottom: 0.3em;
+	line-height: 1.2;
+	border-bottom-width: 1px;
+	border-bottom-style: solid;
+}
+
+h1, h2, h3 {
+	font-weight: normal;
+}
+
+table {
+	border-collapse: collapse;
+}
+
+table > thead > tr > th {
+	text-align: left;
+	border-bottom: 1px solid;
+}
+
+table > thead > tr > th,
+table > thead > tr > td,
+table > tbody > tr > th,
+table > tbody > tr > td {
+	padding: 5px 10px;
+}
+
+table > tbody > tr + tr > td {
+	border-top: 1px solid;
+}
+
+blockquote {
+	margin: 0 7px 0 5px;
+	padding: 0 16px 0 10px;
+	border-left-width: 5px;
+	border-left-style: solid;
+}
+
+code {
+	font-family: Menlo, Monaco, Consolas, "Droid Sans Mono", "Courier New", monospace, "Droid Sans Fallback";
+	font-size: 1em;
+	line-height: 1.357em;
+}
+
+body.wordWrap pre {
+	white-space: pre-wrap;
+}
+
+pre:not(.hljs),
+pre.hljs code > div {
+	padding: 16px;
+	border-radius: 3px;
+	overflow: auto;
+}
+
+pre code {
+	color: var(--vscode-editor-foreground);
+	tab-size: 4;
+}
+
+/** Theming */
+
+.vscode-light pre {
+	background-color: rgba(220, 220, 220, 0.4);
+}
+
+.vscode-dark pre {
+	background-color: rgba(10, 10, 10, 0.4);
+}
+
+.vscode-high-contrast pre {
+	background-color: rgb(0, 0, 0);
+}
+
+.vscode-high-contrast h1 {
+	border-color: rgb(0, 0, 0);
+}
+
+.vscode-light table > thead > tr > th {
+	border-color: rgba(0, 0, 0, 0.69);
+}
+
+.vscode-dark table > thead > tr > th {
+	border-color: rgba(255, 255, 255, 0.69);
+}
+
+.vscode-light h1,
+.vscode-light hr,
+.vscode-light table > tbody > tr + tr > td {
+	border-color: rgba(0, 0, 0, 0.18);
+}
+
+.vscode-dark h1,
+.vscode-dark hr,
+.vscode-dark table > tbody > tr + tr > td {
+	border-color: rgba(255, 255, 255, 0.18);
+}
+
+</style>
+
+<style>
+/* Tomorrow Theme */
+/* http://jmblog.github.com/color-themes-for-google-code-highlightjs */
+/* Original theme - https://github.com/chriskempson/tomorrow-theme */
+
+/* Tomorrow Comment */
+.hljs-comment,
+.hljs-quote {
+	color: #8e908c;
+}
+
+/* Tomorrow Red */
+.hljs-variable,
+.hljs-template-variable,
+.hljs-tag,
+.hljs-name,
+.hljs-selector-id,
+.hljs-selector-class,
+.hljs-regexp,
+.hljs-deletion {
+	color: #c82829;
+}
+
+/* Tomorrow Orange */
+.hljs-number,
+.hljs-built_in,
+.hljs-builtin-name,
+.hljs-literal,
+.hljs-type,
+.hljs-params,
+.hljs-meta,
+.hljs-link {
+	color: #f5871f;
+}
+
+/* Tomorrow Yellow */
+.hljs-attribute {
+	color: #eab700;
+}
+
+/* Tomorrow Green */
+.hljs-string,
+.hljs-symbol,
+.hljs-bullet,
+.hljs-addition {
+	color: #718c00;
+}
+
+/* Tomorrow Blue */
+.hljs-title,
+.hljs-section {
+	color: #4271ae;
+}
+
+/* Tomorrow Purple */
+.hljs-keyword,
+.hljs-selector-tag {
+	color: #8959a8;
+}
+
+.hljs {
+	display: block;
+	overflow-x: auto;
+	color: #4d4d4c;
+	padding: 0.5em;
+}
+
+.hljs-emphasis {
+	font-style: italic;
+}
+
+.hljs-strong {
+	font-weight: bold;
+}
+</style>
+
+<style>
+/*
+ * Markdown PDF CSS
+ */
+
+ body {
+	font-family: -apple-system, BlinkMacSystemFont, "Segoe WPC", "Segoe UI", "Ubuntu", "Droid Sans", sans-serif, "Meiryo";
+	padding: 0 12px;
+}
+
+pre {
+	background-color: #f8f8f8;
+	border: 1px solid #cccccc;
+	border-radius: 3px;
+	overflow-x: auto;
+	white-space: pre-wrap;
+	overflow-wrap: break-word;
+}
+
+pre:not(.hljs) {
+	padding: 23px;
+	line-height: 19px;
+}
+
+blockquote {
+	background: rgba(127, 127, 127, 0.1);
+	border-color: rgba(0, 122, 204, 0.5);
+}
+
+.emoji {
+	height: 1.4em;
+}
+
+code {
+	font-size: 14px;
+	line-height: 19px;
+}
+
+/* for inline code */
+:not(pre):not(.hljs) > code {
+	color: #C9AE75; /* Change the old color so it seems less like an error */
+	font-size: inherit;
+}
+
+/* Page Break : use <div class="page"/> to insert page break
+-------------------------------------------------------- */
+.page {
+	page-break-after: always;
+}
+
+</style>
+
+<script src="https://unpkg.com/mermaid/dist/mermaid.min.js"></script>
 </head>
+<body>
+  <script>
+    mermaid.initialize({
+      startOnLoad: true,
+      theme: document.body.classList.contains('vscode-dark') || document.body.classList.contains('vscode-high-contrast')
+          ? 'dark'
+          : 'default'
+    });
+  </script>
+<br/>
+<h1 id="andr%C3%A9s-pedraza-m%C3%ADguez">Andrés Pedraza Míguez</h1>
+<p><em>Seasoned Java Pro | Turning Ideas into Robust Backend Magic</em></p>
+<h2 id="contact-information">Contact Information</h2>
+<ul>
+<li><strong>Email:</strong> <a href="mailto:pedraza.miguez@gmail.com">pedraza.miguez@gmail.com</a></li>
+<li><strong>LinkedIn:</strong> <a href="https://www.linkedin.com/in/pedrazamiguez/">pedrazamiguez</a></li>
+<li><strong>GitHub:</strong> <a href="https://github.com/pedrazamiguez">pedrazamiguez</a></li>
+<li><strong>Online CV:</strong> <a href="https://pedrazamiguez.github.io">Andrés Pedraza Míguez</a></li>
+<li><strong>Phone:</strong> +34 665 604 912</li>
+</ul>
+<h2 id="professional-summary">Professional Summary</h2>
+<p>Experienced Backend Java Developer with over 13 years of expertise in designing and implementing scalable systems. Specializes in developing robust APIs, managing server deployments for Java applications, and leveraging the Elastic Stack (Elasticsearch, Logstash, Kibana) for monitoring and analytics. Skilled in modern architectures, including hexagonal architecture, and event-driven systems with Kafka. Passionate about delivering reliable solutions and exploring mobile development through personal projects, such as a travel-focused application. Also enthusiastic about AI-powered backend services and cross-functional teamwork to drive continuous product improvement.</p>
+<h2 id="work-experience">Work Experience</h2>
+<h3 id="senior-java-developer-at-plexus-tech"><strong>Senior Java Developer at Plexus Tech</strong></h3>
+<p><em>October 2023 – Present | Seville (Remote)</em></p>
+<ul>
+<li>Participated in internal training programs to stay updated with evolving backend technologies and enterprise practices.</li>
+<li>Took part in technical interviews with Inditex, securing a role in the “Raw Materials” project for Zara’s supply chain.</li>
+<li>Developed and maintained microservices in a Dockerized environment deployed on Azure using Java 21 and Spring Boot (Amiga framework).</li>
+<li>Engineered backend systems using hexagonal architecture and integrated Kafka for event-driven communication.</li>
+<li>Contributed to architectural decisions, estimations, and strategic planning with cross-functional teams.</li>
+<li>Wrote unit and integration tests using JUnit, Mockito, and Traffic Parrot to ensure software stability.</li>
+</ul>
+<p><strong>Main Project: Raw Materials (Inditex)</strong><br>
+A backend-focused initiative to manage the logistics and distribution of raw materials across Zara warehouses, part of a broader digital transformation effort.</p>
+<p><strong>Tech Stack:</strong> Java 21, Spring Boot 3, Amiga Framework, Apache Kafka, Docker, Azure, MongoDB, Git, JUnit, Mockito, Traffic Parrot, RESTful APIs, CI/CD pipelines.</p>
+<hr>
+<h3 id="senior-java-developer-at-brandworkz"><strong>Senior Java Developer at Brandworkz</strong></h3>
+<p><em>February 2017 – August 2023 | London (Hybrid)</em></p>
+<ul>
+<li>Led development of a Java-based API within a multi-tenant microservices architecture.</li>
+<li>Built a complete Reporting module and developed custom visualizations in Kibana.</li>
+<li>Implemented OAuth2 authorization and enhanced API security with user roles.</li>
+<li>Automated deployment with bash scripts and CRON jobs.</li>
+<li>Managed Linux server setup and deployments.</li>
+<li>Actively involved in architectural decisions, planning sessions, onboarding new hires, and advising clients.</li>
+<li>Wrote clean, intelligible documentation and resolved production issues regularly.</li>
+</ul>
+<p><strong>Main Project: Brandworkz</strong><br>
+A SaaS platform for digital asset management, used by clients such as University of Greenwich, Dr. Martens, Boeing, Brother, Assa Abloy, and Hitachi.</p>
+<p><strong>Tech Stack:</strong> Spring Boot, Spring Cloud, Spring Security, Velocity, Thymeleaf, REST APIs, Jenkins, AWS EC2/S3/RDS/DynamoDB, Redis, PostgreSQL, Elasticsearch, Swagger 2, Open API 3, Liquibase, Git, Azure Data Studio.</p>
+<hr>
+<h3 id="freelance-backend-developer-contractor-at-brandworkz"><strong>Freelance Backend Developer (Contractor at Brandworkz)</strong></h3>
+<p><em>February 2022 – August 2023 | Remote</em></p>
+<ul>
+<li>Continued backend support for Brandworkz, focusing on performance enhancements and system optimization while transitioning to contractor role.</li>
+</ul>
+<hr>
+<h3 id="back-end-developer-at-locassa-ltd"><strong>Back-end Developer at Locassa Ltd</strong></h3>
+<p><em>July 2015 – November 2016 | London (On-site)</em></p>
+<ul>
+<li>Involved in all phases of the software lifecycle: planning, implementation, deployment, and maintenance.</li>
+<li>Built back-office apps and participated in client demos and requirement gathering.</li>
+<li>Mentored new hires and explored new frameworks and tools to improve development efficiency.</li>
+</ul>
+<p><strong>Projects:</strong> Ziferblat, Minted, Inkvite, Jarvis, Vesta Fitness, Rounds on Me, gowithYamo, Spot &amp; Change</p>
+<p><strong>Tech Stack:</strong> Spring Boot, Thymeleaf, REST APIs, MySQL, OAuth2, Swagger 2, AWS (Elastic Beanstalk, S3, EC2), Twilio, Foursquare Places API.</p>
+<hr>
+<h3 id="java-analyst-at-grupo-servinform"><strong>Java Analyst at Grupo Servinform</strong></h3>
+<p><em>October 2014 – May 2015 | Seville (On-site)</em></p>
+<ul>
+<li>Gathered requirements and authored analysis documents for government projects.</li>
+<li>Led configuration, testing, and deployment in integration environments.</li>
+<li>Provided mentorship to junior team members.</li>
+</ul>
+<p><strong>Main Project:</strong> HAPR-MIGRA – Migrated legacy data systems as part of a modernization effort.</p>
+<p><strong>Tech Stack:</strong> iBatis, Spring, Struts 1, Tiles, JSP, PL/SQL, iText, jsoup, Apache Tomcat, Subversion, Maven.</p>
+<hr>
+<h3 id="java-developer-at-grupo-servinform"><strong>Java Developer at Grupo Servinform</strong></h3>
+<p><em>January 2012 – September 2014 | Seville (On-site)</em></p>
+<ul>
+<li>Delivered new functionalities based on detailed analysis documentation.</li>
+<li>Wrote PL/SQL scripts to improve database performance.</li>
+<li>Learned and applied Scrum methodology to agile teams.</li>
+</ul>
+<p><strong>Main Project:</strong> HAPR – A system for telematic authorization of specialized workers.</p>
+<p><strong>Client:</strong> Department of Economy, Innovation, Science and Employment, Junta de Andalucía</p>
+<p><strong>Tech Stack:</strong> Hibernate, iBatis, Spring, JSP, Servlets, PL/SQL, JasperReports, Subversion.</p>
+<hr>
+<h3 id="junior-oracle-developer-at-ayesa"><strong>Junior Oracle Developer at Ayesa</strong></h3>
+<p><em>July 2011 – December 2011 | Seville (Part-time)</em></p>
+<ul>
+<li>Updated documents and application flows per client specifications to reduce support requests.</li>
+</ul>
+<p><strong>Main Project:</strong> Integrated Social Services System</p>
+<p><strong>Client:</strong> Department of Equality, Health and Social Politics, Junta de Andalucía</p>
+<p><strong>Tech Stack:</strong> Oracle Forms 9i, PL/SQL, Oracle JDeveloper, SQL Developer</p>
+<hr>
+<h3 id="junior-java-developer-at-ayesa"><strong>Junior Java Developer at Ayesa</strong></h3>
+<p><em>April 2011 – June 2011 | Seville (Part-time)</em></p>
+<ul>
+<li>Created GUI prototypes and implemented minor validations and improvements.</li>
+</ul>
+<p><strong>Main Project:</strong> Concert@ – Private healthcare information system</p>
+<p><strong>Client:</strong> Department of Equality, Health and Social Politics, Junta de Andalucía</p>
+<p><strong>Tech Stack:</strong> Hibernate, Spring, JSF, Richfaces, PL/SQL, Maven, JBoss, Eclipse, NetBeans</p>
+<hr>
+<h2 id="skills">Skills</h2>
+<ul>
+<li><strong>Languages:</strong> Java (Expert), Kotlin (Intermediate), Dart (Intermediate)</li>
+<li><strong>Frameworks &amp; Tools:</strong> Spring Boot, Microservices, Kafka, Docker, Azure, AWS, REST APIs, Hexagonal Architecture, OAuth2</li>
+<li><strong>Databases:</strong> MongoDB, PostgreSQL, MySQL, Oracle, DynamoDB, PL/SQL</li>
+<li><strong>Monitoring &amp; DevOps:</strong> Elastic Stack (Elasticsearch, Logstash, Kibana), Jenkins, Git, Bash, CI/CD</li>
+<li><strong>Testing:</strong> JUnit, Mockito, Integration Testing, TDD</li>
+<li><strong>Other:</strong> Velocity, Thymeleaf, Swagger, Liquibase, Maven, Gradle</li>
+</ul>
+<hr>
+<h2 id="education">Education</h2>
+<p><strong>HNC in Administration and Information Technology</strong><br>
+IES Punta del Verde, Graduated 2011</p>
+<ul>
+<li>Focused on software development and database management.</li>
+<li>Capstone project combining Java and SQL technologies.</li>
+</ul>
 
-<body id="page-top">
-    <a href="#page-top" class="scroll-up scroll"><i class="fa fa-chevron-up"></i></a>
-
-    <!-- ==========================
-    	HEADER - START 
-    =========================== -->
-    <header>
-        <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
-            <div class="container">
-                <!-- Brand and toggle get grouped for better mobile display -->
-                <div class="navbar-header">
-                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavigation"><i
-                            class="fa fa-bars"></i></button>
-                    <img src="image/andres.webp" class="navbar-logo pull-left" alt="" />
-                    <a href="index.html" class="navbar-brand animated flipInX">Andrés Pedraza Míguez</a>
-                </div>
-
-                <!-- Collect the nav links, forms, and other content for toggling -->
-                <div class="collapse navbar-collapse" id="myNavigation">
-
-                    <ul class="nav navbar-nav navbar-right animated flipInX">
-                        <li><a href="#about" class="scroll">About me</a></li>
-                        <li><a href="#services" class="scroll">What I offer</a></li>
-                        <li><a href="#reference" class="scroll">Portfolio</a></li>
-                        <li><a href="#testimonials" class="scroll">Testimonials</a></li>
-                        <li><a href="#contact" class="scroll">Contact</a></li>
-                        <li><a target="_blank" href="https://github.com/pedrazamiguez/cantalobos-wiki"
-                                class="scroll blog_menu_link">Wiki</a></li>
-                    </ul>
-                </div><!-- /.navbar-collapse -->
-            </div><!-- /.container -->
-        </nav>
-
-        <div class="jumbotron">
-            <img src="image/andres.webp" class="img-responsive scrollpoint sp-effect3" alt="" />
-            <div class="social-wrapper">
-                <h2 class="scrollpoint sp-effect3">Andrés Pedraza Míguez</h2>
-            </div>
-            <div class="social-wrapper">
-                <ul class="brands brands-inline hidden-xs scrollpoint sp-effect2">
-                    <li><a target="_blank" href="https://www.linkedin.com/in/pedrazamiguez/"><i
-                                class="fa fa-linkedin"></i></a></li>
-                    <li><a target="_blank" href="https://github.com/pedrazamiguez"><i class="fa fa-github"></i></a></li>
-                    <li><a target="_blank" href="https://github.com/pedrazamiguez/cantalobos-wiki"><i
-                                class="fa fa-wikipedia-w"></i></a></li>
-                </ul>
-            </div>
-            <!-- Slideshow start -->
-            <div id="slideshow" class="carousel slide vertical scrollpoint sp-effect3" data-ride="carousel">
-                <div class="carousel-inner">
-
-                    <div class="item active">
-                        <h3><i class="fa fa-heart icon-first"></i> &nbsp; Microservices lover</h3>
-                    </div>
-
-                    <div class="item">
-                        <h3><i class="fa fa-lightbulb-o"></i> &nbsp; Creative developer</h3>
-                    </div>
-
-                    <div class="item">
-                        <h3><i class="fa fa-life-ring"></i> &nbsp; Supportive team member</h3>
-                    </div>
-
-                    <div class="item">
-                        <h3><i class="fa fa-file-text-o"></i> &nbsp; Great documentation contributor</h3>
-                    </div>
-
-                </div>
-            </div>
-            <!-- Slideshow end -->
-            <a target="_blank" href="./resources/cv_pedrazamiguez_20231018.pdf"
-                class="btn btn-reference btn-lg scroll scrollpoint sp-effect1" role="button"><i
-                    class="fa fa-download"></i> Download CV</a>
-            <a href="#contact" class="btn btn-reference btn-lg scroll scrollpoint sp-effect2" role="button"><i
-                    class="fa fa-envelope"></i> Contact me</a>
-        </div>
-    </header>
-    <!-- ==========================
-    	HEADER - END 
-    =========================== -->
-
-    <!-- ==========================
-    	ABOUT - START 
-    =========================== -->
-    <section id="about" class="content-first">
-        <div class="container">
-            <div class="row">
-                <div class="col-sm-2 hidden-xs scrollpoint sp-effect1"><!-- Profile image -->
-                    <img src="image/andres.webp" class="image-bordered img-responsive" alt="" />
-                </div><!-- Profile end -->
-
-                <div class="col-md-7 col-sm-6 scrollpoint sp-effect1"><!-- Profile description -->
-                    <h3>Andrés Pedraza Míguez</h3>
-                    <p>A methodical Back-end developer with a robust APIs & microservices background using Java/Kotlin,
-                        seeking to expand horizons
-                        in multithreading, reactive programming and mobile development.</p>
-
-                    <h4 class="timetitle">Freelance developer</a></h4>
-                    <h4 class="timerange">Feb 2022 - Present · <span id="timedifftext">1 yr</span></h4>
-                    <p>
-                        I currently provide services based on my acquired knowledge over the years as a freelance
-                        developer to different clients and companies.
-                    </p>
-
-                    <h4 class="timetitle">Senior Java developer at <a target="_blank"
-                            href="https://www.brandworkz.com">Brandworkz</a></h4>
-                    <h4 class="timerange">Feb 2017 - Jan 2022 · 5 yrs</h4>
-                    <p>
-                        In charge of the Java API on a multi-tenancy microservices architecture. Apart from developing,
-                        I was also involved in some core decision-making, planning sessions and estimate discussions.
-                    </p>
-
-                    <p class="section">MAIN RESPONSIBILITIES</p>
-                    <ul>
-                        <li>Built a completely new module for Reporting.</li>
-                        <li>Implemented custom visualizations in Kibana.</li>
-                        <li>Implemented an RSS XML feed tool to integrate external data with Web to Print templates.
-                        </li>
-                        <li>Enhanced the product API security by implementing OAuth2 authorisation flows and introducing
-                            user roles.</li>
-                        <li>Contributed to revamp the product's CMS module.</li>
-                        <li>Worked with bash scripts and CRON to automate continuous delivery.</li>
-                        <li>Suggested and carried out project dependencies update.</li>
-                        <li>Set up Linux servers to deploy software.</li>
-                        <li>Inducted new starters.</li>
-                        <li>Advised clients on how to integrate their system with 3rd party applications.</li>
-                        <li>Improved decision-making skills.</li>
-                        <li>Wrote clean, intelligible documentation about internal processes and technical procedures.
-                        </li>
-                        <li>Fixed a considerable number of bugs on production.</li>
-                        <li>Present on most releases to deliver new product versions.</li>
-                    </ul>
-
-                    <p class="section">MAIN PROJECT</p>
-                    <p>
-                        Brandworkz, a web-based product sold to clients on a subscription basis to manage their brand
-                        and get them to market quicker. The product comprises different modules, namely Digital Asset
-                        Management, Brand Guidelines, Logo Finder, Brand Kit, Workflows, among many others. <br />
-                        Some clients using the product are University of Greenwich, Dr. Martens, Boeing, Brother, Assa
-                        Abloy, Hitachi.
-                    </p>
-
-                    <p class="section">TOOLS AND FRAMEWORKS</p>
-                    <p>
-                        IntelliJ IDEA, Azure Data Studio, Jira, Confluence, Jenkins, Gradle, AWS EC2, S3, RDS, Cloud9,
-                        DynamoDB, Redis, RabbitMQ, Elasticsearch, Logstash, Kibana, Spring Boot, Spring Cloud, Velocity
-                        Templates, Thymeleaf, RESTful web services, Remmina, OAuth 2, Swagger 2, Open API 3, OpenVPN 3,
-                        Google Vision API, PostgreSQL, Microsoft SQL Server, Liquibase, Git.
-                    </p>
-
-                    <h4 class="timetitle">Java / Back-end / APIs developer at <a target="_blank"
-                            href="https://twitter.com/locassa">Locassa</a></h4>
-                    <h4 class="timerange">Jul 2015 - Nov 2016 · 1 yr 5 mos</h4>
-                    <p>
-                        Walked through different stages of development life
-                        cycle in multiple projects, including planning, requirements gathering, analysis,
-                        implementation, testing, deployment and maintenance.
-                    </p>
-
-                    <p class="section">MAIN RESPONSIBILITIES</p>
-                    <ul>
-                        <li>Contributed in all phases of development lifecycle.</li>
-                        <li>Wrote well-designed, testable, efficient code.</li>
-                        <li>Ensured designs were in compliance with specifications.</li>
-                        <li>Prepared and produced releases of software components.</li>
-                        <li>Supported continuous improvement by investigating alternatives and new frameworks.</li>
-                        <li>Inducted new starters.</li>
-                        <li>Involved in client meetings for requirements gathering.</li>
-                        <li>Liaised with other team members.</li>
-                        <li>Conducted demo sessions for clients.</li>
-                        <li>Developed back-office apps for several projects.</li>
-                    </ul>
-
-                    <p class="section">PROJECTS</p>
-                    <ul>
-                        <li>Ziferblat — Check in at Ziferblat coffee shops and pay just for the time you spend there.
-                        </li>
-                        <li>Minted — Meet up with people to exchange different currencies.</li>
-                        <li>Inkvite — Write short stories in cooperation with the community.</li>
-                        <li>Jarvis — Lots of news from all around the world.</li>
-                        <li>Vesta Fitness — Sport-oriented social network.</li>
-                        <li>Rounds on Me — Buy drinks for your friends.</li>
-                        <li>gowithYamo — Discover art galleries nearby.</li>
-                        <li>Spot & Change — Spot the difference game.</li>
-                    </ul>
-
-                    <p class="section">TOOLS AND FRAMEWORKS</p>
-                    <p>
-                        IntelliJ IDEA, MySQL Workbench, SourceTree, Jira, Maven, AWS Elastic Beanstalk, S3, EC2, RDS,
-                        Spring Boot, Thymeleaf, RESTful web services, OAuth 2, JsonDoc, Swagger 2, GlobalPayments,
-                        Twilio, Foursquare Places API.
-                    </p>
-
-                    <h4 class="timetitle">Java Tech Lead at <a target="_blank" href="https://www.servinform.es">Grupo
-                            Servinform</a></h4>
-                    <h4 class="timerange">Oct 2014 - May 2015 · 8 mos</h4>
-
-                    <p>
-                        Acquired a broad knowledge base in systems integration and took the initiative to become a team
-                        player for the current project.
-                    </p>
-
-                    <p class="section">MAIN RESPONSIBILITIES</p>
-                    <ul>
-                        <li>Worked towards meeting Service Level Agreements.</li>
-                        <li>Responsible for writing analysis documents and advanced requirements gathering.</li>
-                        <li>In charge of configuration, testing and deployment on the integration environment.</li>
-                        <li>Resolved critical issues on the production environment.</li>
-                        <li>Fostered communication skills by training co-workers recently joined to the team.</li>
-                    </ul>
-
-                    <p class="section">MAIN PROJECT</p>
-                    <p>
-                        HAPR-MIGRA, a J2EE application to migrate data from the HAPR system database to a new one, as
-                        many changes took place to drastically improve the way data were stored.
-                    </p>
-
-                    <p class="section">TOOLS AND FRAMEWORKS</p>
-                    <p>
-                        Eclipse IDE, TOAD, MySQL Workbench, iReport, MantisBT, Redmine, Apache Tomcat, Subversion,
-                        Maven, FortiClient VPN, iBatis, Spring, Struts 1, Tiles, JasperReports, Servlets, JSP, HTML,
-                        Javascript, CSS, PL/SQL, Apache commons, log4j, jsoup, iText, JSTL, displaytag.
-                    </p>
-
-                    <h4 class="timetitle">Java developer at <a target="_blank" href="https://www.servinform.es">Grupo
-                            Servinform</a></h4>
-                    <h4 class="timerange">Feb 2012 - Sep 2014 · 2 yrs 8 mos</h4>
-                    <p>
-                        As my first real world project, I learnt how to be more efficient and resourceful. I started
-                        using Scrum methodology and strengthened my ability to organise tasks better.
-                    </p>
-
-                    <p class="section">MAIN RESPONSIBILITIES</p>
-                    <ul>
-                        <li>Developed new functionality according to elaborate analysis documents.</li>
-                        <li>Implemented a fair amount of PL/SQL scripts to enhance the database performance.</li>
-                        <li>Fixed inherited bugs from the previous supplier.</li>
-                        <li>Strengthened ability to perform well under pressure.</li>
-                        <li>Learnt how to apply Scrum methodology.</li>
-                    </ul>
-
-                    <p class="section">MAIN PROJECT</p>
-                    <p>
-                        HAPR, a J2EE application to telematically grant authorisations to citizens in order that they
-                        can legally work in specific tasks, such as installing air-conditioning systems or driving a
-                        crane in local roadworks.
-                    </p>
-
-                    <p class="section">TOOLS AND FRAMEWORKS</p>
-                    <p>
-                        Eclipse IDE, TOAD, iReport, MantisBT, Redmine, Apache Tomcat, Subversion, Maven, iBatis,
-                        Hibernate, Spring, Struts 1, Tiles, JasperReports, Servlets, JSP, HTML, Javascript, CSS, PL/SQL,
-                        AutoFirma, log4j, iText, JSTL, displaytag.
-                    </p>
-
-                    <h4 class="timetitle">Internship as Junior Oracle developer at the <a target="_blank"
-                            href="https://www.juntadeandalucia.es/organismos/inclusionsocialjuventudfamiliaseigualdad.html">Regional
-                            Government of Andalusia</a></h4>
-                    <h4 class="timerange">Jul 2011 - Dec 2011 · 6 mos</h4>
-                    <p>
-                        Part-time position where I consolidated my databases knowledge and learnt how to write proper
-                        documentation.
-                    </p>
-
-                    <p class="section">MAIN RESPONSIBILITIES</p>
-                    <ul>
-                        <li>Reviewed relevant documents arranged to be delivered to citizens.</li>
-                        <li>Altered a considerable number of application behaviours due to client specifications.</li>
-                    </ul>
-
-                    <p class="section">MAIN PROJECT</p>
-                    <p>
-                        Integrated Social Services System, a project based on Oracle 9i Forms to handle social
-                        services for citizens.
-                    </p>
-
-                    <p class="section">TOOLS AND FRAMEWORKS</p>
-                    <p>
-                        Oracle JDeveloper, SQLDeveloper, MantisBT, Redmine, Oracle Forms 9i, PL/SQL.
-                    </p>
-
-                    <h4 class="timetitle">Internship as Junior Java developer at <a target="_blank"
-                            href="https://www.ayesa.com">Ayesa</a></h4>
-                    <h4 class="timerange">Apr 2011 - Jun 2011 · 3 mos</h4>
-                    <p>
-                        As my first contact with a real team, I was fascinated about constant efficiency around me. I
-                        developed a strong interest in being more productive and excel at what I do.
-                    </p>
-
-                    <p class="section">MAIN RESPONSIBILITIES</p>
-                    <ul>
-                        <li>Designed graphic interfaces to show a first project prototype to the client.</li>
-                        <li>Developed minor validations and improvements.</li>
-                    </ul>
-
-                    <p class="section">MAIN PROJECT</p>
-                    <p>
-                        Concert@, an information system for private healthcare.
-                    </p>
-
-                    <p class="section">TOOLS AND FRAMEWORKS</p>
-                    <p>
-                        Eclipse IDE, TOAD, Redmine, JBoss server, Subversion, Maven, NetBeans IDE, JustInMind
-                        Prototyper, Hibernate, Spring, JSF, Servlets, XHTML, Javascript, CSS, PL/SQL, Richfaces.
-                    </p>
-
-                    <br />
-
-                </div><!-- Profile description end-->
-
-                <div class="col-md-3 col-sm-4 scrollpoint sp-effect2"><!--Timeline-->
-
-                    <div class="timeline">
-
-                        <div class="event">
-                            <div class="event-info event-icon-search">
-                                <div class="date">Present</div>
-                            </div>
-                            <span>Looking for new challenges...</span>
-                        </div> <!-- BLOG POST 1 - END -->
-
-                        <div class="event">
-                            <div class="event-info event-icon-user">
-                                <div class="date">2022</div>
-                            </div>
-                            <span>Freelance developer</span>
-                        </div> <!-- BLOG POST 1 - END -->
-
-                        <div class="event">
-                            <div class="event-info life event-icon-plane-down">
-                                <div class="date">2019</div>
-                            </div>
-                            <span>Moved back to Seville, Spain</span>
-                        </div> <!-- BLOG POST 1 - END -->
-
-                        <!-- BLOG POST 1 - START -->
-                        <div class="event">
-                            <div class="event-info event-icon-trophy">
-                                <div class="date">2017</div>
-                            </div>
-                            <span>Senior Java developer at <a target="_blank"
-                                    href="https://www.brandworkz.com">Brandworkz</a></span>
-                        </div> <!-- BLOG POST 1 - END -->
-
-                        <div class="event">
-                            <div class="event-info event-icon-flag">
-                                <div class="date">2015</div>
-                            </div>
-                            <span>Java / Back-end / APIs developer at <a target="_blank"
-                                    href="https://twitter.com/locassa">Locassa</a></span>
-                        </div> <!-- BLOG POST 1 - END -->
-
-                        <div class="event">
-                            <div class="event-info life event-icon-plane-up">
-                                <div class="date">2015</div>
-                            </div>
-                            <span>Moved to London, UK</span>
-                        </div> <!-- BLOG POST 1 - END -->
-
-                        <div class="event">
-                            <div class="event-info event-icon-trophy">
-                                <div class="date">2014</div>
-                            </div>
-                            <span>Java Tech Lead at <a target="_blank" href="https://www.servinform.es">Grupo
-                                    Servinform</a></span>
-                        </div> <!-- BLOG POST 1 - END -->
-
-                        <div class="event">
-                            <div class="event-info event-icon-flag">
-                                <div class="date">2012</div>
-                            </div>
-                            <span>Java developer at <a target="_blank" href="https://www.servinform.es">Grupo
-                                    Servinform</a></span>
-                        </div> <!-- BLOG POST 1 - END -->
-
-                        <div class="event">
-                            <div class="event-info event-icon-database">
-                                <div class="date">2011</div>
-                            </div>
-                            <span>Internship as Junior Oracle developer at the <a target="_blank"
-                                    href="https://www.juntadeandalucia.es/organismos/inclusionsocialjuventudfamiliaseigualdad.html">Regional
-                                    Government of Andalusia</a></span>
-                        </div> <!-- BLOG POST 1 - END -->
-
-                        <div class="event">
-                            <div class="event-info event-icon-code">
-                                <div class="date">2011</div>
-                            </div>
-                            <span>Internship as Junior Java developer at <a target="_blank"
-                                    href="https://www.ayesa.com">Ayesa</a></span>
-                        </div> <!-- BLOG POST 1 - END -->
-
-                        <div class="event">
-                            <div class="event-info event-icon-graduation-cap">
-                                <div class="date">2011</div>
-                            </div>
-                            <span>Graduated from Administration and Information Technology HNC at <a target="_blank"
-                                    href="https://www.iespuntadelverde.es">IES Punta del Verde</a></span>
-                        </div> <!-- BLOG POST 1 - END -->
-
-                        <div class="event">
-                            <div class="event-info life event-icon-child">
-                                <div class="date">1987</div>
-                            </div>
-                            <span>Born in Seville, Spain</span>
-                        </div> <!-- BLOG POST 1 - END -->
-
-                    </div><!--timeline-->
-                </div><!--col 3 end-->
-
-            </div><!--Row about end-->
-        </div><!-- Container end-->
-
-        <div id="skills" class="content-first">
-            <div class="container">
-                <div class="row scrollpoint sp-effect3"><!-- Toogle my skills start -->
-                    <div class="col-md-3">
-                        <div class="chart" data-percent="96">96% APIs</div>
-                    </div>
-                    <div class="col-md-3">
-                        <div class="chart" data-percent="90">90% Java</div>
-                    </div>
-                    <div class="col-md-3">
-                        <div class="chart" data-percent="84">84% DBs</div>
-                    </div>
-                    <div class="col-md-3">
-                        <div class="chart" data-percent="76">76% Web</div>
-                    </div>
-                </div><!-- Toogle my skills end-->
-
-            </div><!-- Container end-->
-        </div>
-
-    </section>
-    <!-- ==========================
-    	ABOUT - END 
-    =========================== -->
-
-    <!-- ==========================
-    	SERVICER - START
-    =========================== -->
-    <section id="services" class="content-second">
-        <div class="container">
-            <div class="row">
-                <div class="col-md-12">
-                    <h2 class="scrollpoint sp-effect3">What I offer</h2>
-                    <p class="scrollpoint sp-effect3">
-                        My strongest trait is perseverance and an inner ambition to get the job done on time.
-                    </p>
-                    <p class="scrollpoint sp-effect3"></p>
-
-
-                </div>
-
-                <div class="col-md-3 service scrollpoint sp-effect1">
-                    <img src="image/microservices.webp" alt="">
-                    <h3>Microservices &amp; APIs</h3>
-                    <p>
-                        The sought-after Back-end architecture these days is microservices for large products, as well
-                        as serverless functions or hooks to execute regular procedures.
-                        I am also pretty comfortable with building ordinary RESTful APIs.
-                    </p>
-                </div>
-
-                <div class="col-md-3 service scrollpoint sp-effect1">
-                    <img src="image/apis.webp" alt="">
-                    <h3>Integrations</h3>
-                    <p>From OAuth2 authorisation flows to web services to share data among systems, I have a broad
-                        experience in implementing integrations of all kinds. This also includes data migrations via
-                        APIs or DB scripts.</p>
-                </div>
-
-                <div class="col-md-3 service scrollpoint sp-effect2">
-                    <img src="image/charts.webp" alt="">
-                    <h3>ROI Dashboards</h3>
-                    <p>
-                        One of the most important aspects in a company is visibility about how resources are being used
-                        and if they are paying off.
-                        I am largely familiar with software like the Elastic Stack, which can cover almost any required
-                        scenario to deliver decisive insights.
-                    </p>
-                </div>
-
-                <div class="col-md-3 service scrollpoint sp-effect2">
-                    <img src="image/documentation.webp" alt="">
-                    <h3>Documentation</h3>
-                    <p>It is crucial to document every process in order to follow them consistently, whether it is
-                        Swagger for APIs or internal operations articles on Confluence.</p>
-                </div>
-
-            </div>
-        </div>
-    </section>
-    <!-- ==========================
-    	SERVICES - END 
-    =========================== -->
-
-    <!-- ==========================
-    	NUMBERS - START
-    =========================== -->
-    <section id="separator" class="content-first">
-        <div class="container">
-            <div class="row scrollpoint sp-effect3">
-                <p>I truly believe my main strengths are</p>
-                <div class="col-sm-2">
-                    <i class="fa fa-gamepad"></i>
-                    <p>Team Player</p>
-                </div>
-                <div class="col-sm-2">
-                    <i class="fa fa-comments-o"></i>
-                    <p>Reliable Communicator</p>
-                </div>
-                <div class="col-sm-2">
-                    <i class="fa fa-asterisk"></i>
-                    <p>Attention to Detail</p>
-                </div>
-                <div class="col-sm-2">
-                    <i class="fa fa-rocket"></i>
-                    <p>Fast Learning Skills</p>
-                </div>
-                <div class="col-sm-2">
-                    <i class="fa fa-repeat"></i>
-                    <p>Adaptability to change</p>
-                </div>
-                <div class="col-sm-2">
-                    <i class="fa fa-trophy"></i>
-                    <p>Desire for self-improvement</p>
-                </div>
-            </div>
-        </div>
-    </section>
-    <!-- ==========================
-    	NUMBERS - END 
-    =========================== -->
-
-    <!-- ==========================
-    	SHOWCASE - START
-    =========================== -->
-    <section id="showcase" class="content-second">
-        <div class="container">
-            <div class="row">
-                <div class="col-sm-12">
-                    <h2 class="scrollpoint sp-effect3">My latest work</h2>
-                    <p class="scrollpoint sp-effect3">
-                        A good thing to do to push yourself out of your comfort zone is to try something new.
-                        <br />
-                        This is why I have been developing a mobile app lately using Google Flutter.
-                    </p>
-                </div>
-
-                <div class="col-lg-8 showcase-text scrollpoint sp-effect1">
-                    <div class="row">
-                        <!-- Service 1 -->
-                        <div class="col-sm-6 col-md-6 col-lg-12">
-                            <div class="media">
-                                <div class="pull-left showcase-icon"><i class="fa fa-bullseye"></i></div>
-                                <div class="media-body">
-                                    <h3 class="media-heading">Cross-platform</h3>
-                                    <p>Implemented using the Dart programming language.
-                                        <br />Flutter generates native code for Android and iOS.
-                                    </p>
-                                </div>
-                            </div>
-                        </div>
-                        <!-- Service 2 -->
-                        <div class="col-sm-6 col-md-6 col-lg-12">
-                            <div class="media">
-                                <div class="pull-left showcase-icon"><i class="fa fa-server"></i></div>
-                                <div class="media-body">
-                                    <h3 class="media-heading">Backed-up by Firebase</h3>
-                                    <p>It uses Firebase Authentication to login via email or 3rd party providers,
-                                        Firebase Firestore to keep data in sync across devices through realtime
-                                        listeners and Firebase Storage to upload pictures.</p>
-                                </div>
-                            </div>
-                        </div>
-                        <!-- Service 3 -->
-                        <div class="col-sm-6 col-md-6 col-lg-12">
-                            <div class="media">
-                                <div class="pull-left showcase-icon"><i class="fa fa-search"></i></div>
-                                <div class="media-body">
-                                    <h3 class="media-heading">Full-text search by Algolia</h3>
-                                    <p>Since Firestore does not provide full-text search capabilities, I am using an
-                                        integration with Algolia, which provides realtime data auto-indexing for
-                                        scalable and fast search. <br /> It also has built-in typo tolerance and
-                                        synonyms.</p>
-                                </div>
-                            </div>
-                        </div>
-                        <!-- Service 4 -->
-                        <div class="col-sm-6 col-md-6 col-lg-12">
-                            <div class="media">
-                                <div class="pull-left showcase-icon"><i class="fa fa-location-arrow"></i></div>
-                                <div class="media-body">
-                                    <h3 class="media-heading">Location services and Mapbox</h3>
-                                    <p>The app shows places nearby depending on the user location. I am using Mapbox
-                                        over Google Maps because it is highly customisable and easy to configure, apart
-                                        from displaying fresh maps users are not familiar with.</p>
-                                </div>
-                            </div>
-                        </div>
-                        <!-- Service 4 -->
-                        <div class="col-sm-6 col-md-6 col-lg-12">
-                            <div class="media">
-                                <div class="pull-left showcase-icon"><i class="fa fa-bell-o"></i></div>
-                                <div class="media-body">
-                                    <h3 class="media-heading">Google Cloud Messaging</h3>
-                                    <p>Push notifications are received when users are tagged in any post or whether a
-                                        new chat or message is sent.</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                </div>
-
-                <div class="col-lg-4 col-sm-8 col-md-8 col-md-offset-2 col-sm-offset-2 col-lg-offset-0 showcase-carousel hidden-xs scrollpoint sp-effect2"
-                    style="margin-top: 0 !important;">
-
-                    <div id="carousel-reference" class="carousel slide" data-ride="carousel" style="width: 200;">
-                        <!-- Wrapper for slides -->
-                        <div class="carousel-inner">
-                            <div class="item active"><img src="image/iphone_04.webp" alt=""></div>
-                            <div class="item"><img src="image/iphone_03.webp" alt=""></div>
-                            <div class="item"><img src="image/iphone_06.webp" alt=""></div>
-                            <div class="item"><img src="image/iphone_05.webp" alt=""></div>
-                            <div class="item"><img src="image/iphone_02.webp" alt=""></div>
-                            <div class="item"><img src="image/iphone_01.webp" alt=""></div>
-                            <div class="item"><img src="image/iphone_07.webp" alt=""></div>
-                        </div>
-
-                        <!-- Controls -->
-                        <a class="left carousel-control" href="#carousel-reference" data-slide="prev"><i
-                                class="fa fa-arrow-left"></i></a>
-                        <a class="right carousel-control" href="#carousel-reference" data-slide="next"><i
-                                class="fa fa-arrow-right"></i></a>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div style="display: block;">
-            <br/>
-        </div>
-    </section>
-    <!-- ==========================
-    	SHOWCASE - END 
-    =========================== -->
-
-    <!-- ==========================
-    	QUOTES - START
-    =========================== -->
-    <section id="quotes" class="content-first">
-        <div class="container">
-            <div class="row scrollpoint sp-effect3">
-                <div class="col-sm-8 col-sm-offset-2">
-                    <blockquote class="blockquote-reverse">
-                        <p><i class="fa fa-quote-left"></i> Always code as if the guy who ends up maintaining your code
-                            will be a violent psychopath who knows where you live.</p>
-                        <footer> John Woods</footer>
-                    </blockquote>
-                </div>
-            </div>
-        </div>
-    </section>
-    <!-- ==========================
-    	QUOTES - END 
-    =========================== -->
-
-    <!-- ==========================
-    	REFERENCE - START
-    =========================== -->
-    <section id="reference" class="content-second">
-        <h2 class="scrollpoint sp-effect3">Portfolio</h2>
-        <p class="scrollpoint sp-effect3">
-            Below are some of the projects I am most proud of.
-        </p>
-        <ul class="grid cs-style-4">
-            <li>
-                <figure class="scrollpoint sp-effect1">
-                    <div><img src="image/elk.webp" alt="Kibana plugins"></div>
-                    <figcaption>
-                        <h3>Kibana plugins</h3>
-                        <p>Custom visualizations for Kibana dashboards.</p>
-                        <a href="https://github.com/pedrazamiguez/kibana-plugins" target="_blank">Check out</a>
-                    </figcaption>
-                </figure>
-            </li>
-
-            <li>
-                <figure class="scrollpoint sp-effect3">
-                    <div><img src="image/microservices-alt.webp" alt="Microservices Architecture Template"></div>
-                    <figcaption>
-                        <h3>Microservices Architecture Template</h3>
-                        <p>Implemented using Spring Cloud.</p>
-                        <a href="https://github.com/pedrazamiguez/spring-cloud-microservices" target="_blank">Check out</a>
-                    </figcaption>
-                </figure>
-            </li>
-
-            <li>
-                <figure class="scrollpoint sp-effect2">
-                    <div><img src="image/wiki-alt.webp" alt="Cantalobos Wiki"></div>
-                    <figcaption>
-                        <h3>Cantalobos Wiki</h3>
-                        <p>A personal Wiki powered by Wiki.js.</p>
-                        <a href="https://github.com/pedrazamiguez/cantalobos-wiki" target="_blank">Check out</a>
-                    </figcaption>
-                </figure>
-            </li>
-
-            <li>
-                <figure class="scrollpoint sp-effect1">
-                    <div><img src="image/news-aggregator.webp" alt="img04"></div>
-                    <figcaption>
-                        <h3>News Aggregator</h3>
-                        <p>Back-office to manage RSS XML feeds from multiple sources.</p>
-                        <a href="https://github.com/pedrazamiguez/news-aggregator" target="_blank">Check out</a>
-                    </figcaption>
-                </figure>
-            </li>
-
-            <li>
-                <figure class="scrollpoint sp-effect3">
-                    <div><img src="image/os-tools.webp" alt="img04"></div>
-                    <figcaption>
-                        <h3>OS Tools</h3>
-                        <p>Terminal tools for Linux, Mac and Windows.</p>
-                        <a href="https://github.com/pedrazamiguez/os-tools" target="_blank">Check out</a>
-                    </figcaption>
-                </figure>
-            </li>
-
-            <li>
-                <figure class="scrollpoint sp-effect2">
-                    <div><img src="image/liquibase.webp" alt="img04"></div>
-                    <figcaption>
-                        <h3>Database CI/CD</h3>
-                        <p>Database deployments using Liquibase and Jenkins.</p>
-                        <a href="https://github.com/pedrazamiguez/liquibase" target="_blank">Check out</a>
-                    </figcaption>
-                </figure>
-            </li>
-
-        </ul>
-
-    </section>
-    <!-- ==========================
-    	REFERENCE - END 
-    =========================== -->
-
-    <!-- ==========================
-    	TESTIMONIALS - START
-    =========================== -->
-    <section id="testimonials" class="content-first">
-
-        <div class="container">
-
-            <h2 class="scrollpoint sp-effect3 text-center">
-                Testimonials
-            </h2>
-
-            <p class="scrollpoint sp-effect3 text-center">
-                This is what people I have worked with have to say about me.
-            </p>
-
-            <div class="row">
-
-                <div class="col-sm-12 scrollpoint sp-effect1">
-                    <div class="media">
-                        <a class="pull-left" href="javascript:;"><img class="media-object img-circle"
-                                src="image/jens.png" alt=""></a>
-                        <div class="media-body">
-                            <h4 class="media-heading">Jens Lundgaard</h4>
-                            <span>Founder & CEO</span>
-                            <p>
-                                Since the first time Andrés took part of the team here at Brandworkz, I was impressed by
-                                his capacity to adapt to all the changes we have been through.
-                                </br>
-                                I have had the pleasure to work with him for 5 years, and it has been a joy to see him
-                                evolve and integrate into our team seamlessly.
-                                </br>
-                                Not only he is a great communicator, but also highlights any red flags on time and let
-                                the team know what the best solution might be.
-                                </br>
-                                Apart from delivering high quality code in a timely manner, Andrés has a fundamental
-                                need to document everything he does, from APIs to internal company operations, which
-                                saved time and made processes less error-prone for others to follow.
-                                </br>
-                                Andrés's area of expertise is back-end development using mainly the Java
-                                programming language, but he also thrives on other areas he is not familiar with,
-                                delivering a great work regardless.
-                                </br>
-                                I honestly believe that his dedication and passion lead him to a great candidate
-                                that would absolutely fit in any other team or work environment. I definitely recommend
-                                Andrés for any position that requires sophistication, integrity and inventiveness.
-                            </p>
-                        </div>
-                    </div>
-                </div>
-
-            </div>
-
-            <div class="row">
-
-                <div class="col-sm-12 scrollpoint sp-effect1">
-                    <div class="media">
-                        <a class="pull-left" href="javascript:;"><img class="media-object img-circle"
-                                src="image/hari.png" alt=""></a>
-                        <div class="media-body">
-                            <h4 class="media-heading">Hari Walters</h4>
-                            <span>Head of Product</span>
-                            <p>
-                                I've had the privilege of working with Andrés for over 6 years at Brandworkz, where he
-                                served as a developer. While I was his immediate supervisor for some of this period,
-                                working with Andrés was consistently delightful.
-                                </br>
-                                Andrés is a highly experienced Java developer and has a vast range of technical skills
-                                that span the entire tech stack. His aptitude for grasping new technologies and
-                                implementing them in a business context is unparalleled. For example, he was able to
-                                quickly master Elastic and Kibana to deliver a highly scaleable reporting module, which
-                                our clients love to use on a daily basis. Andrés's adept problem-solving skills enable
-                                him to devise elegant solutions, like addressing tech limitations by developing his
-                                personal plug-ins/extensions.
-                                </br>
-                                Beyond his individual contributions, Andrés is a remarkable collaborator. At Brandworkz,
-                                he consistently demonstrated an aptitude for working seamlessly with both developers and
-                                non-developers alike. Notably, one of his strengths that I personally value is his
-                                commitment to documentation. Andrés understands that good code becomes great when it's
-                                accompanied by thorough, clear documentation. This dedication not only simplified the
-                                onboarding process for new team members but also fostered better collaboration across
-                                departments. Andrés has a knack for explaining complex technical concepts in
-                                understandable terms, making project transitions and handovers a breeze.
-                                </br>
-                                Throughout our time working together, one of Andrés's standout qualities was his
-                                kindness; he was genuinely pleasant to work with. This good nature complemented his
-                                exceptional communication skills, ensuring that his ideas and feedback were always
-                                conveyed clearly and constructively. I was constantly impressed by the speed at which
-                                Andrés delivered projects, but never at the expense of quality. His meticulous attention
-                                to detail ensures that every piece of code he writes is both robust and efficient.
-                                There's no denying Andrés's value to a team. While his absence will be felt, I'm assured
-                                his next venture will benefit enormously from what he offers.
-                            </p>
-                        </div>
-                    </div>
-                </div>
-
-            </div>
-
-            <div class="row">
-
-                <div class="col-sm-7 scrollpoint sp-effect1">
-                    <div class="media">
-                        <a class="pull-left" href="javascript:;"><img class="media-object img-circle"
-                                src="image/jose.png" alt=""></a>
-                        <div class="media-body">
-                            <h4 class="media-heading">Jose Antonio Martínez Fernández</h4>
-                            <span>Senior iOS Developer</span>
-                            <p>Andrés is a great multi-skilled backend developer with high levels of professionalism
-                                with whom I had the pleasure to work for 1 year and 5 months. He was able to deal with
-                                the amount of work for two or three backend developers. Andrés also was really keen to
-                                learn and improve himself (e.g. Android development, sockets, clean code, UI/UX, etc)
-                                and demonstrated a lot of productiveness even under pressure. A real asset to any team.
-                            </p>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-sm-5 scrollpoint sp-effect2">
-                    <div class="media">
-                        <a class="pull-left" href="javascript:;"><img class="media-object img-circle"
-                                src="image/hungju.png" alt=""></a>
-                        <div class="media-body">
-                            <h4 class="media-heading">Hungju Lu</h4>
-                            <span>Senior iOS Software Engineer</span>
-                            <p>Andrés has always been a magic developer in the team since I joined Locassa. He worked in
-                                a multitasking way across different projects and always gives the best solution for the
-                                implementations. He can deal with high stress with fixing any server problems happened.
-                                I can say he had a high value in the team and the company.</p>
-                        </div>
-                    </div>
-                </div>
-
-            </div>
-
-            <div class="row">
-
-                <div class="col-sm-12 scrollpoint sp-effect1">
-                    <div class="media">
-                        <a class="pull-left" href="javascript:;"><img class="media-object img-circle"
-                                src="image/rafa.png" alt=""></a>
-                        <div class="media-body">
-                            <h4 class="media-heading">Rafael Delgado Peña</h4>
-                            <span>CIO</span>
-                            <p>I am very pleased to write this letter of recommendation for Andrés Pedraza Míguez, who
-                                has worked for me for three years and four months. I have been his direct supervisor at
-                                Servinform and Andrés has proved to be one of the most valuable, reliable, flexible,
-                                open-minded employees I have ever had.
-                                <br />
-                                I have always been impressed by his outstanding diligence and his high level of
-                                technical expertise. Indeed, I have been more than satisfied with our working
-                                relationship. During this period, I also had the great pleasure of watching him blossom
-                                from a junior software developer into a fully functioning business-oriented Principal
-                                Software Architect.
-                                <br />
-                                I highly recommend him for any position in the IT field that involves complexity and
-                                creativity, with high quality requirements.
-                            </p>
-                        </div>
-                    </div>
-                </div>
-
-            </div>
-
-        </div>
-
-    </section>
-    <!-- ==========================
-    	TESTIMONIALS - END 
-    =========================== -->
-
-    <!-- ==========================
-    	CONTACT - START
-    =========================== -->
-    <section id="contact" class="content-first">
-        <div class="container">
-            <h2 class="scrollpoint sp-effect3">Contact me</h2>
-            <div class="row">
-                <div class="col-sm-12">
-                    <img src="image/macbook.png" class="img-responsive hidden-xs" alt="">
-
-                    <div class="macbook-inner black">
-                        <div class="row scrollpoint sp-effect4">
-                            <div class="col-sm-8">
-                                <h3 class="hidden-xs">Leave a message</h3>
-
-                                <form role="form" id="contactForm">
-
-                                    <div class="form-group control-group">
-                                        <div class="controls">
-                                            <p class="help-block"></p>
-                                            <input type="text" class="form-control" placeholder="First Name"
-                                                id="firstname" name="firstname"
-                                                data-validation-required-message="Please enter your first name."
-                                                aria-invalid="false">
-                                        </div>
-                                    </div>
-
-                                    <div class="form-group control-group">
-                                        <div class="controls">
-                                            <p class="help-block"></p>
-                                            <input type="text" class="form-control" placeholder="Last Name"
-                                                id="lastname" name="lastname"
-                                                data-validation-required-message="Please enter your last name."
-                                                aria-invalid="false">
-                                        </div>
-                                    </div>
-
-                                    <div class="form-group control-group">
-                                        <div class="controls">
-                                            <p class="help-block"></p>
-                                            <input type="email" class="form-control" placeholder="Email" id="email"
-                                                name="email"
-                                                data-validation-required-message="Please enter your email address."
-                                                aria-invalid="false">
-                                        </div>
-                                    </div>
-
-                                    <div class="form-group control-group">
-                                        <div class="controls">
-                                            <p class="help-block"></p>
-                                            <textarea class="form-control" placeholder="Message" id="message"
-                                                name="message"
-                                                data-validation-required-message="Please enter some message."
-                                                aria-invalid="false"></textarea>
-                                        </div>
-                                    </div>
-
-                                    <div class="form-group">
-                                        <button type="submit" class="btn btn-primary">Send message</button>
-                                        <div class="contact-alert"></div>
-                                    </div>
-
-                                </form>
-
-                            </div>
-                            <div class="col-sm-4">
-                                <img src="image/andres.webp" class="contact-image image-responsive hidden-xs hidden-sm"
-                                    alt="" />
-                                <div class="contact-info">
-                                    <p>Andrés Pedraza Míguez</p>
-                                    <p>Senior Back-end Developer</p>
-                                    <p>Coria del Río, Seville (Spain)</p>
-                                    <p>pedraza.miguez@gmail.com</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                </div>
-            </div>
-        </div>
-    </section>
-    <!-- ==========================
-    	CONTACT - END 
-    =========================== -->
-
-    <!-- ==========================
-    	FOOTER - START
-    =========================== -->
-    <section id="footer">
-        <div class="container">
-            <div class="row">
-                <div class="col-sm-12 scrollpoint sp-effect3">
-                    <ul class="brands brands-inline">
-                        <li><a target="_blank" href="https://www.linkedin.com/in/pedrazamiguez/"><i
-                                    class="fa fa-linkedin"></i></a></li>
-                        <li><a target="_blank" href="https://github.com/pedrazamiguez"><i class="fa fa-github"></i></a>
-                        </li>
-                        <li><a target="_blank" href="https://github.com/pedrazamiguez/cantalobos-wiki"><i
-                                    class="fa fa-wikipedia-w"></i></a></li>
-                    </ul>
-                    <p>© <span id="footer-year"></span> All rights reserved by Andrés Pedraza Míguez</p>
-                </div>
-            </div>
-        </div>
-
-    </section>
-    <!-- ==========================
-    	FOOTER - END 
-    =========================== -->
-
-    <!-- ==========================
-    	JS 
-    =========================== -->
-    <script src="https://code.jquery.com/jquery-latest.min.js"></script>
-    <script src="js/bootstrap.min.js"></script>
-    <script src="js/creative-brands.js"></script>
-    <script src="js/jquery.easy-pie-chart.js"></script>
-    <script src="js/modernizr.custom.js"></script>
-    <script src="js/waypoints.min.js"></script>
-    <script src="js/jquery.countTo.js"></script>
-    <script src="js/jqBootstrapValidation.js"></script>
-    <script src="js/custom.js"></script>
-    <script>
-        $(function () {
-            $("input,textarea").jqBootstrapValidation({
-                preventSubmit: true,
-
-                submitSuccess: function ($form, event) {
-                    event.preventDefault(); // prevent default submit behaviour
-                    // get values from FORM
-                    var firstname = $("input#firstname").val();
-                    var lastname = $("input#lastname").val();
-                    var email = $("input#email").val();
-                    var message = $("textarea#message").val();
-
-                    $.ajax({
-                        url: "https://formspree.io/f/xeqwoebd",
-                        type: "POST",
-                        data: {
-                            firstname: firstname,
-                            lastname: lastname,
-                            email: email,
-                            message: message
-                        },
-                        headers: {
-                            'Accept': 'application/json'
-                        },
-                        cache: false,
-                        success: function () {
-                            // Success message
-                            $('.contact-alert').html("<div class='alert alert-success'>");
-                            $('.contact-alert > .alert-success').html("<button type='button' class='close' data-dismiss='alert' aria-hidden='true'><i class='fa fa-times'></i></button><strong>Your message has been sent.</strong></div>");
-                            //clear all fields
-                            $('#contactForm').trigger("reset");
-                        },
-                        error: function (XMLHttpRequest, textStatus, errorThrown) {
-                            console.log("XMLHttpRequest: " + XMLHttpRequest);
-                            console.log("textStatus: " + textStatus);
-                            console.log("errorThrown: " + errorThrown);
-                            // Fail message
-                            $('.contact-alert').html("<div class='alert alert-danger'>");
-                            $('.contact-alert > .alert-danger').html("<button type='button' class='close' data-dismiss='alert' aria-hidden='true'><i class='fa fa-times'></i></button><strong>Sorry, it seems that my mail server is not responding. Please try again later!</strong></div>");
-                            //clear all fields
-                            $('#contactForm').trigger("reset");
-                        },
-                    })
-                }
-            });
-        });
-    </script>
 </body>
-
 </html>
