@@ -1,0 +1,124 @@
+/* Reset default styles for consistency */
+body, h1, h2, h3, h4, h5, h6, p, ul, ol, li, table, tr, th, td {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+    box-sizing: border-box; /* Better control over padding and borders */
+}
+
+/* Default font and layout */
+body {
+    font-family: 'Funnel Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    font-size: 10pt; /* Reduced base font size */
+    line-height: 1.5; /* Slightly reduced line height */
+    color: #000;
+    background-color: #fff;
+    padding: 8mm; /* Reduced padding */
+}
+
+/* Headings */
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Space Grotesk', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    font-weight: bold;
+    margin-top: 12pt; /* Added some top margin for separation */
+    margin-bottom: 6pt; /* Reduced bottom margin */
+    color: #000; /* Darker color for headings */
+}
+
+h1 { font-size: 20pt; } /* Reduced */
+h2 { font-size: 16pt; } /* Reduced */
+h3 { font-size: 12pt; } /* Reduced */
+h4 { font-size: 10pt; font-weight: bold; } /* Same as body, but bold */
+h5 { font-size: 9pt; font-weight: bold; }
+h6 { font-size: 8pt; font-weight: bold; color: #555; }
+
+/* Paragraphs */
+p {
+    margin-bottom: 8pt; /* Reduced */
+}
+
+/* Lists */
+ul, ol {
+    margin-bottom: 8pt; /* Reduced */
+    padding-left: 15pt; /* Reduced */
+}
+
+li {
+    margin-bottom: 4pt; /* Reduced */
+}
+
+/* Styling for bold text within paragraphs or lists (like your times) */
+strong {
+    font-weight: bold;
+}
+
+/* Italic text (like your reservation details) */
+em {
+    font-style: italic;
+    color: #444; /* Slightly lighter for emphasis */
+}
+
+
+/* Links */
+a {
+    color: #0056b3; /* Slightly darker blue */
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/* Code blocks - may not be used much in itinerary but good to have */
+pre, code {
+    font-family: 'Agave', Courier, monospace;
+    font-size: 9pt; /* Slightly smaller for code */
+    background-color: #f8f8f8; /* Lighter grey */
+    padding: 1pt 3pt; /* Compact padding for inline code */
+    border: 1pt solid #e7e7e7; /* Lighter border */
+    border-radius: 3px;
+}
+
+pre {
+    padding: 8pt; /* Reduced */
+    overflow: auto;
+    margin-bottom: 8pt;
+}
+
+/* Tables - may not be used much in itinerary */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 8pt; /* Reduced */
+    font-size: 8pt; /* Smaller font for tables */
+}
+
+th, td {
+    padding: 4pt; /* Reduced */
+    border: 1pt solid #ccc; /* Lighter border */
+    text-align: left;
+}
+
+th {
+    background-color: #efefef; /* Lighter grey */
+    font-weight: bold;
+}
+
+/* Images - if you add any */
+img {
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 8pt; /* Reduced */
+    border-radius: 3px;
+}
+
+/* Horizontal Rule */
+hr {
+    border: 0;
+    height: 1px;
+    background: #ddd;
+    margin: 15pt 0; /* Reduced margin */
+}
