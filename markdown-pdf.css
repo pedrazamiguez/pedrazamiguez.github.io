@@ -1,70 +1,66 @@
-/* Reset default styles for consistency */
-body, h1, h2, h3, h4, h5, h6, p, ul, ol, li, table, tr, th, td {
+/* === Reset & Base === */
+* {
     margin: 0;
     padding: 0;
-    border: 0;
-    font-size: 100%;
-    font: inherit;
-    vertical-align: baseline;
-    box-sizing: border-box; /* Better control over padding and borders */
+    box-sizing: border-box;
 }
 
-/* Default font and layout */
 body {
-    font-family: 'Funnel Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
-    font-size: 10pt; /* Reduced base font size */
-    line-height: 1.5; /* Slightly reduced line height */
-    color: #000;
-    background-color: #fff;
-    padding: 8mm; /* Reduced padding */
+    font-family: 'Inter', 'Segoe UI', sans-serif;
+    font-size: 15px;
+    color: #222;
+    background-color: #f9f9f9;
+    line-height: 1.6;
+    padding: 40px;
+    max-width: 900px;
+    margin: auto;
 }
 
-/* Headings */
-h1, h2, h3, h4, h5, h6 {
-    font-family: 'Space Grotesk', 'Helvetica Neue', Helvetica, Arial, sans-serif;
-    font-weight: bold;
-    margin-top: 12pt; /* Added some top margin for separation */
-    margin-bottom: 6pt; /* Reduced bottom margin */
-    color: #000; /* Darker color for headings */
+/* === Headings === */
+h1,
+h2,
+h3 {
+    font-weight: 600;
+    color: #333;
+    margin-bottom: 0.4em;
 }
 
-h1 { font-size: 20pt; } /* Reduced */
-h2 { font-size: 16pt; } /* Reduced */
-h3 { font-size: 12pt; } /* Reduced */
-h4 { font-size: 10pt; font-weight: bold; } /* Same as body, but bold */
-h5 { font-size: 9pt; font-weight: bold; }
-h6 { font-size: 8pt; font-weight: bold; color: #555; }
+h1 {
+    font-size: 2rem;
+    border-bottom: 2px solid #ddd;
+    padding-bottom: 0.2em;
+    margin-bottom: 1.2em;
+}
 
-/* Paragraphs */
+h2 {
+    font-size: 1.4rem;
+    margin-top: 2.2em;
+    border-bottom: 1px solid #e0e0e0;
+    padding-bottom: 0.2em;
+}
+
+h3 {
+    font-size: 1.1rem;
+    color: #555;
+}
+
+/* === Paragraphs & Lists === */
 p {
-    margin-bottom: 8pt; /* Reduced */
+    margin-bottom: 1em;
 }
 
-/* Lists */
-ul, ol {
-    margin-bottom: 8pt; /* Reduced */
-    padding-left: 15pt; /* Reduced */
+ul {
+    margin-left: 1.4em;
+    margin-bottom: 1.2em;
 }
 
 li {
-    margin-bottom: 4pt; /* Reduced */
+    margin-bottom: 0.4em;
 }
 
-/* Styling for bold text within paragraphs or lists (like your times) */
-strong {
-    font-weight: bold;
-}
-
-/* Italic text (like your reservation details) */
-em {
-    font-style: italic;
-    color: #444; /* Slightly lighter for emphasis */
-}
-
-
-/* Links */
+/* === Contact Links === */
 a {
-    color: #0056b3; /* Slightly darker blue */
+    color: #0073e6;
     text-decoration: none;
 }
 
@@ -72,53 +68,88 @@ a:hover {
     text-decoration: underline;
 }
 
-/* Code blocks - may not be used much in itinerary but good to have */
-pre, code {
-    font-family: 'Agave', Courier, monospace;
-    font-size: 9pt; /* Slightly smaller for code */
-    background-color: #f8f8f8; /* Lighter grey */
-    padding: 1pt 3pt; /* Compact padding for inline code */
-    border: 1pt solid #e7e7e7; /* Lighter border */
-    border-radius: 3px;
+/* === Job Titles & Dates === */
+em {
+    color: #777;
+    font-style: normal;
+    display: block;
+    margin-top: -0.3em;
+    margin-bottom: 0.8em;
 }
 
+/* === Horizontal Rules === */
+hr {
+    border: none;
+    border-top: 1px solid #ddd;
+    margin: 2em 0;
+}
+
+/* === Code blocks & inline === */
+code,
 pre {
-    padding: 8pt; /* Reduced */
-    overflow: auto;
-    margin-bottom: 8pt;
+    font-family: 'Courier New', monospace;
+    background: #f4f4f4;
+    padding: 2px 6px;
+    border-radius: 4px;
 }
 
-/* Tables - may not be used much in itinerary */
+/* === Blockquote === */
+blockquote {
+    border-left: 4px solid #ccc;
+    padding-left: 1em;
+    color: #666;
+    margin: 1em 0;
+    background-color: #f3f3f3;
+}
+
+/* === Table Style (if used) === */
 table {
     width: 100%;
     border-collapse: collapse;
-    margin-bottom: 8pt; /* Reduced */
-    font-size: 8pt; /* Smaller font for tables */
+    margin-bottom: 1em;
 }
 
-th, td {
-    padding: 4pt; /* Reduced */
-    border: 1pt solid #ccc; /* Lighter border */
+th,
+td {
+    padding: 0.6em;
+    border-bottom: 1px solid #ddd;
     text-align: left;
 }
 
-th {
-    background-color: #efefef; /* Lighter grey */
-    font-weight: bold;
+/* === Responsive & Print === */
+@media print {
+    body {
+        background: white;
+        color: black;
+        padding: 0;
+    }
+
+    a {
+        color: black;
+        text-decoration: none;
+    }
 }
 
-/* Images - if you add any */
-img {
-    max-width: 100%;
-    height: auto;
-    margin-bottom: 8pt; /* Reduced */
-    border-radius: 3px;
+/* === Extra: Signature Touches === */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
 }
 
-/* Horizontal Rule */
-hr {
-    border: 0;
-    height: 1px;
-    background: #ddd;
-    margin: 15pt 0; /* Reduced margin */
+header h1 {
+    border: none;
+    font-size: 2.2rem;
+    margin: 0;
+}
+
+.contact-info {
+    margin-top: 1em;
+    font-size: 0.95rem;
+}
+
+.contact-info li {
+    list-style: none;
+    margin-bottom: 0.3em;
 }

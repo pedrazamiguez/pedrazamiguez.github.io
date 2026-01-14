@@ -1,131 +1,111 @@
-# Andrés Pedraza Míguez  
-*Seasoned Java Pro | Turning Ideas into Robust Backend Magic*
+# Andrés Pedraza Míguez
+*Senior Java & Kotlin Engineer | Remote Contractor Specialist*
 
 ## Contact Information
-- **Email:** [pedraza.miguez@gmail.com](mailto:pedraza.miguez@gmail.com)  
-- **LinkedIn:** [pedrazamiguez](https://www.linkedin.com/in/pedrazamiguez/)  
-- **GitHub:** [pedrazamiguez](https://github.com/pedrazamiguez)  
-- **Online CV:** [Andrés Pedraza Míguez](https://pedrazamiguez.github.io)  
-- **Phone:** +34 665 604 912  
+- **Email:** [pedraza.miguez@gmail.com](mailto:pedraza.miguez@gmail.com)
+- **LinkedIn:** [pedrazamiguez](https://www.linkedin.com/in/pedrazamiguez/)
+- **GitHub:** [pedrazamiguez](https://github.com/pedrazamiguez)
+- **Online CV:** [Andrés Pedraza Míguez](https://pedrazamiguez.github.io)
+- **Phone:** +34 665 604 912
 
 ## Professional Summary
-Experienced Backend Java Developer with over 13 years of expertise in designing and implementing scalable systems. Specializes in developing robust APIs, managing server deployments for Java applications, and leveraging the Elastic Stack (Elasticsearch, Logstash, Kibana) for monitoring and analytics. Skilled in modern architectures, including hexagonal architecture, and event-driven systems with Kafka. Passionate about delivering reliable solutions and exploring mobile development through personal projects, such as a travel-focused application. Also enthusiastic about AI-powered backend services and cross-functional teamwork to drive continuous product improvement.
+Senior Backend Engineer with over 14 years of experience designing scalable systems, now leveraging a strong hybrid skillset in **Java (Backend)** and **Kotlin (Mobile/Android)**. Proven track record working as a **Remote Contractor for UK-based companies**, delivering high-quality solutions in English-speaking environments.
+
+Specializes in **Java 21, Spring Boot, and Hexagonal Architecture**, with recent hands-on leadership in **Android Native (Jetpack Compose)** projects. Known for stepping into complex, legacy environments to refactor code, mentor senior peers, and drive delivery. Passionate about software craftsmanship, automated testing, and solving critical business problems across the full stack.
 
 ## Work Experience
 
-### **Senior Java Developer at Plexus Tech**  
-*October 2023 – Present | Seville (Remote)*  
-- Participated in internal training programs to stay updated with evolving backend technologies and enterprise practices.  
-- Took part in technical interviews with Inditex, securing a role in the “Raw Materials” project for Zara’s supply chain.  
-- Developed and maintained microservices in a Dockerized environment deployed on Azure using Java 21 and Spring Boot (Amiga framework).  
-- Engineered backend systems using hexagonal architecture and integrated Kafka for event-driven communication.  
-- Contributed to architectural decisions, estimations, and strategic planning with cross-functional teams.  
-- Wrote unit and integration tests using JUnit, Mockito, and Traffic Parrot to ensure software stability.
+### **Senior Java Developer (Acting Mobile Tech Lead) at Plexus Tech**
+*Client: Inditex (Zara) | October 2023 – Present | Seville (Remote)*
 
-**Main Project: Raw Materials (Inditex)**  
-A backend-focused initiative to manage the logistics and distribution of raw materials across Zara warehouses, part of a broader digital transformation effort.
+* **Dual Role Strategy:** Officially hired as a Backend Engineer but proactively took ownership of a critical **Android App (Kotlin, Jetpack Compose)** to mitigate delivery risks, effectively operating as a Fullstack Lead.
+* **Mobile Rescue & Architecture:** Refactored unstable legacy Android modules, establishing clean architecture patterns and resolving critical production bugs that were impacting Zara's supply chain operations.
+* **Technical Leadership:** Mentored senior team members on modern Kotlin practices and Jetpack Compose, significantly elevating the team's coding standards and reducing technical debt.
+* **Backend Core:** Continued developing and maintaining robust microservices for the logistics system using **Java 21, Spring Boot 3, and Apache Kafka** within a Hexagonal Architecture.
+* **Quality Assurance:** Enforced strict testing protocols (JUnit, Mockito, Traffic Parrot) across both backend and mobile codebases to ensure stability in a Dockerized Azure environment.
 
-**Tech Stack:** Java 21, Spring Boot 3, Amiga Framework, Apache Kafka, Docker, Azure, MongoDB, Git, JUnit, Mockito, Traffic Parrot, RESTful APIs, CI/CD pipelines.
+**Main Project: Raw Materials (Inditex)**
+A critical initiative managing the logistics and distribution of raw materials across global Zara warehouses.
 
----
-
-### **Senior Java Developer at Brandworkz**  
-*February 2017 – August 2023 | London (Hybrid)*  
-- Led development of a Java-based API within a multi-tenant microservices architecture.  
-- Built a complete Reporting module and developed custom visualizations in Kibana.  
-- Implemented OAuth2 authorization and enhanced API security with user roles.  
-- Automated deployment with bash scripts and CRON jobs.  
-- Managed Linux server setup and deployments.  
-- Actively involved in architectural decisions, planning sessions, onboarding new hires, and advising clients.  
-- Wrote clean, intelligible documentation and resolved production issues regularly.
-
-**Main Project: Brandworkz**  
-A SaaS platform for digital asset management, used by clients such as University of Greenwich, Dr. Martens, Boeing, Brother, Assa Abloy, and Hitachi.
-
-**Tech Stack:** Spring Boot, Spring Cloud, Spring Security, Velocity, Thymeleaf, REST APIs, Jenkins, AWS EC2/S3/RDS/DynamoDB, Redis, PostgreSQL, Elasticsearch, Swagger 2, Open API 3, Liquibase, Git, Azure Data Studio.
+**Tech Stack:** Java 21, Kotlin (Android/Compose), Spring Boot 3, Apache Kafka, Docker, Azure, MongoDB, JUnit, Mockito, CI/CD pipelines.
 
 ---
 
-### **Freelance Backend Developer (Contractor at Brandworkz)**  
-*February 2022 – August 2023 | Remote*  
-- Continued backend support for Brandworkz, focusing on performance enhancements and system optimization while transitioning to contractor role.
+### **Senior Java Developer at Brandworkz**
+*February 2017 – August 2023 | London (Hybrid)*
+
+* Led the development of a core Java-based API within a multi-tenant microservices architecture for high-profile clients like **Boeing, Dr. Martens, and Hitachi**.
+* Built a complete Reporting module from scratch and developed custom analytics visualizations using **Elasticsearch and Kibana**.
+* Implemented **OAuth2** authorization and significantly enhanced API security with granular user roles.
+* Automated deployment pipelines using Bash scripts, CRON jobs, and Jenkins.
+* Actively involved in architectural decisions, strategic planning, and onboarding new hires.
+
+**Main Project: Brandworkz SaaS**
+A Digital Asset Management (DAM) platform used globally by enterprise clients.
+
+**Tech Stack:** Spring Boot, Spring Cloud, Spring Security, AWS (EC2/S3/RDS), Elasticsearch, Redis, PostgreSQL, Swagger, OpenAPI 3, Liquibase.
 
 ---
 
-### **Back-end Developer at Locassa Ltd**  
-*July 2015 – November 2016 | London (On-site)*  
-- Involved in all phases of the software lifecycle: planning, implementation, deployment, and maintenance.  
-- Built back-office apps and participated in client demos and requirement gathering.  
-- Mentored new hires and explored new frameworks and tools to improve development efficiency.
+### **Freelance Backend Developer (Contractor at Brandworkz)**
+*February 2022 – August 2023 | Remote*
 
-**Projects:** Ziferblat, Minted, Inkvite, Jarvis, Vesta Fitness, Rounds on Me, gowithYamo, Spot & Change
-
-**Tech Stack:** Spring Boot, Thymeleaf, REST APIs, MySQL, OAuth2, Swagger 2, AWS (Elastic Beanstalk, S3, EC2), Twilio, Foursquare Places API.
+* Successfully transitioned from full-time employee to **independent contractor**, demonstrating strong self-management and reliability in a 100% remote setup.
+* Focused on performance optimizations and backend support during critical system upgrades.
 
 ---
 
-### **Java Analyst at Grupo Servinform**  
-*October 2014 – May 2015 | Seville (On-site)*  
-- Gathered requirements and authored analysis documents for government projects.  
-- Led configuration, testing, and deployment in integration environments.  
-- Provided mentorship to junior team members.
+### **Back-end Developer at Locassa Ltd**
+*July 2015 – November 2016 | London (On-site)*
 
-**Main Project:** HAPR-MIGRA – Migrated legacy data systems as part of a modernization effort.
+* Managed the full software lifecycle: planning, implementation, deployment, and maintenance for multiple client startups.
+* Built back-office applications and led client demos and requirement gathering sessions.
+* Mentored junior developers and introduced new frameworks to improve development efficiency.
 
-**Tech Stack:** iBatis, Spring, Struts 1, Tiles, JSP, PL/SQL, iText, jsoup, Apache Tomcat, Subversion, Maven.
-
----
-
-### **Java Developer at Grupo Servinform**  
-*January 2012 – September 2014 | Seville (On-site)*  
-- Delivered new functionalities based on detailed analysis documentation.  
-- Wrote PL/SQL scripts to improve database performance.  
-- Learned and applied Scrum methodology to agile teams.
-
-**Main Project:** HAPR – A system for telematic authorization of specialized workers.
-
-**Client:** Department of Economy, Innovation, Science and Employment, Junta de Andalucía
-
-**Tech Stack:** Hibernate, iBatis, Spring, JSP, Servlets, PL/SQL, JasperReports, Subversion.
+**Projects:** Ziferblat, Minted, Inkvite, Jarvis, Vesta Fitness, Rounds on Me.
+**Tech Stack:** Spring Boot, Thymeleaf, REST APIs, MySQL, OAuth2, AWS (Elastic Beanstalk, S3, EC2).
 
 ---
 
-### **Junior Oracle Developer at Ayesa**  
-*July 2011 – December 2011 | Seville (Part-time)*  
-- Updated documents and application flows per client specifications to reduce support requests.
+### **Java Analyst at Grupo Servinform**
+*October 2014 – May 2015 | Seville (On-site)*
 
-**Main Project:** Integrated Social Services System  
+* Gathered requirements and authored technical analysis documents for government modernization projects.
+* Led configuration, testing, and deployment in integration environments.
 
-**Client:** Department of Equality, Health and Social Politics, Junta de Andalucía
-
-**Tech Stack:** Oracle Forms 9i, PL/SQL, Oracle JDeveloper, SQL Developer
+**Tech Stack:** iBatis, Spring, Struts, PL/SQL, Apache Tomcat, Maven.
 
 ---
 
-### **Junior Java Developer at Ayesa**  
-*April 2011 – June 2011 | Seville (Part-time)*  
-- Created GUI prototypes and implemented minor validations and improvements.
+### **Java Developer at Grupo Servinform**
+*January 2012 – September 2014 | Seville (On-site)*
 
-**Main Project:** Concert@ – Private healthcare information system  
+* Delivered new functionalities for the "HAPR" system (Telematic Authorization) for the Junta de Andalucía.
+* Optimized database performance using advanced PL/SQL scripts.
+* Applied Scrum methodology in an agile team environment.
 
-**Client:** Department of Equality, Health and Social Politics, Junta de Andalucía
-
-**Tech Stack:** Hibernate, Spring, JSF, Richfaces, PL/SQL, Maven, JBoss, Eclipse, NetBeans
+**Tech Stack:** Hibernate, iBatis, Spring, JSP, PL/SQL, Subversion.
 
 ---
+
+### **Junior Oracle/Java Developer at Ayesa**
+*April 2011 – December 2011 | Seville (Part-time)*
+
+* Developed GUI prototypes and maintained legacy systems for public healthcare and social services projects.
+
+**Tech Stack:** Oracle Forms, PL/SQL, Hibernate, Spring, JSF.
 
 ## Skills
-- **Languages:** Java (Expert), Kotlin (Intermediate), Dart (Intermediate)  
-- **Frameworks & Tools:** Spring Boot, Microservices, Kafka, Docker, Azure, AWS, REST APIs, Hexagonal Architecture, OAuth2  
-- **Databases:** MongoDB, PostgreSQL, MySQL, Oracle, DynamoDB, PL/SQL  
-- **Monitoring & DevOps:** Elastic Stack (Elasticsearch, Logstash, Kibana), Jenkins, Git, Bash, CI/CD  
-- **Testing:** JUnit, Mockito, Integration Testing, TDD  
-- **Other:** Velocity, Thymeleaf, Swagger, Liquibase, Maven, Gradle
 
----
+- **Languages:** Java (Expert), Kotlin (Advanced), Dart (Intermediate).
+- **Core Frameworks:** Spring Boot 3, Spring Cloud, Microservices, Hexagonal Architecture.
+- **Data & Messaging:** Apache Kafka, MongoDB, PostgreSQL, MySQL, Oracle, Redis, Elasticsearch.
+- **Cloud & DevOps:** Docker, Kubernetes, Azure, AWS (EC2, S3, RDS), Jenkins, CI/CD, Git.
+- **Testing & Quality:** JUnit 5, Mockito, TDD, Integration Testing.
+- **Other:** REST APIs, OAuth2, Swagger/OpenAPI, Liquibase, Maven, Gradle.
 
 ## Education
-**HNC in Administration and Information Technology**  
-IES Punta del Verde, Graduated 2011  
-- Focused on software development and database management.  
-- Capstone project combining Java and SQL technologies.
+**HNC in Administration and Information Technology**
+IES Punta del Verde, Graduated 2011
+* Focused on software development and database management.
+* Capstone project combining Java and SQL technologies.
