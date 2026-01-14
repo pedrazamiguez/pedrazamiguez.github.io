@@ -78,8 +78,8 @@ em {
     margin-bottom: 0.8em;
 }
 
-/* Center the subtitle (first em after h1) */
-h1 + p > em {
+/* Center the subtitle paragraph after h1 */
+h1 + p {
     text-align: center;
 }
 
