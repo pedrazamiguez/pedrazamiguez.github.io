@@ -21,7 +21,7 @@ Specializes in **Java 21, Spring Boot, and Hexagonal Architecture**, with recent
 * **Dual Role Strategy:** Officially hired as a Backend Engineer but proactively took ownership of a critical **Android App (Kotlin, Jetpack Compose)** to mitigate delivery risks, effectively operating as a Fullstack Lead.
 * **Mobile Rescue & Architecture:** Refactored unstable legacy Android modules, establishing clean architecture patterns and resolving critical production bugs that were impacting Zara's supply chain operations.
 * **Technical Leadership:** Mentored senior team members on modern Kotlin practices and Jetpack Compose, significantly elevating the team's coding standards and reducing technical debt.
-* **Backend Core:** Continued developing and maintaining robust microservices for the logistics system using **Java 21, Spring Boot 3, and Apache Kafka** within a Hexagonal Architecture.
+* **Backend Core:** Developed robust microservices using **Java 21** and **Spring Boot 3**, enforcing an **API-First strategy**: used **OpenAPI** for mobile clients and **AsyncAPI** with **Kafka & Avro schemas** to guarantee type-safe integration with logistics partners.
 * **Quality Assurance:** Enforced strict testing protocols (JUnit, Mockito, Traffic Parrot) across both backend and mobile codebases to ensure stability in a Dockerized Azure environment.
 
 **Main Project: Raw Materials (Inditex)**
@@ -102,7 +102,7 @@ A Digital Asset Management (DAM) platform used globally by enterprise clients.
 - **Data & Messaging:** Apache Kafka, MongoDB, PostgreSQL, MySQL, Oracle, Redis, Elasticsearch.
 - **Cloud & DevOps:** Docker, Kubernetes, Azure, AWS (EC2, S3, RDS), Jenkins, CI/CD, Git.
 - **Testing & Quality:** JUnit 5, Mockito, TDD, Integration Testing.
-- **Other:** REST APIs, OAuth2, Swagger/OpenAPI, Liquibase, Maven, Gradle.
+- **Other:** **API-First Design**, OpenAPI Generator, **AsyncAPI**, OAuth2, Liquibase, Gradle.
 
 ## Education
 **HNC in Administration and Information Technology**
