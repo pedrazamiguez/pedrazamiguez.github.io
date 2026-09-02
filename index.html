@@ -162,9 +162,10 @@ a.download-btn:hover {
 }
 
 .contact-item {
-    display: flex;
+    display: grid;
+    grid-template-columns: 76px 1fr;
     align-items: center;
-    gap: 0.45rem;
+    gap: 0.4rem;
     color: var(--text-muted);
 }
 
@@ -172,7 +173,7 @@ a.download-btn:hover {
     font-weight: 600;
     color: var(--text-body);
     font-size: 0.82rem;
-    min-width: 55px;
+    white-space: nowrap;
 }
 
 .contact-value {
@@ -468,9 +469,16 @@ th {
         font-size: 0.78rem;
     }
 
+    .contact-item {
+        display: grid;
+        grid-template-columns: 70px 1fr;
+        align-items: center;
+        gap: 0.35rem;
+    }
+
     .contact-label {
-        min-width: 48px;
         font-size: 0.75rem;
+        white-space: nowrap;
     }
 
     h2 {
@@ -654,7 +662,8 @@ A Digital Asset Management (DAM) platform used globally by enterprise clients.</
 <div class="tech-stack-container"><span class="tech-stack-label">TECH STACK</span><div class="tech-pills"><span class="tech-pill">Oracle Forms</span><span class="tech-pill">PL/SQL</span><span class="tech-pill">Hibernate</span><span class="tech-pill">Spring</span><span class="tech-pill">JSF</span></div></div>
 <h2>Skills</h2>
 <ul>
-<li><strong>Languages:</strong> Java (Expert), Kotlin (Advanced), Dart (Intermediate)</li>
+<li><strong>Programming Languages:</strong> Java (Expert), Kotlin (Advanced), Dart (Intermediate)</li>
+<li><strong>Spoken Languages:</strong> Spanish (Native), English (Full Professional / Fluent — 8+ years UK experience)</li>
 <li><strong>Core Frameworks &amp; Mobile:</strong> Spring Boot 3, Spring Cloud, Microservices, Hexagonal Architecture, Jetpack Compose, Flutter</li>
 <li><strong>AI &amp; Agentic Engineering:</strong> Agentic Workflows (OpenCode, Antigravity, Copilot), Model Context Protocol (MCP), Custom Agent Skills &amp; Rules, Multi-Agent &amp; RAG Foundations, Claude / GPT / Gemini Integration</li>
 <li><strong>Data &amp; Messaging:</strong> Apache Kafka, MongoDB, PostgreSQL, MySQL, Oracle, Redis, Elasticsearch</li>

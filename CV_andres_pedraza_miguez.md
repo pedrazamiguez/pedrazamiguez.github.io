@@ -99,7 +99,8 @@ A Digital Asset Management (DAM) platform used globally by enterprise clients.
 
 ## Skills
 
-- **Languages:** Java (Expert), Kotlin (Advanced), Dart (Intermediate)
+- **Programming Languages:** Java (Expert), Kotlin (Advanced), Dart (Intermediate)
+- **Spoken Languages:** Spanish (Native), English (Full Professional / Fluent — 8+ years UK experience)
 - **Core Frameworks & Mobile:** Spring Boot 3, Spring Cloud, Microservices, Hexagonal Architecture, Jetpack Compose, Flutter
 - **AI & Agentic Engineering:** Agentic Workflows (OpenCode, Antigravity, Copilot), Model Context Protocol (MCP), Custom Agent Skills & Rules, Multi-Agent & RAG Foundations, Claude / GPT / Gemini Integration
 - **Data & Messaging:** Apache Kafka, MongoDB, PostgreSQL, MySQL, Oracle, Redis, Elasticsearch
