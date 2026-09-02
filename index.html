@@ -4,8 +4,46 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Andrés Pedraza Míguez</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=JetBrains+Mono:wght@400;500;600&family=Plus+Jakarta+Sans:ital,wght@0,400..800;1,400..800&display=swap" rel="stylesheet">
     <style>
-/* === Reset & Base === */
+/* === Google Fonts Import === */
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=JetBrains+Mono:wght@400;500;600&family=Plus+Jakarta+Sans:ital,wght@0,400..800;1,400..800&display=swap');
+
+/* === CSS Variables & Theme System === */
+:root {
+    --font-heading: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    --font-body: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    --font-mono: 'JetBrains Mono', 'SFMono-Regular', Consolas, Menlo, monospace;
+
+    /* Executive Slate & Deep Navy Theme (Subtle, Refined, High-End) */
+    --text-primary: #0f172a;       /* Slate 900 */
+    --text-body: #334155;          /* Slate 700 */
+    --text-muted: #64748b;         /* Slate 500 */
+    --text-light: #94a3b8;         /* Slate 400 */
+
+    --accent-primary: #1e3a8a;     /* Deep Executive Navy */
+    --accent-hover: #0f172a;       /* Midnight Slate */
+    --accent-link: #1d4ed8;        /* Classic Navy Link */
+    --accent-subtle: #f8fafc;      /* Soft Slate */
+    --accent-border: #cbd5e1;      /* Slate 300 */
+
+    --bg-page: #f8fafc;            /* Slate 50 */
+    --bg-card: #ffffff;            /* Pure White */
+    --bg-muted: #f1f5f9;           /* Slate 100 */
+
+    --border-subtle: #e2e8f0;      /* Slate 200 */
+    --border-strong: #cbd5e1;      /* Slate 300 */
+
+    --badge-bg: #f1f5f9;
+    --badge-text: #334155;
+    --badge-border: #e2e8f0;
+
+    --shadow-card: 0 4px 6px -1px rgba(15, 23, 42, 0.04), 0 10px 15px -3px rgba(15, 23, 42, 0.04);
+}
+
+/* === Reset & Base Styles === */
 * {
     margin: 0;
     padding: 0;
@@ -13,260 +51,607 @@
 }
 
 body {
-    font-family: 'Inter', 'Segoe UI', sans-serif;
-    font-size: 15px;
-    color: #222;
-    background-color: #f9f9f9;
+    font-family: var(--font-body);
+    font-size: 14.5px;
+    color: var(--text-body);
+    background-color: var(--bg-page);
     line-height: 1.6;
-    padding: 40px;
-    max-width: 900px;
-    margin: auto;
+    padding: 40px 16px;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
 }
 
-/* === Headings === */
-h1,
-h2,
-h3 {
-    font-weight: 600;
-    color: #2c3e50;
-    margin-bottom: 0.4em;
+/* Document Container */
+.cv-document {
+    max-width: 860px;
+    margin: 0 auto;
+    background: var(--bg-card);
+    padding: 52px 60px;
+    border-radius: 12px;
+    border: 1px solid var(--border-subtle);
+    box-shadow: var(--shadow-card);
+}
+
+/* === Header Section === */
+.cv-header {
+    margin-bottom: 2.2rem;
+}
+
+.header-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 1.5rem;
+    margin-bottom: 1.25rem;
+}
+
+.header-titles {
+    flex: 1;
 }
 
 h1 {
-    font-size: 2rem;
-    border-bottom: 2px solid #ddd;
-    padding-bottom: 0.2em;
-    margin-bottom: 1.2em;
-    text-align: center;
+    font-family: var(--font-heading);
+    font-size: 2.35rem;
+    font-weight: 800;
+    color: var(--text-primary);
+    letter-spacing: -0.03em;
+    line-height: 1.15;
+    margin-bottom: 0.35rem;
+    text-align: left;
 }
 
-h2 {
-    font-size: 1.4rem;
-    margin-top: 2.2em;
-    border-bottom: 1px solid #e0e0e0;
-    padding-bottom: 0.2em;
+.cv-subtitle,
+h1 + p {
+    font-family: var(--font-heading);
+    font-size: 1.05rem;
+    font-weight: 600;
+    color: var(--accent-primary);
+    letter-spacing: -0.01em;
+    margin-bottom: 0;
+    text-align: left;
 }
 
-h3 {
-    font-size: 1.1rem;
-    color: #555;
+.cv-subtitle em,
+h1 + p em {
+    font-style: normal;
+    color: inherit;
+    display: inline;
 }
 
-/* === Paragraphs & Lists === */
-p {
-    margin-bottom: 1em;
+/* Download Action Button (Header Right) */
+.header-action a,
+a.download-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.4rem;
+    background: var(--accent-primary);
+    color: #ffffff !important;
+    padding: 9px 18px;
+    border-radius: 6px;
+    font-family: var(--font-heading);
+    font-weight: 600;
+    font-size: 0.85rem;
+    text-decoration: none;
+    box-shadow: 0 2px 4px rgba(30, 58, 138, 0.18);
+    transition: all 0.15s ease;
+    white-space: nowrap;
 }
 
-ul {
-    margin-left: 1.4em;
-    margin-bottom: 1.2em;
-}
-
-li {
-    margin-bottom: 0.6em;
-}
-
-/* === Contact Links === */
-a {
-    color: #0073e6;
+.header-action a:hover,
+a.download-btn:hover {
+    background: var(--accent-hover);
+    box-shadow: 0 4px 8px rgba(30, 58, 138, 0.28);
+    transform: translateY(-1px);
     text-decoration: none;
 }
 
-a:hover {
+/* === Contact Structured Card & Grid === */
+.contact-card {
+    background: var(--bg-muted);
+    border: 1px solid var(--border-subtle);
+    border-radius: 8px;
+    padding: 0.9rem 1.25rem;
+    margin-top: 1rem;
+}
+
+.contact-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 0.55rem 2rem;
+    font-size: 0.88rem;
+}
+
+.contact-item {
+    display: flex;
+    align-items: center;
+    gap: 0.45rem;
+    color: var(--text-muted);
+}
+
+.contact-label {
+    font-weight: 600;
+    color: var(--text-body);
+    font-size: 0.82rem;
+    min-width: 55px;
+}
+
+.contact-value {
+    color: var(--text-primary);
+}
+
+.contact-value a {
+    color: var(--text-primary);
+    font-weight: 500;
+    text-decoration: none;
+}
+
+.contact-value a:hover {
+    color: var(--accent-link);
     text-decoration: underline;
 }
 
-/* === Job Titles & Dates === */
-em {
-    color: #777;
+/* === Section Headings (h2) === */
+h2 {
+    font-family: var(--font-heading);
+    font-size: 0.82rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.09em;
+    color: var(--accent-primary);
+    margin-top: 2.2rem;
+    margin-bottom: 0.9rem;
+    padding-bottom: 0;
+    border-bottom: none; /* Removed gray horizontal line */
+    display: flex;
+    align-items: center;
+}
+
+/* === Job Titles & Roles (h3) === */
+h3 {
+    font-family: var(--font-heading);
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: var(--text-primary);
+    margin-top: 1.6rem;
+    margin-bottom: 0.25rem;
+    letter-spacing: -0.015em;
+}
+
+/* Subtitles, Company Names, Dates & Locations */
+h3 + p em,
+p > em {
+    font-family: var(--font-body);
+    font-size: 0.86rem;
+    font-weight: 500;
+    color: var(--text-muted);
     font-style: normal;
     display: block;
-    margin-top: -0.3em;
-    margin-bottom: 0.8em;
+    margin-top: 0;
+    margin-bottom: 0.8rem;
 }
 
-/* Center the subtitle paragraph after h1 */
-h1 + p {
-    text-align: center;
+/* === Paragraphs & Content Lists === */
+p {
+    margin-bottom: 0.85rem;
+    color: var(--text-body);
+    line-height: 1.62;
 }
 
-/* === Horizontal Rules === */
+/* Custom Uncut Circular Bullets */
+ul {
+    list-style: none;
+    margin-left: 0;
+    padding-left: 0;
+    margin-bottom: 1.1rem;
+}
+
+li {
+    position: relative;
+    padding-left: 1.25rem;
+    margin-bottom: 0.45rem;
+    color: var(--text-body);
+    line-height: 1.58;
+}
+
+li::before {
+    content: "";
+    position: absolute;
+    left: 0.15rem;
+    top: 0.62em;
+    width: 4.5px;
+    height: 4.5px;
+    border-radius: 50%;
+    background-color: var(--accent-primary);
+    opacity: 0.85;
+}
+
+/* Bullet Lead-In Emphasis (e.g. **Dual Role Strategy:**) */
+li > strong:first-child {
+    font-family: var(--font-heading);
+    font-weight: 700;
+    color: var(--text-primary);
+}
+
+/* Regular bold words */
+strong {
+    font-weight: 600;
+    color: var(--text-primary);
+}
+
+/* === Project Highlight Row === */
+.project-highlight {
+    margin-top: 0.85rem;
+    margin-bottom: 0.5rem;
+    font-size: 0.88rem;
+    line-height: 1.55;
+    color: var(--text-body);
+}
+
+.project-label {
+    font-family: var(--font-heading);
+    font-weight: 700;
+    color: var(--text-primary);
+}
+
+.project-desc {
+    display: block;
+    margin-top: 0.2rem;
+    color: var(--text-muted);
+}
+
+/* === Tech Stack Badge Container === */
+.tech-stack-container {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 0.4rem 0.5rem;
+    margin: 0.65rem 0 1.2rem 0;
+    font-size: 0.85rem;
+}
+
+.tech-stack-label {
+    font-family: var(--font-heading);
+    font-weight: 700;
+    font-size: 0.74rem;
+    text-transform: uppercase;
+    letter-spacing: 0.07em;
+    color: var(--text-muted);
+    margin-right: 0.3rem;
+    white-space: nowrap;
+}
+
+.tech-pills {
+    display: inline-flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 0.35rem;
+}
+
+.tech-pill {
+    background-color: var(--badge-bg);
+    color: var(--badge-text);
+    border: 1px solid var(--badge-border);
+    padding: 2px 7px;
+    border-radius: 4px;
+    font-size: 0.78rem;
+    font-family: var(--font-mono);
+    font-weight: 500;
+    letter-spacing: -0.01em;
+}
+
+/* === Horizontal Rules (Hidden for Clean Modern Spacing) === */
 hr {
-    border: none;
-    border-top: 1px solid #ddd;
-    margin: 2em 0;
+    display: none;
+}
+
+/* === Links === */
+a {
+    color: var(--accent-link);
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.15s ease;
+}
+
+a:hover {
+    color: var(--accent-hover);
+    text-decoration: underline;
 }
 
 /* === Code blocks & inline === */
 code,
 pre {
-    font-family: 'Courier New', monospace;
-    background: #f4f4f4;
+    font-family: var(--font-mono);
+    background: var(--bg-muted);
+    color: var(--text-primary);
     padding: 2px 6px;
     border-radius: 4px;
+    font-size: 0.88em;
+    border: 1px solid var(--border-subtle);
 }
 
 /* === Blockquote === */
 blockquote {
-    border-left: 4px solid #ccc;
-    padding-left: 1em;
-    color: #666;
-    margin: 1em 0;
-    background-color: #f3f3f3;
+    border-left: 3px solid var(--accent-primary);
+    padding-left: 1rem;
+    color: var(--text-muted);
+    margin: 1rem 0;
+    background-color: var(--bg-muted);
+    border-radius: 0 6px 6px 0;
+    padding: 0.5rem 1rem;
 }
 
-/* === Table Style (if used) === */
+/* === Table Style === */
 table {
     width: 100%;
     border-collapse: collapse;
-    margin-bottom: 1em;
+    margin-bottom: 1.2rem;
 }
 
 th,
 td {
-    padding: 0.6em;
-    border-bottom: 1px solid #ddd;
+    padding: 0.6rem 0.8rem;
+    border-bottom: 1px solid var(--border-subtle);
     text-align: left;
 }
 
-/* === Page Setup & Print === */
+th {
+    font-family: var(--font-heading);
+    font-weight: 700;
+    color: var(--text-primary);
+    font-size: 0.85rem;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+    background-color: var(--bg-muted);
+}
+
+/* === Page Setup & Print (PDF) === */
 @page {
     size: A4;
-    margin: 15mm 15mm 15mm 15mm;
+    margin: 14mm 14mm 14mm 14mm;
 }
 
 @media print {
-    body {
-        background: white;
-        color: #222;
-        padding: 0;
-        max-width: 100%;
-        font-size: 14px;
-        line-height: 1.5;
+    html, body {
+        background: #ffffff !important;
+        color: #1e293b !important;
+        font-size: 12.5px;
+        line-height: 1.46;
+        padding: 0 !important;
+        margin: 0 !important;
+        -webkit-print-color-adjust: exact;
+        print-color-adjust: exact;
     }
 
-    h1, h2, h3 {
+    .cv-document {
+        max-width: 100% !important;
+        padding: 0 !important;
+        margin: 0 !important;
+        background: transparent !important;
+        border: none !important;
+        box-shadow: none !important;
+        border-radius: 0 !important;
+    }
+
+    .cv-header {
+        margin-bottom: 1.2rem;
+    }
+
+    .header-top {
+        margin-bottom: 0.6rem;
+    }
+
+    h1 {
+        font-size: 1.95rem;
+        margin-bottom: 0.2rem;
+        color: #0f172a !important;
+    }
+
+    .cv-subtitle,
+    h1 + p {
+        font-size: 0.95rem;
+        margin-bottom: 0;
+        color: #1e3a8a !important;
+    }
+
+    .contact-card {
+        padding: 0.5rem 0.9rem;
+        margin-top: 0.75rem;
+        margin-bottom: 1.2rem;
+        background: #f8fafc !important;
+        border: 1px solid #e2e8f0 !important;
+        border-radius: 6px;
+    }
+
+    .contact-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 0.35rem 1.5rem;
+        font-size: 0.78rem;
+    }
+
+    .contact-label {
+        min-width: 48px;
+        font-size: 0.75rem;
+    }
+
+    h2 {
+        font-size: 0.78rem;
+        margin-top: 1.3rem;
+        margin-bottom: 0.45rem;
+        padding-bottom: 0;
+        color: #1e3a8a !important;
+        border-bottom: none !important;
         page-break-after: avoid;
         break-after: avoid;
     }
 
-    hr {
+    h3 {
+        font-size: 0.98rem;
+        margin-top: 1.1rem;
+        margin-bottom: 0.15rem;
+        color: #0f172a !important;
         page-break-after: avoid;
+        break-after: avoid;
+    }
+
+    h3 + p em,
+    p > em {
+        margin-bottom: 0.45rem;
+        font-size: 0.8rem;
+        color: #64748b !important;
+        page-break-after: avoid;
+        break-after: avoid;
+    }
+
+    li {
+        padding-left: 1rem;
+        margin-bottom: 0.35rem;
+    }
+
+    li::before {
+        left: 0.1rem;
+        top: 0.58em;
+        width: 4px;
+        height: 4px;
+        background-color: #1e3a8a !important;
+        -webkit-print-color-adjust: exact;
+        print-color-adjust: exact;
+    }
+
+    .project-highlight {
+        margin-top: 0.5rem;
+        margin-bottom: 0.35rem;
+        font-size: 0.82rem;
+    }
+
+    .tech-stack-container {
+        margin: 0.45rem 0 0.8rem 0;
+        page-break-inside: avoid;
+        break-inside: avoid;
+    }
+
+    .tech-stack-label {
+        font-size: 0.72rem;
+    }
+
+    .tech-pill {
+        background-color: #f1f5f9 !important;
+        color: #334155 !important;
+        border: 1px solid #e2e8f0 !important;
+        font-size: 0.74rem;
+        padding: 1px 5px;
+    }
+
+    ul {
+        margin-left: 0;
+        padding-left: 0;
+        margin-bottom: 0.7rem;
+    }
+
+    p {
+        margin-bottom: 0.5rem;
+    }
+
+    hr {
+        display: none !important;
     }
 
     a {
-        color: #0073e6;
+        color: #1e3a8a !important;
         text-decoration: none;
     }
-}
-
-/* === Extra: Signature Touches === */
-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    flex-wrap: wrap;
-}
-
-header h1 {
-    border: none;
-    font-size: 2.2rem;
-    margin: 0;
-}
-
-.contact-info {
-    margin-top: 1em;
-    font-size: 0.95rem;
-}
-
-.contact-info li {
-    list-style: none;
-    margin-bottom: 0.3em;
 }
     </style>
 </head>
 <body>
-<h1>Andrés Pedraza Míguez</h1>
-<p><em>Senior Java &amp; Kotlin Engineer | Remote Contractor Specialist</em></p>
-<h2>Contact Information</h2>
-<ul>
-<li><strong>Email:</strong> <a href="mailto:pedraza.miguez@gmail.com">pedraza.miguez@gmail.com</a></li>
-<li><strong>LinkedIn:</strong> <a href="https://www.linkedin.com/in/pedrazamiguez/">pedrazamiguez</a></li>
-<li><strong>GitHub:</strong> <a href="https://github.com/pedrazamiguez">pedrazamiguez</a></li>
-<li><strong>Download CV:</strong> <a href="CV_andres_pedraza_miguez.pdf" download>Download PDF</a></li>
-<li><strong>Phone:</strong> +34 665 604 912</li>
-</ul>
+    <main class="cv-document">
+<header class="cv-header">
+  <div class="header-top">
+    <div class="header-titles">
+      <h1>Andrés Pedraza Míguez</h1>
+      <p class="cv-subtitle">Senior Java &amp; Kotlin Engineer | Remote Contractor Specialist</p>
+    </div>
+    <div class="header-action"><a href="CV_andres_pedraza_miguez.pdf" download>Download PDF</a></div>
+  </div>
+  <div class="contact-card">
+    <div class="contact-grid">
+      <div class="contact-item"><span class="contact-label">Email:</span> <span class="contact-value"><a href="mailto:pedraza.miguez@gmail.com">pedraza.miguez@gmail.com</a></span></div>
+      <div class="contact-item"><span class="contact-label">Phone:</span> <span class="contact-value">+34 665 604 912</span></div>
+      <div class="contact-item"><span class="contact-label">LinkedIn:</span> <span class="contact-value"><a href="https://www.linkedin.com/in/pedrazamiguez/">pedrazamiguez</a></span></div>
+      <div class="contact-item"><span class="contact-label">GitHub:</span> <span class="contact-value"><a href="https://github.com/pedrazamiguez">pedrazamiguez</a></span></div>
+    </div>
+  </div>
+</header>
 <h2>Professional Summary</h2>
-<p>Senior Backend Engineer with over 14 years of experience designing scalable systems, now leveraging a strong hybrid skill set in <strong>Java (Backend)</strong> and <strong>Kotlin (Mobile/Android)</strong>. Proven track record working as a Remote Contractor for UK-based companies, delivering high-quality solutions in English-speaking environments.</p>
-<p>Specialises in <strong>Java 21</strong>, <strong>Spring Boot</strong>, and <strong>Hexagonal Architecture</strong>, with recent hands-on leadership in <strong>Android Native (Jetpack Compose)</strong> projects. Known for stepping into complex, legacy environments to refactor code, mentor senior peers, and drive delivery. Passionate about software craftsmanship, automated testing, and solving critical business problems across the full stack.</p>
+<p>Senior Backend Engineer with over 14 years of experience designing scalable systems, now leveraging a strong hybrid skill set across Java (Backend) and Kotlin (Mobile/Android). Proven track record working as a Remote Contractor for UK-based companies, delivering high-quality solutions in English-speaking environments.</p>
+<p>Specialises in Java 21, Spring Boot, and Hexagonal Architecture, with recent hands-on leadership in Android Native (Jetpack Compose) projects. Known for stepping into complex, legacy environments to refactor code, mentor senior peers, and drive delivery. Passionate about software craftsmanship, automated testing, and solving critical business problems across the full stack.</p>
 <h2>Work Experience</h2>
-<h3><strong>Senior Java Developer (Acting Mobile Tech Lead) at Plexus Tech</strong></h3>
+<h3>Senior Java Developer (Acting Mobile Tech Lead) at Plexus Tech</h3>
 <p><em>Client: Inditex (Zara) | October 2023 – Present | Seville (Remote)</em></p>
 <ul>
-<li><strong>Dual Role Strategy:</strong> Officially hired as a Backend Engineer but proactively took ownership of a critical Android App (<strong>Kotlin</strong>, <strong>Jetpack Compose</strong>) to mitigate delivery risks, effectively operating as a Fullstack Lead.</li>
+<li><strong>Dual Role Strategy:</strong> Officially hired as a Backend Engineer but proactively took ownership of a critical Android App (Kotlin, Jetpack Compose) to mitigate delivery risks, effectively operating as a Fullstack Lead.</li>
 <li><strong>Mobile Rescue &amp; Architecture:</strong> Refactored unstable legacy Android modules, establishing clean architecture patterns and resolving critical production bugs that were impacting Zara&rsquo;s supply chain operations.</li>
-<li><strong>Technical Leadership:</strong> Mentored senior team members on modern <strong>Kotlin</strong> practices and <strong>Jetpack Compose</strong>, significantly elevating the team&rsquo;s coding standards and reducing technical debt.</li>
-<li><strong>Backend Core:</strong> Developed robust microservices using <strong>Java 21</strong> and <strong>Spring Boot 3</strong>, enforcing an API-First strategy: used <strong>OpenAPI</strong> for mobile clients and <strong>AsyncAPI</strong> with <strong>Kafka</strong> &amp; <strong>Avro schemas</strong> to guarantee type-safe integration with logistics partners.</li>
-<li><strong>AI-Augmented SDLC:</strong> Integrated agentic developer tooling (<strong>OpenCode</strong>, <strong>GitHub Copilot</strong>, <strong>MCP</strong>) with custom agents and rules across Android Studio and Jira/GitHub, accelerating technical refinements (SDD), acceptance criteria generation, PR reviews, and production issue investigations.</li>
-<li><strong>Quality Assurance:</strong> Enforced strict testing protocols (<strong>JUnit</strong>, <strong>Mockito</strong>, <strong>Traffic Parrot</strong>) across both backend and mobile codebases to ensure stability in a Dockerised <strong>Azure</strong> environment.</li>
+<li><strong>Technical Leadership:</strong> Mentored senior team members on modern Kotlin practices and Jetpack Compose, significantly elevating the team&rsquo;s coding standards and reducing technical debt.</li>
+<li><strong>Backend Core:</strong> Developed robust microservices using Java 21 and Spring Boot 3, enforcing an API-First strategy: used OpenAPI for mobile clients and AsyncAPI with Kafka &amp; Avro schemas to guarantee type-safe integration with logistics partners.</li>
+<li><strong>AI-Augmented SDLC:</strong> Integrated agentic developer tooling (OpenCode, GitHub Copilot, MCP) with custom agents and rules across Android Studio and Jira/GitHub, accelerating technical refinements (SDD), acceptance criteria generation, PR reviews, and production issue investigations.</li>
+<li><strong>Quality Assurance:</strong> Enforced strict testing protocols (JUnit, Mockito, Traffic Parrot) across both backend and mobile codebases to ensure stability in a Dockerised Azure environment.</li>
 </ul>
 <p><strong>Main Project: Raw Materials (Inditex)</strong>
 A critical initiative managing the logistics and distribution of raw materials across global Zara warehouses.</p>
-<p><strong>Tech Stack:</strong> <strong>Java 21</strong>, <strong>Kotlin (Android/Compose)</strong>, <strong>Spring Boot 3</strong>, <strong>Apache Kafka</strong>, <strong>Docker</strong>, <strong>Azure</strong>, <strong>MongoDB</strong>, <strong>JUnit</strong>, <strong>Mockito</strong>, <strong>MCP</strong>, CI/CD pipelines.</p>
+<div class="tech-stack-container"><span class="tech-stack-label">TECH STACK</span><div class="tech-pills"><span class="tech-pill">Java 21</span><span class="tech-pill">Kotlin (Android/Compose)</span><span class="tech-pill">Spring Boot 3</span><span class="tech-pill">Apache Kafka</span><span class="tech-pill">Docker</span><span class="tech-pill">Azure</span><span class="tech-pill">MongoDB</span><span class="tech-pill">JUnit</span><span class="tech-pill">Mockito</span><span class="tech-pill">MCP</span><span class="tech-pill">CI/CD pipelines</span></div></div>
 <hr />
-<h3><strong>Senior Java Developer at Brandworkz</strong></h3>
+<h3>Senior Java Developer at Brandworkz</h3>
 <p><em>February 2017 – August 2023 | London (Hybrid)</em></p>
 <ul>
-<li>Led the development of a core Java-based API within a multi-tenant microservices architecture for high-profile clients like <strong>Boeing, Dr. Martens, and Hitachi</strong>.</li>
-<li>Built a complete Reporting module from scratch and developed custom analytics visualizations using <strong>Elasticsearch and Kibana</strong>.</li>
-<li>Implemented <strong>OAuth2</strong> authorisation and significantly enhanced API security with granular user roles.</li>
-<li>Automated deployment pipelines using Bash scripts, CRON jobs, and Jenkins.</li>
-<li>Actively involved in architectural decisions, strategic planning, and onboarding new hires.</li>
+<li><strong>API Architecture:</strong> Led the development of a core Java-based API within a multi-tenant microservices architecture for high-profile clients like Boeing, Dr. Martens, and Hitachi.</li>
+<li><strong>Analytics &amp; Reporting:</strong> Built a complete Reporting module from scratch and developed custom analytics visualizations using Elasticsearch and Kibana.</li>
+<li><strong>Security &amp; Auth:</strong> Implemented OAuth2 authorisation and significantly enhanced API security with granular user roles.</li>
+<li><strong>DevOps &amp; Automation:</strong> Automated deployment pipelines using Bash scripts, CRON jobs, and Jenkins.</li>
+<li><strong>Technical Leadership:</strong> Actively involved in architectural decisions, strategic planning, and onboarding new hires.</li>
 </ul>
 <p><strong>Main Project: Brandworkz SaaS</strong>
 A Digital Asset Management (DAM) platform used globally by enterprise clients.</p>
-<p><strong>Tech Stack:</strong> <strong>Spring Boot</strong>, <strong>Spring Cloud</strong>, <strong>Spring Security</strong>, <strong>AWS (EC2/S3/RDS)</strong>, <strong>Elasticsearch</strong>, <strong>Redis</strong>, <strong>PostgreSQL</strong>, <strong>Swagger</strong>, <strong>OpenAPI 3</strong>, <strong>Liquibase</strong>.</p>
+<div class="tech-stack-container"><span class="tech-stack-label">TECH STACK</span><div class="tech-pills"><span class="tech-pill">Spring Boot</span><span class="tech-pill">Spring Cloud</span><span class="tech-pill">Spring Security</span><span class="tech-pill">AWS (EC2/S3/RDS)</span><span class="tech-pill">Elasticsearch</span><span class="tech-pill">Redis</span><span class="tech-pill">PostgreSQL</span><span class="tech-pill">Swagger</span><span class="tech-pill">OpenAPI 3</span><span class="tech-pill">Liquibase</span></div></div>
 <hr />
-<h3><strong>Freelance Backend Developer (Contractor at Brandworkz)</strong></h3>
+<h3>Freelance Backend Developer (Contractor at Brandworkz)</h3>
 <p><em>February 2022 – August 2023 | Remote</em></p>
 <ul>
-<li>Successfully transitioned from full-time employee to independent contractor, demonstrating strong self-management and reliability in a 100% remote setup.</li>
-<li>Focused on performance optimisations and backend support during critical system upgrades.</li>
+<li><strong>Contracting Transition:</strong> Successfully transitioned from full-time employee to independent contractor, demonstrating strong self-management and reliability in a 100% remote setup.</li>
+<li><strong>Performance Tuning:</strong> Focused on performance optimisations and backend support during critical system upgrades.</li>
 </ul>
 <hr />
-<h3><strong>Back-end Developer at Locassa Ltd</strong></h3>
+<h3>Back-end Developer at Locassa Ltd</h3>
 <p><em>July 2015 – November 2016 | London (On-site)</em></p>
 <ul>
-<li>Managed the full software lifecycle: planning, implementation, deployment, and maintenance for multiple client startups.</li>
-<li>Built back-office applications and led client demos and requirement gathering sessions.</li>
-<li>Mentored junior developers and introduced new frameworks to improve development efficiency.</li>
+<li><strong>Full Lifecycle Delivery:</strong> Managed the full software lifecycle: planning, implementation, deployment, and maintenance for multiple client startups.</li>
+<li><strong>Client Engagement:</strong> Built back-office applications and led client demos and requirement gathering sessions.</li>
+<li><strong>Mentorship:</strong> Mentored junior developers and introduced modern frameworks to improve development efficiency.</li>
 </ul>
-<p><strong>Projects:</strong> Ziferblat, Minted, Inkvite, Jarvis, Vesta Fitness, Rounds on Me.
-<strong>Tech Stack:</strong> <strong>Spring Boot</strong>, <strong>Thymeleaf</strong>, <strong>REST APIs</strong>, <strong>MySQL</strong>, <strong>OAuth2</strong>, <strong>AWS (Elastic Beanstalk, S3, EC2)</strong>.</p>
+<div class="project-highlight"><span class="project-label">Projects:</span> <span class="project-desc">Ziferblat, Minted, Inkvite, Jarvis, Vesta Fitness, Rounds on Me.</span></div>
+<div class="tech-stack-container"><span class="tech-stack-label">TECH STACK</span><div class="tech-pills"><span class="tech-pill">Spring Boot</span><span class="tech-pill">Thymeleaf</span><span class="tech-pill">REST APIs</span><span class="tech-pill">MySQL</span><span class="tech-pill">OAuth2</span><span class="tech-pill">AWS (Elastic Beanstalk</span><span class="tech-pill">S3</span><span class="tech-pill">EC2)</span></div></div>
 <hr />
-<h3><strong>Java Analyst at Grupo Servinform</strong></h3>
+<h3>Java Analyst at Grupo Servinform</h3>
 <p><em>October 2014 – May 2015 | Seville (On-site)</em></p>
 <ul>
-<li>Gathered requirements and authored technical analysis documents for government modernization projects.</li>
-<li>Led configuration, testing, and deployment in integration environments.</li>
+<li><strong>Requirements Analysis:</strong> Gathered requirements and authored technical analysis documents for government modernization projects.</li>
+<li><strong>Release &amp; Deployment:</strong> Led configuration, testing, and deployment in integration environments.</li>
 </ul>
-<p><strong>Tech Stack:</strong> <strong>iBatis</strong>, <strong>Spring</strong>, <strong>Struts</strong>, <strong>PL/SQL</strong>, <strong>Apache Tomcat</strong>, <strong>Maven</strong>.</p>
+<div class="tech-stack-container"><span class="tech-stack-label">TECH STACK</span><div class="tech-pills"><span class="tech-pill">iBatis</span><span class="tech-pill">Spring</span><span class="tech-pill">Struts</span><span class="tech-pill">PL/SQL</span><span class="tech-pill">Apache Tomcat</span><span class="tech-pill">Maven</span></div></div>
 <hr />
-<h3><strong>Java Developer at Grupo Servinform</strong></h3>
+<h3>Java Developer at Grupo Servinform</h3>
 <p><em>January 2012 – September 2014 | Seville (On-site)</em></p>
 <ul>
-<li>Delivered new functionalities for the &ldquo;HAPR&rdquo; system (Telematic Authorisation) for the Junta de Andalucía.</li>
-<li>Optimised database performance using advanced <strong>PL/SQL</strong> scripts.</li>
-<li>Applied Scrum methodology in an agile team environment.</li>
+<li><strong>Core Development:</strong> Delivered new functionalities for the &ldquo;HAPR&rdquo; system (Telematic Authorisation) for the Junta de Andalucía.</li>
+<li><strong>Database Tuning:</strong> Optimised database performance using advanced PL/SQL scripts.</li>
+<li><strong>Agile Delivery:</strong> Applied Scrum methodology in an agile team environment.</li>
 </ul>
-<p><strong>Tech Stack:</strong> <strong>Hibernate</strong>, <strong>iBatis</strong>, <strong>Spring</strong>, <strong>JSP</strong>, <strong>PL/SQL</strong>, <strong>Subversion</strong>.</p>
+<div class="tech-stack-container"><span class="tech-stack-label">TECH STACK</span><div class="tech-pills"><span class="tech-pill">Hibernate</span><span class="tech-pill">iBatis</span><span class="tech-pill">Spring</span><span class="tech-pill">JSP</span><span class="tech-pill">PL/SQL</span><span class="tech-pill">Subversion</span></div></div>
 <hr />
-<h3><strong>Junior Oracle/Java Developer at Ayesa</strong></h3>
+<h3>Junior Oracle/Java Developer at Ayesa</h3>
 <p><em>April 2011 – December 2011 | Seville (Part-time)</em></p>
 <ul>
-<li>Developed GUI prototypes and maintained legacy systems for public healthcare and social services projects.</li>
+<li><strong>GUI &amp; Legacy Maintenance:</strong> Developed GUI prototypes and maintained legacy systems for public healthcare and social services projects.</li>
 </ul>
-<p><strong>Tech Stack:</strong> <strong>Oracle Forms</strong>, <strong>PL/SQL</strong>, <strong>Hibernate</strong>, <strong>Spring</strong>, <strong>JSF</strong>.</p>
+<div class="tech-stack-container"><span class="tech-stack-label">TECH STACK</span><div class="tech-pills"><span class="tech-pill">Oracle Forms</span><span class="tech-pill">PL/SQL</span><span class="tech-pill">Hibernate</span><span class="tech-pill">Spring</span><span class="tech-pill">JSF</span></div></div>
 <h2>Skills</h2>
 <ul>
 <li><strong>Languages:</strong> Java (Expert), Kotlin (Advanced), Dart (Intermediate)</li>
@@ -278,9 +663,12 @@ A Digital Asset Management (DAM) platform used globally by enterprise clients.</
 <li><strong>Other:</strong> API-First Design, OpenAPI Generator, AsyncAPI, OAuth2, Liquibase, Gradle</li>
 </ul>
 <h2>Education</h2>
-<p><strong>HNC in Administration and Information Technology</strong>
-IES Punta del Verde, Graduated 2011
-* Focused on software development and database management.
-* Capstone project combining Java and SQL technologies.</p>
+<h3>HNC in Administration and Information Technology</h3>
+<p><em>IES Punta del Verde | Graduated 2011</em></p>
+<ul>
+<li>Focused on software development and database management.</li>
+<li>Capstone project combining Java and SQL technologies.</li>
+</ul>
+    </main>
 </body>
 </html>

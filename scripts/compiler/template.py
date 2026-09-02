@@ -29,12 +29,17 @@ def generate_html_document(html_body: str, title: str, css_path: str = None) -> 
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>{title}</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=JetBrains+Mono:wght@400;500;600&family=Plus+Jakarta+Sans:ital,wght@0,400..800;1,400..800&display=swap" rel="stylesheet">
     <style>
 {css_content}
     </style>
 </head>
 <body>
+    <main class="cv-document">
 {html_body}
+    </main>
 </body>
 </html>"""
     return doc_html

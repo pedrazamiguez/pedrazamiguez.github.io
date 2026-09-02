@@ -20,7 +20,7 @@ def render_pdf(doc_html: str, output_pdf_path: str):
         with sync_playwright() as p:
             browser = p.chromium.launch()
             page = browser.new_page()
-            page.goto(f"file://{os.path.abspath(temp_html_path)}", wait_until="load")
+            page.goto(f"file://{os.path.abspath(temp_html_path)}", wait_until="networkidle")
             
             # Wait for fonts to load if available
             try:
