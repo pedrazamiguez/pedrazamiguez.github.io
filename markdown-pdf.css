@@ -49,17 +49,21 @@ body {
     padding: 40px 16px;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
+    overflow-x: hidden;
 }
 
 /* Document Container */
 .cv-document {
     max-width: 860px;
+    width: 100%;
     margin: 0 auto;
     background: var(--bg-card);
     padding: 52px 60px;
     border-radius: 12px;
     border: 1px solid var(--border-subtle);
     box-shadow: var(--shadow-card);
+    word-wrap: break-word;
+    overflow-wrap: break-word;
 }
 
 /* === Header Section === */
@@ -157,6 +161,7 @@ a.download-btn:hover {
     align-items: center;
     gap: 0.4rem;
     color: var(--text-muted);
+    min-width: 0;
 }
 
 .contact-label {
@@ -168,12 +173,17 @@ a.download-btn:hover {
 
 .contact-value {
     color: var(--text-primary);
+    min-width: 0;
+    word-break: break-word;
+    overflow-wrap: anywhere;
 }
 
 .contact-value a {
     color: var(--text-primary);
     font-weight: 500;
     text-decoration: none;
+    word-break: break-word;
+    overflow-wrap: anywhere;
 }
 
 .contact-value a:hover {
@@ -393,6 +403,175 @@ th {
     text-transform: uppercase;
     letter-spacing: 0.04em;
     background-color: var(--bg-muted);
+}
+
+/* === Responsive Styles (Tablet & Mobile Web) === */
+@media screen and (max-width: 768px) {
+    body {
+        padding: 24px 12px;
+    }
+
+    .cv-document {
+        padding: 36px 30px;
+        border-radius: 10px;
+    }
+
+    h1 {
+        font-size: 2.1rem;
+    }
+
+    .contact-grid {
+        gap: 0.55rem 1.25rem;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    body {
+        padding: 12px 8px;
+        font-size: 14px;
+    }
+
+    .cv-document {
+        padding: 24px 16px;
+        border-radius: 8px;
+        box-shadow: 0 2px 4px rgba(15, 23, 42, 0.05);
+    }
+
+    .cv-header {
+        margin-bottom: 1.6rem;
+    }
+
+    .header-top {
+        flex-direction: column;
+        align-items: stretch;
+        gap: 0.85rem;
+        margin-bottom: 0.85rem;
+    }
+
+    h1 {
+        font-size: 1.75rem;
+        letter-spacing: -0.025em;
+        line-height: 1.18;
+        margin-bottom: 0.25rem;
+    }
+
+    .cv-subtitle,
+    h1 + p {
+        font-size: 0.95rem;
+        line-height: 1.4;
+    }
+
+    .header-action {
+        width: 100%;
+        margin-top: 0.25rem;
+    }
+
+    .header-action a,
+    a.download-btn {
+        display: flex;
+        width: 100%;
+        justify-content: center;
+        padding: 10px 16px;
+        font-size: 0.88rem;
+    }
+
+    .contact-card {
+        padding: 0.75rem 0.9rem;
+        margin-top: 0.75rem;
+    }
+
+    .contact-grid {
+        grid-template-columns: 1fr;
+        gap: 0.45rem;
+        font-size: 0.85rem;
+    }
+
+    .contact-item {
+        grid-template-columns: 72px 1fr;
+        gap: 0.35rem;
+    }
+
+    h2 {
+        font-size: 0.78rem;
+        margin-top: 1.6rem;
+        margin-bottom: 0.65rem;
+    }
+
+    h3 {
+        font-size: 1.02rem;
+        margin-top: 1.25rem;
+        margin-bottom: 0.2rem;
+    }
+
+    h3 + p em,
+    p > em {
+        font-size: 0.82rem;
+        margin-bottom: 0.65rem;
+    }
+
+    p {
+        font-size: 0.88rem;
+        line-height: 1.55;
+        margin-bottom: 0.75rem;
+    }
+
+    ul {
+        margin-bottom: 0.85rem;
+    }
+
+    li {
+        font-size: 0.88rem;
+        line-height: 1.52;
+        padding-left: 1.15rem;
+        margin-bottom: 0.4rem;
+    }
+
+    li::before {
+        left: 0.1rem;
+        top: 0.55em;
+        width: 4px;
+        height: 4px;
+    }
+
+    .project-highlight {
+        font-size: 0.85rem;
+        margin-top: 0.65rem;
+        margin-bottom: 0.4rem;
+    }
+
+    .tech-stack-container {
+        gap: 0.35rem 0.4rem;
+        margin: 0.5rem 0 0.9rem 0;
+    }
+
+    .tech-stack-label {
+        width: 100%;
+        margin-bottom: 0.15rem;
+        margin-right: 0;
+    }
+
+    .tech-pill {
+        font-size: 0.74rem;
+        padding: 2px 6px;
+    }
+}
+
+@media screen and (max-width: 380px) {
+    body {
+        padding: 8px 4px;
+    }
+
+    .cv-document {
+        padding: 20px 12px;
+    }
+
+    h1 {
+        font-size: 1.55rem;
+    }
+
+    .contact-item {
+        grid-template-columns: 65px 1fr;
+    }
 }
 
 /* === Page Setup & Print (PDF) === */
