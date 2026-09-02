@@ -22,12 +22,13 @@ Specialises in **Java 21**, **Spring Boot**, and **Hexagonal Architecture**, wit
 * **Mobile Rescue & Architecture:** Refactored unstable legacy Android modules, establishing clean architecture patterns and resolving critical production bugs that were impacting Zara's supply chain operations.
 * **Technical Leadership:** Mentored senior team members on modern **Kotlin** practices and **Jetpack Compose**, significantly elevating the team's coding standards and reducing technical debt.
 * **Backend Core:** Developed robust microservices using **Java 21** and **Spring Boot 3**, enforcing an API-First strategy: used **OpenAPI** for mobile clients and **AsyncAPI** with **Kafka** & **Avro schemas** to guarantee type-safe integration with logistics partners.
+* **AI-Augmented SDLC:** Integrated agentic developer tooling (**OpenCode**, **GitHub Copilot**, **MCP**) with custom agents and rules across Android Studio and Jira/GitHub, accelerating technical refinements (SDD), acceptance criteria generation, PR reviews, and production issue investigations.
 * **Quality Assurance:** Enforced strict testing protocols (**JUnit**, **Mockito**, **Traffic Parrot**) across both backend and mobile codebases to ensure stability in a Dockerised **Azure** environment.
 
 **Main Project: Raw Materials (Inditex)**
 A critical initiative managing the logistics and distribution of raw materials across global Zara warehouses.
 
-**Tech Stack:** **Java 21**, **Kotlin (Android/Compose)**, **Spring Boot 3**, **Apache Kafka**, **Docker**, **Azure**, **MongoDB**, **JUnit**, **Mockito**, CI/CD pipelines.
+**Tech Stack:** **Java 21**, **Kotlin (Android/Compose)**, **Spring Boot 3**, **Apache Kafka**, **Docker**, **Azure**, **MongoDB**, **JUnit**, **Mockito**, **MCP**, CI/CD pipelines.
 
 ---
 
@@ -98,7 +99,8 @@ A Digital Asset Management (DAM) platform used globally by enterprise clients.
 ## Skills
 
 - **Languages:** Java (Expert), Kotlin (Advanced), Dart (Intermediate)
-- **Core Frameworks:** Spring Boot 3, Spring Cloud, Microservices, Hexagonal Architecture
+- **Core Frameworks & Mobile:** Spring Boot 3, Spring Cloud, Microservices, Hexagonal Architecture, Jetpack Compose, Flutter
+- **AI & Agentic Engineering:** Agentic Workflows (OpenCode, Antigravity, Copilot), Model Context Protocol (MCP), Custom Agent Skills & Rules, Multi-Agent & RAG Foundations, Claude / GPT / Gemini Integration
 - **Data & Messaging:** Apache Kafka, MongoDB, PostgreSQL, MySQL, Oracle, Redis, Elasticsearch
 - **Cloud & DevOps:** Docker, Kubernetes, Azure, AWS (EC2, S3, RDS), Jenkins, CI/CD, Git
 - **Testing & Quality:** JUnit 5, Mockito, TDD, Integration Testing

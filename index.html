@@ -1,385 +1,194 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-<title>Andrés Pedraza Míguez</title>
-<meta http-equiv="Content-type" content="text/html;charset=UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-<style>
-/* https://github.com/microsoft/vscode/blob/master/extensions/markdown-language-features/media/markdown.css */
-/*---------------------------------------------------------------------------------------------
- *  Copyright (c) Microsoft Corporation. All rights reserved.
- *  Licensed under the MIT License. See License.txt in the project root for license information.
- *--------------------------------------------------------------------------------------------*/
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Andrés Pedraza Míguez</title>
+    <style>
+/* === Reset & Base === */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 
 body {
-	font-family: var(--vscode-markdown-font-family, -apple-system, BlinkMacSystemFont, "Segoe WPC", "Segoe UI", "Ubuntu", "Droid Sans", sans-serif);
-	font-size: var(--vscode-markdown-font-size, 14px);
-	padding: 0 26px;
-	line-height: var(--vscode-markdown-line-height, 22px);
-	word-wrap: break-word;
+    font-family: 'Inter', 'Segoe UI', sans-serif;
+    font-size: 15px;
+    color: #222;
+    background-color: #f9f9f9;
+    line-height: 1.6;
+    padding: 40px;
+    max-width: 900px;
+    margin: auto;
 }
 
-#code-csp-warning {
-	position: fixed;
-	top: 0;
-	right: 0;
-	color: white;
-	margin: 16px;
-	text-align: center;
-	font-size: 12px;
-	font-family: sans-serif;
-	background-color:#444444;
-	cursor: pointer;
-	padding: 6px;
-	box-shadow: 1px 1px 1px rgba(0,0,0,.25);
-}
-
-#code-csp-warning:hover {
-	text-decoration: none;
-	background-color:#007acc;
-	box-shadow: 2px 2px 2px rgba(0,0,0,.25);
-}
-
-body.scrollBeyondLastLine {
-	margin-bottom: calc(100vh - 22px);
-}
-
-body.showEditorSelection .code-line {
-	position: relative;
-}
-
-body.showEditorSelection .code-active-line:before,
-body.showEditorSelection .code-line:hover:before {
-	content: "";
-	display: block;
-	position: absolute;
-	top: 0;
-	left: -12px;
-	height: 100%;
-}
-
-body.showEditorSelection li.code-active-line:before,
-body.showEditorSelection li.code-line:hover:before {
-	left: -30px;
-}
-
-.vscode-light.showEditorSelection .code-active-line:before {
-	border-left: 3px solid rgba(0, 0, 0, 0.15);
-}
-
-.vscode-light.showEditorSelection .code-line:hover:before {
-	border-left: 3px solid rgba(0, 0, 0, 0.40);
-}
-
-.vscode-light.showEditorSelection .code-line .code-line:hover:before {
-	border-left: none;
-}
-
-.vscode-dark.showEditorSelection .code-active-line:before {
-	border-left: 3px solid rgba(255, 255, 255, 0.4);
-}
-
-.vscode-dark.showEditorSelection .code-line:hover:before {
-	border-left: 3px solid rgba(255, 255, 255, 0.60);
-}
-
-.vscode-dark.showEditorSelection .code-line .code-line:hover:before {
-	border-left: none;
-}
-
-.vscode-high-contrast.showEditorSelection .code-active-line:before {
-	border-left: 3px solid rgba(255, 160, 0, 0.7);
-}
-
-.vscode-high-contrast.showEditorSelection .code-line:hover:before {
-	border-left: 3px solid rgba(255, 160, 0, 1);
-}
-
-.vscode-high-contrast.showEditorSelection .code-line .code-line:hover:before {
-	border-left: none;
-}
-
-img {
-	max-width: 100%;
-	max-height: 100%;
-}
-
-a {
-	text-decoration: none;
-}
-
-a:hover {
-	text-decoration: underline;
-}
-
-a:focus,
-input:focus,
-select:focus,
-textarea:focus {
-	outline: 1px solid -webkit-focus-ring-color;
-	outline-offset: -1px;
-}
-
-hr {
-	border: 0;
-	height: 2px;
-	border-bottom: 2px solid;
+/* === Headings === */
+h1,
+h2,
+h3 {
+    font-weight: 600;
+    color: #2c3e50;
+    margin-bottom: 0.4em;
 }
 
 h1 {
-	padding-bottom: 0.3em;
-	line-height: 1.2;
-	border-bottom-width: 1px;
-	border-bottom-style: solid;
+    font-size: 2rem;
+    border-bottom: 2px solid #ddd;
+    padding-bottom: 0.2em;
+    margin-bottom: 1.2em;
+    text-align: center;
 }
 
-h1, h2, h3 {
-	font-weight: normal;
+h2 {
+    font-size: 1.4rem;
+    margin-top: 2.2em;
+    border-bottom: 1px solid #e0e0e0;
+    padding-bottom: 0.2em;
 }
 
-table {
-	border-collapse: collapse;
+h3 {
+    font-size: 1.1rem;
+    color: #555;
 }
 
-table > thead > tr > th {
-	text-align: left;
-	border-bottom: 1px solid;
+/* === Paragraphs & Lists === */
+p {
+    margin-bottom: 1em;
 }
 
-table > thead > tr > th,
-table > thead > tr > td,
-table > tbody > tr > th,
-table > tbody > tr > td {
-	padding: 5px 10px;
+ul {
+    margin-left: 1.4em;
+    margin-bottom: 1.2em;
 }
 
-table > tbody > tr + tr > td {
-	border-top: 1px solid;
+li {
+    margin-bottom: 0.6em;
 }
 
-blockquote {
-	margin: 0 7px 0 5px;
-	padding: 0 16px 0 10px;
-	border-left-width: 5px;
-	border-left-style: solid;
+/* === Contact Links === */
+a {
+    color: #0073e6;
+    text-decoration: none;
 }
 
-code {
-	font-family: Menlo, Monaco, Consolas, "Droid Sans Mono", "Courier New", monospace, "Droid Sans Fallback";
-	font-size: 1em;
-	line-height: 1.357em;
+a:hover {
+    text-decoration: underline;
 }
 
-body.wordWrap pre {
-	white-space: pre-wrap;
+/* === Job Titles & Dates === */
+em {
+    color: #777;
+    font-style: normal;
+    display: block;
+    margin-top: -0.3em;
+    margin-bottom: 0.8em;
 }
 
-pre:not(.hljs),
-pre.hljs code > div {
-	padding: 16px;
-	border-radius: 3px;
-	overflow: auto;
+/* Center the subtitle paragraph after h1 */
+h1 + p {
+    text-align: center;
 }
 
-pre code {
-	color: var(--vscode-editor-foreground);
-	tab-size: 4;
+/* === Horizontal Rules === */
+hr {
+    border: none;
+    border-top: 1px solid #ddd;
+    margin: 2em 0;
 }
 
-/** Theming */
-
-.vscode-light pre {
-	background-color: rgba(220, 220, 220, 0.4);
-}
-
-.vscode-dark pre {
-	background-color: rgba(10, 10, 10, 0.4);
-}
-
-.vscode-high-contrast pre {
-	background-color: rgb(0, 0, 0);
-}
-
-.vscode-high-contrast h1 {
-	border-color: rgb(0, 0, 0);
-}
-
-.vscode-light table > thead > tr > th {
-	border-color: rgba(0, 0, 0, 0.69);
-}
-
-.vscode-dark table > thead > tr > th {
-	border-color: rgba(255, 255, 255, 0.69);
-}
-
-.vscode-light h1,
-.vscode-light hr,
-.vscode-light table > tbody > tr + tr > td {
-	border-color: rgba(0, 0, 0, 0.18);
-}
-
-.vscode-dark h1,
-.vscode-dark hr,
-.vscode-dark table > tbody > tr + tr > td {
-	border-color: rgba(255, 255, 255, 0.18);
-}
-
-</style>
-
-<style>
-/* Base16 Atelier Savanna Light - Theme */
-/* by Bram de Haan (http://atelierbram.github.io/syntax-highlighting/atelier-schemes/savanna) */
-/* Original Base16 color scheme by Chris Kempson (https://github.com/chriskempson/base16) */
-
-/* Atelier-Savanna Comment */
-.hljs-comment,
-.hljs-quote {
-  color: #5f6d64;
-}
-
-/* Atelier-Savanna Red */
-.hljs-variable,
-.hljs-template-variable,
-.hljs-attribute,
-.hljs-tag,
-.hljs-name,
-.hljs-regexp,
-.hljs-link,
-.hljs-selector-id,
-.hljs-selector-class {
-  color: #b16139;
-}
-
-/* Atelier-Savanna Orange */
-.hljs-number,
-.hljs-meta,
-.hljs-built_in,
-.hljs-builtin-name,
-.hljs-literal,
-.hljs-type,
-.hljs-params {
-  color: #9f713c;
-}
-
-/* Atelier-Savanna Green */
-.hljs-string,
-.hljs-symbol,
-.hljs-bullet {
-  color: #489963;
-}
-
-/* Atelier-Savanna Blue */
-.hljs-title,
-.hljs-section {
-  color: #478c90;
-}
-
-/* Atelier-Savanna Purple */
-.hljs-keyword,
-.hljs-selector-tag {
-  color: #55859b;
-}
-
-.hljs-deletion,
-.hljs-addition {
-  color: #171c19;
-  display: inline-block;
-  width: 100%;
-}
-
-.hljs-deletion {
-  background-color: #b16139;
-}
-
-.hljs-addition {
-  background-color: #489963;
-}
-
-.hljs {
-  display: block;
-  overflow-x: auto;
-  background: #ecf4ee;
-  color: #526057;
-  padding: 0.5em;
-}
-
-.hljs-emphasis {
-  font-style: italic;
-}
-
-.hljs-strong {
-  font-weight: bold;
-}
-
-</style>
-
-<style>
-/*
- * Markdown PDF CSS
- */
-
- body {
-	font-family: -apple-system, BlinkMacSystemFont, "Segoe WPC", "Segoe UI", "Ubuntu", "Droid Sans", sans-serif, "Meiryo";
-	padding: 0 12px;
-}
-
+/* === Code blocks & inline === */
+code,
 pre {
-	background-color: #f8f8f8;
-	border: 1px solid #cccccc;
-	border-radius: 3px;
-	overflow-x: auto;
-	white-space: pre-wrap;
-	overflow-wrap: break-word;
+    font-family: 'Courier New', monospace;
+    background: #f4f4f4;
+    padding: 2px 6px;
+    border-radius: 4px;
 }
 
-pre:not(.hljs) {
-	padding: 23px;
-	line-height: 19px;
-}
-
+/* === Blockquote === */
 blockquote {
-	background: rgba(127, 127, 127, 0.1);
-	border-color: rgba(0, 122, 204, 0.5);
+    border-left: 4px solid #ccc;
+    padding-left: 1em;
+    color: #666;
+    margin: 1em 0;
+    background-color: #f3f3f3;
 }
 
-.emoji {
-	height: 1.4em;
+/* === Table Style (if used) === */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 1em;
 }
 
-code {
-	font-size: 14px;
-	line-height: 19px;
+th,
+td {
+    padding: 0.6em;
+    border-bottom: 1px solid #ddd;
+    text-align: left;
 }
 
-/* for inline code */
-:not(pre):not(.hljs) > code {
-	color: #C9AE75; /* Change the old color so it seems less like an error */
-	font-size: inherit;
+/* === Page Setup & Print === */
+@page {
+    size: A4;
+    margin: 15mm 15mm 15mm 15mm;
 }
 
-/* Page Break : use <div class="page"/> to insert page break
--------------------------------------------------------- */
-.page {
-	page-break-after: always;
+@media print {
+    body {
+        background: white;
+        color: #222;
+        padding: 0;
+        max-width: 100%;
+        font-size: 14px;
+        line-height: 1.5;
+    }
+
+    h1, h2, h3 {
+        page-break-after: avoid;
+        break-after: avoid;
+    }
+
+    hr {
+        page-break-after: avoid;
+    }
+
+    a {
+        color: #0073e6;
+        text-decoration: none;
+    }
 }
 
-</style>
-<link rel="stylesheet" href="./markdown-pdf.css" type="text/css">
-<script src="https://unpkg.com/mermaid/dist/mermaid.min.js"></script>
+/* === Extra: Signature Touches === */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+header h1 {
+    border: none;
+    font-size: 2.2rem;
+    margin: 0;
+}
+
+.contact-info {
+    margin-top: 1em;
+    font-size: 0.95rem;
+}
+
+.contact-info li {
+    list-style: none;
+    margin-bottom: 0.3em;
+}
+    </style>
 </head>
 <body>
-  <script>
-    mermaid.initialize({
-      startOnLoad: true,
-      theme: document.body.classList.contains('vscode-dark') || document.body.classList.contains('vscode-high-contrast')
-          ? 'dark'
-          : 'default'
-    });
-  </script>
-<h1 id="andr%C3%A9s-pedraza-m%C3%ADguez">Andrés Pedraza Míguez</h1>
+<h1>Andrés Pedraza Míguez</h1>
 <p><em>Senior Java &amp; Kotlin Engineer | Remote Contractor Specialist</em></p>
-<h2 id="contact-information">Contact Information</h2>
+<h2>Contact Information</h2>
 <ul>
 <li><strong>Email:</strong> <a href="mailto:pedraza.miguez@gmail.com">pedraza.miguez@gmail.com</a></li>
 <li><strong>LinkedIn:</strong> <a href="https://www.linkedin.com/in/pedrazamiguez/">pedrazamiguez</a></li>
@@ -387,24 +196,25 @@ code {
 <li><strong>Download CV:</strong> <a href="CV_andres_pedraza_miguez.pdf" download>Download PDF</a></li>
 <li><strong>Phone:</strong> +34 665 604 912</li>
 </ul>
-<h2 id="professional-summary">Professional Summary</h2>
+<h2>Professional Summary</h2>
 <p>Senior Backend Engineer with over 14 years of experience designing scalable systems, now leveraging a strong hybrid skill set in <strong>Java (Backend)</strong> and <strong>Kotlin (Mobile/Android)</strong>. Proven track record working as a Remote Contractor for UK-based companies, delivering high-quality solutions in English-speaking environments.</p>
 <p>Specialises in <strong>Java 21</strong>, <strong>Spring Boot</strong>, and <strong>Hexagonal Architecture</strong>, with recent hands-on leadership in <strong>Android Native (Jetpack Compose)</strong> projects. Known for stepping into complex, legacy environments to refactor code, mentor senior peers, and drive delivery. Passionate about software craftsmanship, automated testing, and solving critical business problems across the full stack.</p>
-<h2 id="work-experience">Work Experience</h2>
-<h3 id="senior-java-developer-acting-mobile-tech-lead-at-plexus-tech"><strong>Senior Java Developer (Acting Mobile Tech Lead) at Plexus Tech</strong></h3>
+<h2>Work Experience</h2>
+<h3><strong>Senior Java Developer (Acting Mobile Tech Lead) at Plexus Tech</strong></h3>
 <p><em>Client: Inditex (Zara) | October 2023 – Present | Seville (Remote)</em></p>
 <ul>
 <li><strong>Dual Role Strategy:</strong> Officially hired as a Backend Engineer but proactively took ownership of a critical Android App (<strong>Kotlin</strong>, <strong>Jetpack Compose</strong>) to mitigate delivery risks, effectively operating as a Fullstack Lead.</li>
-<li><strong>Mobile Rescue &amp; Architecture:</strong> Refactored unstable legacy Android modules, establishing clean architecture patterns and resolving critical production bugs that were impacting Zara's supply chain operations.</li>
-<li><strong>Technical Leadership:</strong> Mentored senior team members on modern <strong>Kotlin</strong> practices and <strong>Jetpack Compose</strong>, significantly elevating the team's coding standards and reducing technical debt.</li>
+<li><strong>Mobile Rescue &amp; Architecture:</strong> Refactored unstable legacy Android modules, establishing clean architecture patterns and resolving critical production bugs that were impacting Zara&rsquo;s supply chain operations.</li>
+<li><strong>Technical Leadership:</strong> Mentored senior team members on modern <strong>Kotlin</strong> practices and <strong>Jetpack Compose</strong>, significantly elevating the team&rsquo;s coding standards and reducing technical debt.</li>
 <li><strong>Backend Core:</strong> Developed robust microservices using <strong>Java 21</strong> and <strong>Spring Boot 3</strong>, enforcing an API-First strategy: used <strong>OpenAPI</strong> for mobile clients and <strong>AsyncAPI</strong> with <strong>Kafka</strong> &amp; <strong>Avro schemas</strong> to guarantee type-safe integration with logistics partners.</li>
+<li><strong>AI-Augmented SDLC:</strong> Integrated agentic developer tooling (<strong>OpenCode</strong>, <strong>GitHub Copilot</strong>, <strong>MCP</strong>) with custom agents and rules across Android Studio and Jira/GitHub, accelerating technical refinements (SDD), acceptance criteria generation, PR reviews, and production issue investigations.</li>
 <li><strong>Quality Assurance:</strong> Enforced strict testing protocols (<strong>JUnit</strong>, <strong>Mockito</strong>, <strong>Traffic Parrot</strong>) across both backend and mobile codebases to ensure stability in a Dockerised <strong>Azure</strong> environment.</li>
 </ul>
-<p><strong>Main Project: Raw Materials (Inditex)</strong><br>
+<p><strong>Main Project: Raw Materials (Inditex)</strong>
 A critical initiative managing the logistics and distribution of raw materials across global Zara warehouses.</p>
-<p><strong>Tech Stack:</strong> <strong>Java 21</strong>, <strong>Kotlin (Android/Compose)</strong>, <strong>Spring Boot 3</strong>, <strong>Apache Kafka</strong>, <strong>Docker</strong>, <strong>Azure</strong>, <strong>MongoDB</strong>, <strong>JUnit</strong>, <strong>Mockito</strong>, CI/CD pipelines.</p>
-<hr>
-<h3 id="senior-java-developer-at-brandworkz"><strong>Senior Java Developer at Brandworkz</strong></h3>
+<p><strong>Tech Stack:</strong> <strong>Java 21</strong>, <strong>Kotlin (Android/Compose)</strong>, <strong>Spring Boot 3</strong>, <strong>Apache Kafka</strong>, <strong>Docker</strong>, <strong>Azure</strong>, <strong>MongoDB</strong>, <strong>JUnit</strong>, <strong>Mockito</strong>, <strong>MCP</strong>, CI/CD pipelines.</p>
+<hr />
+<h3><strong>Senior Java Developer at Brandworkz</strong></h3>
 <p><em>February 2017 – August 2023 | London (Hybrid)</em></p>
 <ul>
 <li>Led the development of a core Java-based API within a multi-tenant microservices architecture for high-profile clients like <strong>Boeing, Dr. Martens, and Hitachi</strong>.</li>
@@ -413,66 +223,64 @@ A critical initiative managing the logistics and distribution of raw materials a
 <li>Automated deployment pipelines using Bash scripts, CRON jobs, and Jenkins.</li>
 <li>Actively involved in architectural decisions, strategic planning, and onboarding new hires.</li>
 </ul>
-<p><strong>Main Project: Brandworkz SaaS</strong><br>
+<p><strong>Main Project: Brandworkz SaaS</strong>
 A Digital Asset Management (DAM) platform used globally by enterprise clients.</p>
 <p><strong>Tech Stack:</strong> <strong>Spring Boot</strong>, <strong>Spring Cloud</strong>, <strong>Spring Security</strong>, <strong>AWS (EC2/S3/RDS)</strong>, <strong>Elasticsearch</strong>, <strong>Redis</strong>, <strong>PostgreSQL</strong>, <strong>Swagger</strong>, <strong>OpenAPI 3</strong>, <strong>Liquibase</strong>.</p>
-<hr>
-<h3 id="freelance-backend-developer-contractor-at-brandworkz"><strong>Freelance Backend Developer (Contractor at Brandworkz)</strong></h3>
+<hr />
+<h3><strong>Freelance Backend Developer (Contractor at Brandworkz)</strong></h3>
 <p><em>February 2022 – August 2023 | Remote</em></p>
 <ul>
 <li>Successfully transitioned from full-time employee to independent contractor, demonstrating strong self-management and reliability in a 100% remote setup.</li>
 <li>Focused on performance optimisations and backend support during critical system upgrades.</li>
 </ul>
-<hr>
-<h3 id="back-end-developer-at-locassa-ltd"><strong>Back-end Developer at Locassa Ltd</strong></h3>
+<hr />
+<h3><strong>Back-end Developer at Locassa Ltd</strong></h3>
 <p><em>July 2015 – November 2016 | London (On-site)</em></p>
 <ul>
 <li>Managed the full software lifecycle: planning, implementation, deployment, and maintenance for multiple client startups.</li>
 <li>Built back-office applications and led client demos and requirement gathering sessions.</li>
 <li>Mentored junior developers and introduced new frameworks to improve development efficiency.</li>
 </ul>
-<p><strong>Projects:</strong> Ziferblat, Minted, Inkvite, Jarvis, Vesta Fitness, Rounds on Me.<br>
+<p><strong>Projects:</strong> Ziferblat, Minted, Inkvite, Jarvis, Vesta Fitness, Rounds on Me.
 <strong>Tech Stack:</strong> <strong>Spring Boot</strong>, <strong>Thymeleaf</strong>, <strong>REST APIs</strong>, <strong>MySQL</strong>, <strong>OAuth2</strong>, <strong>AWS (Elastic Beanstalk, S3, EC2)</strong>.</p>
-<hr>
-<h3 id="java-analyst-at-grupo-servinform"><strong>Java Analyst at Grupo Servinform</strong></h3>
+<hr />
+<h3><strong>Java Analyst at Grupo Servinform</strong></h3>
 <p><em>October 2014 – May 2015 | Seville (On-site)</em></p>
 <ul>
 <li>Gathered requirements and authored technical analysis documents for government modernization projects.</li>
 <li>Led configuration, testing, and deployment in integration environments.</li>
 </ul>
 <p><strong>Tech Stack:</strong> <strong>iBatis</strong>, <strong>Spring</strong>, <strong>Struts</strong>, <strong>PL/SQL</strong>, <strong>Apache Tomcat</strong>, <strong>Maven</strong>.</p>
-<hr>
-<h3 id="java-developer-at-grupo-servinform"><strong>Java Developer at Grupo Servinform</strong></h3>
+<hr />
+<h3><strong>Java Developer at Grupo Servinform</strong></h3>
 <p><em>January 2012 – September 2014 | Seville (On-site)</em></p>
 <ul>
-<li>Delivered new functionalities for the &quot;HAPR&quot; system (Telematic Authorisation) for the Junta de Andalucía.</li>
+<li>Delivered new functionalities for the &ldquo;HAPR&rdquo; system (Telematic Authorisation) for the Junta de Andalucía.</li>
 <li>Optimised database performance using advanced <strong>PL/SQL</strong> scripts.</li>
 <li>Applied Scrum methodology in an agile team environment.</li>
 </ul>
 <p><strong>Tech Stack:</strong> <strong>Hibernate</strong>, <strong>iBatis</strong>, <strong>Spring</strong>, <strong>JSP</strong>, <strong>PL/SQL</strong>, <strong>Subversion</strong>.</p>
-<hr>
-<h3 id="junior-oraclejava-developer-at-ayesa"><strong>Junior Oracle/Java Developer at Ayesa</strong></h3>
+<hr />
+<h3><strong>Junior Oracle/Java Developer at Ayesa</strong></h3>
 <p><em>April 2011 – December 2011 | Seville (Part-time)</em></p>
 <ul>
 <li>Developed GUI prototypes and maintained legacy systems for public healthcare and social services projects.</li>
 </ul>
 <p><strong>Tech Stack:</strong> <strong>Oracle Forms</strong>, <strong>PL/SQL</strong>, <strong>Hibernate</strong>, <strong>Spring</strong>, <strong>JSF</strong>.</p>
-<h2 id="skills">Skills</h2>
+<h2>Skills</h2>
 <ul>
 <li><strong>Languages:</strong> Java (Expert), Kotlin (Advanced), Dart (Intermediate)</li>
-<li><strong>Core Frameworks:</strong> Spring Boot 3, Spring Cloud, Microservices, Hexagonal Architecture</li>
+<li><strong>Core Frameworks &amp; Mobile:</strong> Spring Boot 3, Spring Cloud, Microservices, Hexagonal Architecture, Jetpack Compose, Flutter</li>
+<li><strong>AI &amp; Agentic Engineering:</strong> Agentic Workflows (OpenCode, Antigravity, Copilot), Model Context Protocol (MCP), Custom Agent Skills &amp; Rules, Multi-Agent &amp; RAG Foundations, Claude / GPT / Gemini Integration</li>
 <li><strong>Data &amp; Messaging:</strong> Apache Kafka, MongoDB, PostgreSQL, MySQL, Oracle, Redis, Elasticsearch</li>
 <li><strong>Cloud &amp; DevOps:</strong> Docker, Kubernetes, Azure, AWS (EC2, S3, RDS), Jenkins, CI/CD, Git</li>
 <li><strong>Testing &amp; Quality:</strong> JUnit 5, Mockito, TDD, Integration Testing</li>
 <li><strong>Other:</strong> API-First Design, OpenAPI Generator, AsyncAPI, OAuth2, Liquibase, Gradle</li>
 </ul>
-<h2 id="education">Education</h2>
-<p><strong>HNC in Administration and Information Technology</strong><br>
-IES Punta del Verde, Graduated 2011</p>
-<ul>
-<li>Focused on software development and database management.</li>
-<li>Capstone project combining Java and SQL technologies.</li>
-</ul>
-
+<h2>Education</h2>
+<p><strong>HNC in Administration and Information Technology</strong>
+IES Punta del Verde, Graduated 2011
+* Focused on software development and database management.
+* Capstone project combining Java and SQL technologies.</p>
 </body>
 </html>

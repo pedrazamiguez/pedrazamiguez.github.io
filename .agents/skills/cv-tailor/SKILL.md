@@ -48,8 +48,9 @@ Create a new file in the `tailored/` folder:
 5. **Factual Integrity (STRICT)**:
    - Do NOT invent companies, dates, or non-existent roles. Every claim must remain true to Andrés's actual background.
 
-### 4. Provide Export & Submission Instructions
-Remind Andrés how to export the tailored CV:
-1. Open the generated `tailored/CV_Andres_Pedraza_<Company>_<Role>.md` in VS Code.
-2. Use Markdown PDF export (using `markdown-pdf.css`) to generate the tailored PDF for submission.
-3. Keep the online portfolio link in the PDF pointing back to `https://pedrazamiguez.github.io`.
+### 4. Build & Export the Tailored PDF
+Run the automated build tool to generate the tailored PDF:
+```bash
+python3 scripts/build_cv.py tailored/CV_Andres_Pedraza_<Company>_<Role>.md
+```
+This automatically compiles the PDF to `tailored/CV_Andres_Pedraza_<Company>_<Role>.pdf` while keeping the online portfolio link pointing back to `https://pedrazamiguez.github.io`.

@@ -122,16 +122,33 @@ td {
     text-align: left;
 }
 
-/* === Responsive & Print === */
+/* === Page Setup & Print === */
+@page {
+    size: A4;
+    margin: 15mm 15mm 15mm 15mm;
+}
+
 @media print {
     body {
         background: white;
-        color: black;
+        color: #222;
         padding: 0;
+        max-width: 100%;
+        font-size: 14px;
+        line-height: 1.5;
+    }
+
+    h1, h2, h3 {
+        page-break-after: avoid;
+        break-after: avoid;
+    }
+
+    hr {
+        page-break-after: avoid;
     }
 
     a {
-        color: black;
+        color: #0073e6;
         text-decoration: none;
     }
 }

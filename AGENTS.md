@@ -6,14 +6,15 @@ This repository contains the online CV and professional web presence for **Andr�
 
 ### Key Files & Roles
 - **`CV_andres_pedraza_miguez.md`**: The **master source of truth** for Andrés's standard/core CV. All general updates to work history, skills, contact info, and summary must be made here.
-- **`markdown-pdf.css`**: The stylesheet used by external Markdown export tools (e.g., VS Code *Markdown PDF* or similar extensions) to format both HTML and PDF outputs cleanly and consistently.
-- **`index.html`**: The public entry point for GitHub Pages. Generated from `CV_andres_pedraza_miguez.md` using the styling from `markdown-pdf.css`.
-- **`CV_andres_pedraza_miguez.pdf`**: The downloadable PDF version of the master CV, exported from `CV_andres_pedraza_miguez.md`.
+- **`scripts/build_cv.py`**: The automated Python build script that compiles Markdown into HTML (`index.html`) and PDF (`CV_andres_pedraza_miguez.pdf`) using Playwright Chromium.
+- **`markdown-pdf.css`**: The unified stylesheet formatting both HTML and PDF outputs cleanly and consistently.
+- **`index.html`**: The public entry point for GitHub Pages, generated automatically with the **Download PDF** link.
+- **`CV_andres_pedraza_miguez.pdf`**: The downloadable PDF version of the master CV, generated automatically with the **Online CV** link.
 - **`tailored/`**: Directory for company- or role-specific tailored CV variants (e.g., `CV_Andres_Pedraza_<Company>_<Role>.md`).
 
 ---
 
-## 2. The Core Conversion & Linking Rule (CRITICAL)
+## 2. The Core Conversion & Automated Linking Rule (CRITICAL)
 
 When parsing `CV_andres_pedraza_miguez.md` to HTML and PDF, there is a fundamental difference in how links must behave:
 
@@ -31,35 +32,22 @@ When parsing `CV_andres_pedraza_miguez.md` to HTML and PDF, there is a fundament
      <li><strong>Download CV:</strong> <a href="CV_andres_pedraza_miguez.pdf" download>Download PDF</a></li>
      ```
 
-### Standard Export Procedure
-Whenever `CV_andres_pedraza_miguez.md` is modified:
-1. **Export to PDF**:
-   - Export `CV_andres_pedraza_miguez.md` to `CV_andres_pedraza_miguez.pdf` using VS Code (Markdown PDF extension) with `markdown-pdf.css`.
-2. **Export to HTML**:
-   - Export `CV_andres_pedraza_miguez.md` to HTML.
-   - Ensure the exported file is named `index.html` at the repository root.
-3. **Update Link in `index.html`**:
-   - Replace the **Online CV** list item:
-     ```html
-     <li><strong>Online CV:</strong> <a href="https://pedrazamiguez.github.io">Andrés Pedraza Míguez</a></li>
-     ```
-     with the **Download CV** item:
-     ```html
-     <li><strong>Download CV:</strong> <a href="CV_andres_pedraza_miguez.pdf" download>Download PDF</a></li>
-     ```
+### Automated Build Procedure
+All conversions and link adjustments are handled automatically by `scripts/build_cv.py`:
+- **Build Master CV**: `python3 scripts/build_cv.py` (generates `index.html` and `CV_andres_pedraza_miguez.pdf`).
+- **Build Specific Tailored CV**: `python3 scripts/build_cv.py tailored/CV_Andres_Pedraza_<Company>_<Role>.md`.
+- **Build All CVs**: `python3 scripts/build_cv.py --all`.
 
 ---
 
-## 3. Mandatory Agent Reminder Protocol
+## 3. Mandatory Agent Protocol
 
 Whenever any AI agent suggests, edits, or applies changes to `CV_andres_pedraza_miguez.md` or any CV content:
-- **ALWAYS remind the user at the end of the response** about the export steps:
-  > ⚠️ **Reminder:** After making changes to `CV_andres_pedraza_miguez.md`:
-  > 1. Re-export to PDF (`CV_andres_pedraza_miguez.pdf`).
-  > 2. Re-export to HTML (`index.html`).
-  > 3. Verify that `index.html` has replaced the **Online CV** link with the **Download PDF** link:
-  >    `<li><strong>Download CV:</strong> <a href="CV_andres_pedraza_miguez.pdf" download>Download PDF</a></li>`
-  > *(Or ask if you would like me to update `index.html` directly for you!)*
+- **Automatically run the build tool or remind the user**:
+  ```bash
+  python3 scripts/build_cv.py
+  ```
+  *(This automatically produces the updated `index.html` and `CV_andres_pedraza_miguez.pdf` with properly formatted links).*
 
 ---
 
