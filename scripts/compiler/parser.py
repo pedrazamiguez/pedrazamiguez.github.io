@@ -1,7 +1,12 @@
 import re
 import markdown
 
-def parse_markdown_to_html(md_text: str, target_mode: str = "pdf", pdf_filename: str = "CV_andres_pedraza_miguez.pdf") -> tuple[str, str]:
+def parse_markdown_to_html(
+    md_text: str,
+    target_mode: str = "pdf",
+    pdf_filename: str = "CV_andres_pedraza_miguez.pdf",
+    online_url: str = "https://pedrazamiguez.github.io"
+) -> tuple[str, str]:
     """
     Parses CV markdown to HTML body and extracts document title.
     
@@ -9,6 +14,7 @@ def parse_markdown_to_html(md_text: str, target_mode: str = "pdf", pdf_filename:
         md_text: Raw markdown content.
         target_mode: 'pdf' or 'html'.
         pdf_filename: The target PDF filename to link to when in 'html' mode.
+        online_url: The canonical online URL for this CV version when in 'pdf' mode.
         
     Returns:
         tuple of (html_body, title)
@@ -27,6 +33,14 @@ def parse_markdown_to_html(md_text: str, target_mode: str = "pdf", pdf_filename:
         processed_md = re.sub(
             r'[-*]\s+\*\*Online CV:\*\*\s+\[.*?\]\(.*?\)',
             rf'- **Download CV:** <a href="{pdf_filename}" download>Download PDF</a>',
+            processed_md,
+            flags=re.IGNORECASE
+        )
+    elif target_mode == "pdf" and online_url:
+        # In PDF mode, ensure the Online CV link points to its corresponding online page
+        processed_md = re.sub(
+            r'([-*]\s+\*\*Online CV:\*\*\s+\[)(.*?)(\]\()(.*?)(\))',
+            rf'\g<1>\g<2>\g<3>{online_url}\g<5>',
             processed_md,
             flags=re.IGNORECASE
         )

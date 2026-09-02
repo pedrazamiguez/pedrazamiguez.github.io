@@ -38,8 +38,8 @@ Create a new file in the `tailored/` folder:
    - Align subtitle to match target role title closely (e.g., `*Senior Java / Kotlin Backend Engineer | Remote Specialist*` or `*Lead Android Engineer (Kotlin & Jetpack Compose)*`).
 2. **Contact Section**:
    - Keep standard contact links (Email, LinkedIn, GitHub, Phone).
-   - Ensure the **Online CV** link points to `https://pedrazamiguez.github.io`:
-     `- **Online CV:** [Andrés Pedraza Míguez](https://pedrazamiguez.github.io)`
+   - The **Online CV** link in Markdown can point to `https://pedrazamiguez.github.io` or its tailored URL `https://pedrazamiguez.github.io/tailored/CV_Andres_Pedraza_<Company>_<Role>.html` (the build compiler will automatically map the PDF link to its dedicated online HTML page):
+     `- **Online CV:** [Andrés Pedraza Míguez](https://pedrazamiguez.github.io/tailored/CV_Andres_Pedraza_<Company>_<Role>.html)`
 3. **Professional Summary**:
    - Rewrite the 2-paragraph summary to directly mirror the top 3-4 priorities from the JD.
 4. **Work Experience Bullet Points**:
@@ -48,9 +48,11 @@ Create a new file in the `tailored/` folder:
 5. **Factual Integrity (STRICT)**:
    - Do NOT invent companies, dates, or non-existent roles. Every claim must remain true to Andrés's actual background.
 
-### 4. Build & Export the Tailored PDF
-Run the automated build tool to generate the tailored PDF:
+### 4. Build & Export the Tailored HTML & PDF
+Run the automated build tool to compile the tailored files:
 ```bash
 python3 scripts/build_cv.py tailored/CV_Andres_Pedraza_<Company>_<Role>.md
 ```
-This automatically compiles the PDF to `tailored/CV_Andres_Pedraza_<Company>_<Role>.pdf` while keeping the online portfolio link pointing back to `https://pedrazamiguez.github.io`.
+This automatically compiles:
+- `tailored/CV_Andres_Pedraza_<Company>_<Role>.html` (with a **Download PDF** button for this tailored version).
+- `tailored/CV_Andres_Pedraza_<Company>_<Role>.pdf` (with the **Online CV** link pointing directly to its corresponding tailored HTML URL).

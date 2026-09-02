@@ -50,11 +50,14 @@ def build_single_cv(md_path: str, html_only: bool = False, pdf_only: bool = Fals
         output_html = MASTER_HTML
         output_pdf = MASTER_PDF
         pdf_rel_name = os.path.basename(MASTER_PDF)
+        online_url = "https://pedrazamiguez.github.io"
     else:
         base_name = os.path.splitext(md_path)[0]
         output_html = base_name + ".html"
         output_pdf = base_name + ".pdf"
         pdf_rel_name = os.path.basename(output_pdf)
+        rel_html = os.path.relpath(output_html, PROJECT_ROOT).replace("\\", "/")
+        online_url = f"https://pedrazamiguez.github.io/{rel_html}"
 
     with open(md_path, "r", encoding="utf-8") as f:
         md_text = f.read()
@@ -64,7 +67,9 @@ def build_single_cv(md_path: str, html_only: bool = False, pdf_only: bool = Fals
     # 1. Generate HTML if requested
     if not pdf_only:
         # In HTML mode, replace Online CV link with Download PDF link
-        html_body, title = parse_markdown_to_html(md_text, target_mode="html", pdf_filename=pdf_rel_name)
+        html_body, title = parse_markdown_to_html(
+            md_text, target_mode="html", pdf_filename=pdf_rel_name, online_url=online_url
+        )
         full_html = generate_html_document(html_body, title, css_path=CSS_PATH)
         with open(output_html, "w", encoding="utf-8") as f:
             f.write(full_html)
@@ -72,8 +77,10 @@ def build_single_cv(md_path: str, html_only: bool = False, pdf_only: bool = Fals
 
     # 2. Generate PDF if requested
     if not html_only:
-        # In PDF mode, keep the Online CV link
-        pdf_html_body, title = parse_markdown_to_html(md_text, target_mode="pdf", pdf_filename=pdf_rel_name)
+        # In PDF mode, ensure the Online CV link points to the canonical online version
+        pdf_html_body, title = parse_markdown_to_html(
+            md_text, target_mode="pdf", pdf_filename=pdf_rel_name, online_url=online_url
+        )
         pdf_doc_html = generate_html_document(pdf_html_body, title, css_path=CSS_PATH)
         render_pdf(pdf_doc_html, output_pdf)
         print(f"  ✓ PDF generated:  {os.path.relpath(output_pdf, PROJECT_ROOT)}")

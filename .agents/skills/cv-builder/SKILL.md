@@ -11,10 +11,12 @@ Use this skill whenever you or the user modify `CV_andres_pedraza_miguez.md` or 
 ## Purpose & Automated Rules
 
 This skill automates the compilation of Markdown CVs into:
-1. **HTML (`index.html`)**: For public web viewing on GitHub Pages.
-   - **Link Rule**: Automatically transforms the **Online CV** list item into a **Download CV** link pointing to the PDF (`<a href="CV_andres_pedraza_miguez.pdf" download>Download PDF</a>`).
-2. **PDF (`CV_andres_pedraza_miguez.pdf` or `tailored/*.pdf`)**: For offline distribution / job applications.
-   - **Link Rule**: Preserves the **Online CV** link pointing to `https://pedrazamiguez.github.io`.
+1. **Master CV**:
+   - **HTML (`index.html`)**: For public web viewing on GitHub Pages. Transforms the **Online CV** list item into a **Download CV** link pointing to `CV_andres_pedraza_miguez.pdf`.
+   - **PDF (`CV_andres_pedraza_miguez.pdf`)**: For offline distribution. The **Online CV** link points to `https://pedrazamiguez.github.io`.
+2. **Tailored CVs (`tailored/`)**:
+   - **HTML (`tailored/*.html`)**: Generates an online mirror on GitHub Pages with a **Download PDF** link pointing to that specific tailored PDF.
+   - **PDF (`tailored/*.pdf`)**: For offline submission to companies/recruiters. The **Online CV** link points directly to its corresponding tailored web URL (`https://pedrazamiguez.github.io/tailored/<Filename>.html`).
 
 ---
 

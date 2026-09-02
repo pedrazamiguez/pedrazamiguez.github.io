@@ -10,5 +10,6 @@ Example:
 
 ## Notes
 - The master version remains `../CV_andres_pedraza_miguez.md`.
-- Tailored Markdown CVs can be exported to PDF via VS Code using `../markdown-pdf.css`.
-- In PDFs generated from tailored CVs, the **Online CV** link points back to the live master portfolio: [https://pedrazamiguez.github.io](https://pedrazamiguez.github.io).
+- Tailored Markdown CVs are compiled to both HTML and PDF using `python3 scripts/build_cv.py tailored/<CV_file>.md`.
+- In PDFs generated from tailored CVs, the **Online CV** link points directly to its corresponding tailored web version on GitHub Pages: `https://pedrazamiguez.github.io/tailored/<CV_file>.html`.
+- In HTML files generated in `tailored/`, the top action button allows recruiters to download that specific tailored PDF directly.

@@ -74,8 +74,11 @@ When analyzing a JD:
 4. **Maintain Factual Integrity**:
    - Never invent roles, dates, or non-existent experience. Reframe and emphasize genuine expertise and achievements.
 5. **Link Strategy for Tailored CVs**:
-   - If the tailored CV is exported to PDF for submission, ensure its contact section includes the link to Andrés's main online portfolio:
-     `- **Online CV:** [Andrés Pedraza Míguez](https://pedrazamiguez.github.io)`
+   - For both HTML and PDF formats, `scripts/build_cv.py` automatically generates the dedicated HTML version alongside the PDF and coordinates the links:
+     - **In Tailored PDF (`tailored/*.pdf`)**: The **Online CV** link points directly to its dedicated web version on GitHub Pages:
+       `- **Online CV:** [Andrés Pedraza Míguez](https://pedrazamiguez.github.io/tailored/<Filename>.html)`
+     - **In Tailored HTML (`tailored/*.html`)**: The header includes a dedicated **Download PDF** button downloading that specific tailored PDF (`<Filename>.pdf`).
+   - Standard social links remain identical across all CVs:
      `- **LinkedIn:** [pedrazamiguez](https://www.linkedin.com/in/pedrazamiguez/)`
      `- **GitHub:** [pedrazamiguez](https://github.com/pedrazamiguez)`
 
