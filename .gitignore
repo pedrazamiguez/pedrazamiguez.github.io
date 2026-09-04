@@ -9,4 +9,5 @@ __pycache__/
 ._*
 .Spotlight-V100
 .Trashes
-
+# Private job application tracking, notes & salary negotiations
+applications/

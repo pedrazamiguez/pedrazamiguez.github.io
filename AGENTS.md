@@ -93,3 +93,15 @@ When analyzing a JD:
   - **Databases & Search**: PostgreSQL, MongoDB, Redis, Elasticsearch & Kibana.
   - **Cloud & DevOps**: AWS (EC2, S3, RDS), Azure, Docker, Jenkins, CI/CD, Bash scripting.
   - **Ways of Working**: Remote contractor for UK & global enterprises (Inditex/Zara, Brandworkz, Locassa), English fluency, software craftsmanship, mentorship, TDD/automated testing.
+
+---
+
+## 6. Job Application & Interview Tracking Protocol (`job-tracker`)
+When the user mentions applications, interviews, feedback, or salary queries:
+- **Private Data Protection**: The `applications/` folder is strictly git-ignored to protect recruiter names, salaries, and interview notes.
+- **Workflow**:
+  - Maintain the master table in `applications/TRACKER.md`.
+  - Maintain deep-dive company files in `applications/companies/<company_slug>.md`.
+  - Automatically process raw user brain-dumps (impressions, feelings, tough interview questions, gaps) into structured debriefs with actionable prep items.
+  - Readily answer queries about salary ranges, contacts, past questions, and stage statuses without the user needing to search manually.
+  - Follow the full skill instructions in `.agents/skills/job-tracker/SKILL.md`.
